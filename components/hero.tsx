@@ -8,7 +8,7 @@ import { VideoPlayer } from "@/components/video-player"
 
 export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
-  const introVideoUrl = "https://www.youtube.com/embed/ixr_fL53m_8?autoplay=1&rel=0"
+  const introVideoUrl = "https://www.youtube.com/embed/MsnCtB7kCUU?autoplay=1"
 
   return (
     <section className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden">
@@ -34,7 +34,7 @@ export function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16">
         <div className="mb-6">
           <img
-            src="/placeholder.svg?width=150&height=150"
+            src="/images/images.jpg"
             alt="IChO 2026 Logo"
             className="w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full shadow-lg bg-white p-2"
           />

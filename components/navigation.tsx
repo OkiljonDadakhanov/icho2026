@@ -67,7 +67,7 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <img
-                src="/placeholder.svg?width=100&height=100"
+                src="/images/images.jpg"
                 alt="IChO 2026 Logo Icon"
                 className="w-10 h-10 rounded-full bg-white p-0.5 shadow-sm"
               />
