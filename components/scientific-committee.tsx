@@ -97,7 +97,7 @@ const scientificCommitteeMembers: ScientificMember[] = [
     country: "Russia",
     bio: "Professor Eremin is a professor of physical chemistry with a great experience in All-Russian and international chemistry olympiads.",
     linkedin: "",
-    image: "/images/scientific/Vadim.jpg",
+    image: "/images/scientific/vadim.jpg",
   },
 ];
 
