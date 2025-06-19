@@ -46,6 +46,7 @@ export function Navigation() {
         { name: "Venue & Labs", href: "/hosting/venue" },
         { name: "Accommodation", href: "/hosting/accommodation" },
         { name: "Visa & Travel", href: "/hosting/travel" },
+               { name: "Organization", href: "/organization" },
       ],
     },
     {
