@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Navigation } from '@/components/navigation'
+import { Footer } from '@/components/footer'
 
 export const metadata: Metadata = {
   title: 'IChO 2026',
@@ -14,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <Navigation />
+
+        {children}
+      <Footer />
+        
+        </body>
     </html>
   )
 }

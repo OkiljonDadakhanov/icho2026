@@ -1,8 +1,7 @@
 "use client"
 
 import { Dialog, DialogContent } from "@/components/ui/dialog"
-
-interface VideoPlayerProps {
+ interface VideoPlayerProps {
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
   videoUrl: string

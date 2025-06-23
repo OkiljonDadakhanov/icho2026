@@ -10,71 +10,56 @@ export function Navigation() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    {
-      name: "IChO 2024",
-      href: "/icho-2024",
-      dropdown: [
-        { name: "Event Details", href: "/icho-2024/details" },
-        { name: "Archive", href: "/icho-2024/archive" },
-      ],
-    },
+  {
+  name: "IChO 2026",
+  href: "/icho-2024",
+  dropdown: [
+    { name: "IChO 2026", href: "/icho-2024" },
+    { name: "Supervisory Committee", href: "/icho-2024#supervisory-committee" },
+    { name: "Scientific Committee", href: "/icho-2024#scientific-committee" },
+    { name: "Organizing Committee", href: "/icho-2024#organizing-committee" },
+    { name: "International Steering Committee", href: "/icho-2024#international-steering-committee" },
+    { name: "Program", href: "/icho-2024#program" },
+  ],
+},
     { name: "Partnership", href: "/partnership" },
     { name: "Uzbekistan", href: "/uzbekistan" },
     {
       name: "About IChO",
       href: "/about",
       dropdown: [
-        { name: "History", href: "/about/history" },
-        { name: "Mission", href: "/about/mission" },
-        { name: "Organization", href: "/about/organization" },
+        { name: "About", href: "/about" },
+        { name: "Regulations", href: "/about/regulations" },
+        { name: "Final report", href: "/about/final-report" },
       ],
     },
     {
-      name: "Results & Problems",
-      href: "/results",
+      name: "Competetions",
+      href: "/competetions",
       dropdown: [
-        { name: "Past Exams", href: "/results/exams" },
-        { name: "Medalists", href: "/results/medalists" },
-        { name: "Statistics", href: "/results/statistics" },
+                { name: "Competetions", href: "/competetions" },
+        { name: "Exam information", href: "/exam-info" },
+        { name: "Problems", href: "/problems" },
+        { name: "Results", href: "/results" },
       ],
     },
-    {
-      name: "Hosting Info",
-      href: "/hosting",
-      dropdown: [
-        { name: "Tashkent Overview", href: "/hosting/tashkent" },
-        { name: "Venue & Labs", href: "/hosting/venue" },
-        { name: "Accommodation", href: "/hosting/accommodation" },
-        { name: "Visa & Travel", href: "/hosting/travel" },
-               { name: "Organization", href: "/organization" },
-      ],
-    },
-    {
-      name: "News & Media",
-      href: "/news",
-      dropdown: [
-        { name: "Press Releases", href: "/news/press" },
-        { name: "Gallery", href: "/news/gallery" },
-        { name: "Videos", href: "/news/videos" },
-      ],
-    },
+   
+
     { name: "Contact Us", href: "/contact" },
   ]
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <img
                 src="/images/images.jpg"
                 alt="IChO 2026 Logo Icon"
-                className="w-10 h-10 rounded-full bg-white p-0.5 shadow-sm"
+                className="w-20 h-26 "
               />
-              <div className="hidden sm:block">
-                <span className="text-xl font-bold text-gray-900">IChO 2026</span>
-              </div>
+         
             </Link>
           </div>
 
