@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import React from "react"
-import { FileText, Award } from "lucide-react"
+import React from "react";
+import { FileText, Award } from "lucide-react";
 
 export default function FinalReport() {
   return (
@@ -21,26 +21,39 @@ export default function FinalReport() {
             <FileText className="w-4 h-4 text-emerald-500" />
             <span>Final Report</span>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">Summary of Results & Insights</h1>
+          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
+            Summary of Results & Insights
+          </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Discover the key outcomes, award distributions, and overall statistics from the 58th International Chemistry Olympiad.
+            Discover the key outcomes, award distributions, and overall
+            statistics from the 58th International Chemistry Olympiad.
           </p>
         </div>
 
         {/* Report Summary */}
         <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-6">
-          <h2 className="text-3xl font-semibold text-slate-800">Event Overview</h2>
+          <h2 className="text-3xl font-semibold text-slate-800">
+            Event Overview
+          </h2>
           <p className="text-slate-700 text-lg font-light">
-            The IChO 2026 hosted 320 talented students from 84 countries. Participants undertook challenging theoretical and practical exams, showcasing their deep understanding and creativity in chemistry.
+            The IChO 2026 hosted 320 talented students from 84 countries.
+            Participants undertook challenging theoretical and practical exams,
+            showcasing their deep understanding and creativity in chemistry.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-6 pt-4">
             <div className="p-6 bg-white rounded-2xl border border-white/20 shadow hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">Participants</h3>
-              <p className="text-slate-700 text-base font-light">320 students, 168 mentors, 84 teams.</p>
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                Participants
+              </h3>
+              <p className="text-slate-700 text-base font-light">
+                320 students, 168 mentors, 84 teams.
+              </p>
             </div>
             <div className="p-6 bg-white rounded-2xl border border-white/20 shadow hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">Award Distribution</h3>
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                Award Distribution
+              </h3>
               <ul className="list-disc list-inside text-slate-700 text-base font-light space-y-1">
                 <li>Gold: 33 students</li>
                 <li>Silver: 65 students</li>
@@ -66,16 +79,11 @@ export default function FinalReport() {
 
         {/* Download Link (Optional) */}
         <div className="text-center pt-8">
-          <a
-            href="/files/IChO2026_Final_Report.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-8 py-4 text-lg font-semibold rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 text-white hover:scale-105 hover:shadow-xl transition-all duration-300"
-          >
-            Download Full Report (PDF)
-          </a>
+          <p className="inline-block px-8 py-4 text-lg font-semibold rounded-2xl bg-gradient-to-r from-gray-400 to-gray-600 text-white">
+            Full Report (PDF) – Coming Soon
+          </p>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
-import React from "react"
-import { ShieldCheck } from "lucide-react"
+import React from "react";
+import { ShieldCheck, Download } from "lucide-react";
+import Link from "next/link";
 
 export default function Regulations() {
   return (
@@ -21,55 +22,90 @@ export default function Regulations() {
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
             <span>IChO Regulations</span>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">Rules & Guidelines</h1>
+          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
+            Rules & Guidelines
+          </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Ensure fair and transparent participation at the International Chemistry Olympiad by following these core regulations.
+            Ensure fair and transparent participation at the International
+            Chemistry Olympiad by following these core regulations.
           </p>
         </div>
 
         {/* Regulations Sections */}
         <div className="grid gap-8">
-          {/* Section 1 */}
           <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">1. Eligibility</h2>
+            <h2 className="text-2xl font-semibold text-slate-800">
+              1. Eligibility
+            </h2>
             <p className="text-slate-700 text-lg font-light">
-              Participants must be secondary school students under the age of 20, who have not commenced university studies and are selected through their national competition.
+              Participants must be secondary school students under the age of
+              20, who have not commenced university studies and are selected
+              through their national competition.
             </p>
           </div>
 
-          {/* Section 2 */}
           <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">2. Team Composition</h2>
+            <h2 className="text-2xl font-semibold text-slate-800">
+              2. Team Composition
+            </h2>
             <p className="text-slate-700 text-lg font-light">
-              Each participating country may send up to four student competitors and two accompanying adults (mentors).
+              Each participating country may send up to four student competitors
+              and two accompanying adults (mentors).
             </p>
           </div>
 
-          {/* Section 3 */}
           <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">3. Exam Structure</h2>
+            <h2 className="text-2xl font-semibold text-slate-800">
+              3. Exam Structure
+            </h2>
             <p className="text-slate-700 text-lg font-light">
-              The Olympiad includes one theoretical and one practical exam. Each exam is designed to assess a broad understanding of chemistry, creativity, and problem-solving skills.
+              The Olympiad includes one theoretical and one practical exam. Each
+              exam is designed to assess a broad understanding of chemistry,
+              creativity, and problem-solving skills.
             </p>
           </div>
 
-          {/* Section 4 */}
           <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">4. Conduct & Fairness</h2>
+            <h2 className="text-2xl font-semibold text-slate-800">
+              4. Conduct & Fairness
+            </h2>
             <p className="text-slate-700 text-lg font-light">
-              Any form of cheating, communication during exams, or violation of ethical conduct may result in disqualification of individuals or entire teams.
+              Any form of cheating, communication during exams, or violation of
+              ethical conduct may result in disqualification of individuals or
+              entire teams.
             </p>
           </div>
 
-          {/* Section 5 */}
           <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">5. Language</h2>
+            <h2 className="text-2xl font-semibold text-slate-800">
+              5. Language
+            </h2>
             <p className="text-slate-700 text-lg font-light">
-              English is the official language of IChO. All tasks, discussions, and materials are translated by each country's mentors into their students' native language.
+              English is the official language of IChO. All tasks, discussions,
+              and materials are translated by each country's mentors into their
+              students' native language.
             </p>
           </div>
         </div>
+
+        {/* Download Button + Extra Text */}
+        <div className="mt-12 text-center space-y-6">
+          <p className="text-slate-700 text-lg font-light max-w-2xl mx-auto">
+            For complete details and special participation procedures, we
+            encourage you to download the full IChO 2026 Regulations document.
+          </p>
+
+          <Link
+            href="/regulations.pdf"
+            target="_blank"
+            download
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-base font-medium shadow-md transition-all"
+          >
+            <Download className="w-5 h-5" />
+            Download Regulations (PDF)
+          </Link>
+        </div>
       </div>
     </section>
-  )
+  );
 }
