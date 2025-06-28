@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Sparkles,
@@ -17,20 +20,26 @@ export default function PartnershipPage() {
       description: "Main sponsor of IChO 2026",
     },
     {
-      name: "UzChemIndustry",
-      logo: "/images/sponsors/uzchem.png",
-      tier: "Partner",
-      description: "Industrial partner for chemical innovation",
-    },
-    {
       name: "Agency for Specialized Educational Institutions",
-      logo: "/images/sponsors/agency.png",
+      logo: "/logos/agentlik.png",
       tier: "Partner",
       description: "Supporting gifted education across Uzbekistan",
     },
     {
+      name: "Science Olympiad Center",
+      logo: "/logos/fom.png",
+      tier: "Organizer",
+      description: "Organizing national and international science competitions",
+    },
+    {
+      name: "UzChemIndustry",
+      logo: "/logos/uzchem.png",
+      tier: "Partner",
+      description: "Industrial partner for chemical innovation",
+    },
+    {
       name: "Tashkent State Pedagogical University (TSPU)",
-      logo: "/images/sponsors/tdpu.png",
+      logo: "/logos/tdpu.webp",
       tier: "Partner",
       description: "Academic partner in chemistry education",
     },
@@ -42,7 +51,7 @@ export default function PartnershipPage() {
     },
     {
       name: "National Institute of Pedagogical Mastery named after A. Avloniy",
-      logo: "/images/sponsors/avloniy.png",
+      logo: "/logos/avloniy.jpg",
       tier: "Partner",
       description: "Supporting excellence in teaching",
     },
@@ -206,15 +215,22 @@ export default function PartnershipPage() {
                   className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-16 h-16 bg-gray-200 rounded-xl flex items-center justify-center">
-                      <Building className="h-8 w-8 text-gray-400" />
+                    <div className="w-24 h-24 bg-white border border-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+                      <Image
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        width={80}
+                        height={80}
+                        className="object-contain"
+                      />
                     </div>
+
                     <div>
                       <h3 className="font-bold text-slate-900">
                         {partner.name}
                       </h3>
                       <div
-                        className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                        className={`inline-block mt-1 px-2 py-1 rounded-full text-xs font-medium ${
                           partner.tier === "Platinum"
                             ? "bg-purple-100 text-purple-800"
                             : partner.tier === "Gold"
@@ -236,8 +252,6 @@ export default function PartnershipPage() {
             </div>
           </div>
         </section>
-
-        {/* CTA */}
       </main>
     </>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ScrollText, Calendar, Download } from "lucide-react";
 
 type CommitteeMember = {
@@ -179,14 +180,15 @@ export default function Icho2026Page() {
 
         {/* Program PDF Download */}
         <div className="text-center pt-8" id="program">
-          <a
-            href="/files/icho2026-program.pdf"
+          <Link
+            href="/program.pdf"
+            target="_blank"
             download
-            className="inline-flex items-center gap-2 px-8 py-4 text-lg font-semibold rounded-2xl bg-gradient-to-r from-emerald-600 to-sky-600 text-white hover:scale-105 hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-base font-medium shadow-md transition-all"
           >
             <Download className="w-5 h-5" />
-            Download IChO 2026 Program (PDF)
-          </a>
+            Download Program (PDF)
+          </Link>
         </div>
       </div>
     </section>
