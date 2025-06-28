@@ -1,10 +1,8 @@
 "use client";
 
-import React from "react";
-import { ShieldCheck, Download } from "lucide-react";
-import Link from "next/link";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
-export default function Regulations() {
+export default function ContactUsPage() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
       {/* Background Decorations */}
@@ -16,96 +14,51 @@ export default function Regulations() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
-        <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
-            <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            <span>IChO Regulations</span>
-          </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            Rules & Guidelines
-          </h1>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Ensure fair and transparent participation at the International
-            Chemistry Olympiad by following these core regulations.
-          </p>
-        </div>
-
-        {/* Regulations Sections */}
-        <div className="grid gap-8">
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              1. Eligibility
+      <main className="relative z-10 flex-grow container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-12 text-center text-slate-900">
+          Contact Us
+        </h1>
+        <div className="max-w-3xl mx-auto space-y-12 text-slate-800">
+          <div>
+            <h2 className="text-2xl font-semibold mb-6 text-center">
+              Organizing Committee
             </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Participants must be secondary school students under the age of
-              20, who have not commenced university studies and are selected
-              through their national competition.
-            </p>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              2. Team Composition
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Each participating country may send up to four student competitors
-              and two accompanying adults (mentors).
-            </p>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <MapPin className="h-6 w-6 mr-3 mt-1 text-emerald-600 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold">Address:</h3>
+                  <p>Science Olympiad Center </p>
+                  <p>100099, Otchopar-1, Darvozakent Street, House 60</p>
+                  <p>Yunusobod District, Tashkent, Uzbekistan</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Mail className="h-6 w-6 mr-3 mt-1 text-emerald-600 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold">Email:</h3>
+                  <p>info@olympcenter.uz</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <Phone className="h-6 w-6 mr-3 mt-1 text-emerald-600 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold">Phone:</h3>
+                  <p>+998 77 550 33 66</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              3. Exam Structure
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              The Olympiad includes one theoretical and one practical exam. Each
-              exam is designed to assess a broad understanding of chemistry,
-              creativity, and problem-solving skills.
+          <div className="text-center">
+            <h3 className="text-xl font-semibold mb-3">Office Hours</h3>
+            <p className="text-slate-700">
+              Monday – Friday: 9:00 AM – 6:00 PM (GMT+5, Tashkent Time)
             </p>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              4. Conduct & Fairness
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Any form of cheating, communication during exams, or violation of
-              ethical conduct may result in disqualification of individuals or
-              entire teams.
-            </p>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              5. Language
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              English is the official language of IChO. All tasks, discussions,
-              and materials are translated by each country's mentors into their
-              students' native language.
-            </p>
+           
           </div>
         </div>
-
-        {/* Download Button + Extra Text */}
-        <div className="mt-12 text-center space-y-6">
-          <p className="text-slate-700 text-lg font-light max-w-2xl mx-auto">
-            For complete details and special participation procedures, we
-            encourage you to download the full IChO 2026 Regulations document.
-          </p>
-
-          <Link
-            href="/regulations.pdf"
-            target="_blank"
-            download
-            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-base font-medium shadow-md transition-all"
-          >
-            <Download className="w-5 h-5" />
-            Download Regulations (PDF)
-          </Link>
-        </div>
-      </div>
+      </main>
     </section>
   );
 }
