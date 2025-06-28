@@ -12,14 +12,14 @@ export function Navigation() {
     { name: "Home", href: "/" },
   {
   name: "IChO 2026",
-  href: "/icho-2024",
+  href: "/icho-2026",
   dropdown: [
-    { name: "IChO 2026", href: "/icho-2024" },
-    { name: "Supervisory Committee", href: "/icho-2024#supervisory-committee" },
-    { name: "Scientific Committee", href: "/icho-2024#scientific-committee" },
-    { name: "Organizing Committee", href: "/icho-2024#organizing-committee" },
-    { name: "International Steering Committee", href: "/icho-2024#international-steering-committee" },
-    { name: "Program", href: "/icho-2024#program" },
+    { name: "IChO 2026", href: "/icho-2026" },
+    { name: "Supervisory Committee", href: "/icho-2026#supervisory-committee" },
+    { name: "Scientific Committee", href: "/icho-2026#scientific-committee" },
+    { name: "Organizing Committee", href: "/icho-2026#organizing-committee" },
+    { name: "International Steering Committee", href: "/icho-2026#international-steering-committee" },
+    { name: "Program", href: "/icho-2026#program" },
   ],
 },
     { name: "Partnership", href: "/partnership" },
@@ -57,7 +57,7 @@ export function Navigation() {
               <img
                 src="/images/images.jpg"
                 alt="IChO 2026 Logo Icon"
-                className="w-20 h-26 "
+                className="w-20 h-26 " 
               />
          
             </Link>

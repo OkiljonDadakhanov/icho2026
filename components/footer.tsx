@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from 'next/image'
 import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
 
 export function Footer() {
@@ -9,13 +10,14 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">IChO</span>
-              </div>
-              <div>
-                <span className="text-xl font-bold">IChO 2026</span>
-                <span className="text-sm text-gray-400 block">Tashkent, Uzbekistan</span>
-              </div>
+              
+            <Image
+              src="/images/images.jpg"
+              alt="IChO 2026 Logo"
+              width={150}  
+              height={150}
+              className="h-12 w-12 rounded-lg"  
+            />
             </div>
             <p className="text-gray-400 mb-6">Fostering global talent and unity through chemistry since 1968.</p>
             <div className="flex space-x-4">
@@ -53,11 +55,7 @@ export function Footer() {
                   Uzbekistan
                 </Link>
               </li>
-              <li>
-                <Link href="/hosting" className="text-gray-400 hover:text-white transition-colors">
-                  Hosting Info
-                </Link>
-              </li>
+         
               <li>
                 <Link href="/results" className="text-gray-400 hover:text-white transition-colors">
                   Results
@@ -80,16 +78,7 @@ export function Footer() {
                   Past Exams
                 </Link>
               </li>
-              <li>
-                <Link href="/results/medalists" className="text-gray-400 hover:text-white transition-colors">
-                  Medalists
-                </Link>
-              </li>
-              <li>
-                <Link href="/hosting/travel" className="text-gray-400 hover:text-white transition-colors">
-                  Travel Info
-                </Link>
-              </li>
+        
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact Us

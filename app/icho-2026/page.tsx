@@ -1,21 +1,21 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { ScrollText, Calendar, Download } from "lucide-react"
+import Image from "next/image";
+import { ScrollText, Calendar, Download } from "lucide-react";
 
 type CommitteeMember = {
-  name: string
-  role: string
-  institute: string
-  country: string
-  title: string
-  image?: string
-}
+  name: string;
+  role: string;
+  institute: string;
+  country: string;
+  title: string;
+  image?: string;
+};
 
 type CommitteeSection = {
-  title: string
-  members: CommitteeMember[]
-}
+  title: string;
+  members: CommitteeMember[];
+};
 
 const Card = ({ member }: { member: CommitteeMember }) => (
   <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-5 flex gap-4 items-start hover:shadow-xl transition-all duration-300">
@@ -36,43 +36,11 @@ const Card = ({ member }: { member: CommitteeMember }) => (
       <p className="text-sm italic mt-1">{member.title}</p>
     </div>
   </div>
-)
+);
 
 export default function Icho2026Page() {
   const supervisoryCommittee: CommitteeMember[] = [
     {
-      name: "Acad. Shamansur Sagdullaev",
-      role: "Committee member",
-      institute: "Institute of Plant Chemistry",
-      country: "Uzbekistan",
-      title: "Director of Institute of Plant Chemistry",
-      image: "/images/shamansur.jpg",
-    },
-     {
-      name: "Acad. Shamansur Sagdullaev",
-      role: "Committee member",
-      institute: "Institute of Plant Chemistry",
-      country: "Uzbekistan",
-      title: "Director of Institute of Plant Chemistry",
-      image: "/images/shamansur.jpg",
-    },
-     {
-      name: "Acad. Shamansur Sagdullaev",
-      role: "Committee member",
-      institute: "Institute of Plant Chemistry",
-      country: "Uzbekistan",
-      title: "Director of Institute of Plant Chemistry",
-      image: "/images/shamansur.jpg",
-    },
-     {
-      name: "Acad. Shamansur Sagdullaev",
-      role: "Committee member",
-      institute: "Institute of Plant Chemistry",
-      country: "Uzbekistan",
-      title: "Director of Institute of Plant Chemistry",
-      image: "/images/shamansur.jpg",
-    },
-     {
       name: "Acad. Shamansur Sagdullaev",
       role: "Committee member",
       institute: "Institute of Plant Chemistry",
@@ -87,7 +55,7 @@ export default function Icho2026Page() {
       country: "Uzbekistan",
       title: "Minister of Higher Education",
     },
-  ]
+  ];
 
   const scientificCommittee: CommitteeMember[] = [
     {
@@ -104,15 +72,7 @@ export default function Icho2026Page() {
       country: "Russia",
       title: "Chemistry Expert",
     },
-       {
-      name: "Prof. Alexander Ivanov",
-      role: "Task Developer",
-      institute: "Mendeleev University",
-      country: "Russia",
-      title: "Chemistry Expert",
-    },
-    
-  ]
+  ];
 
   const organizingCommittee: CommitteeMember[] = [
     {
@@ -129,66 +89,20 @@ export default function Icho2026Page() {
       country: "Uzbekistan",
       title: "Web & IT Manager",
     },
-     {
-      name: "Jasur Sharipov",
-      role: "Technical Lead",
-      institute: "Olympiad Web Department",
-      country: "Uzbekistan",
-      title: "Web & IT Manager",
-    },
-     {
-      name: "Jasur Sharipov",
-      role: "Technical Lead",
-      institute: "Olympiad Web Department",
-      country: "Uzbekistan",
-      title: "Web & IT Manager",
-    },
-  ]
+  ];
 
-  const steeringCommittee: CommitteeMember[] = [
-    {
-      name: "Prof. Wolfgang Schneider",
-      role: "International Member",
-      institute: "IChO Board",
-      country: "Germany",
-      title: "Steering Committee Member",
-    },
-    {
-      name: "Dr. Jane Kim",
-      role: "International Member",
-      institute: "Korea Institute of Chemistry",
-      country: "South Korea",
-      title: "Senior Researcher",
-    },
-      {
-      name: "Dr. Jane Kim",
-      role: "International Member",
-      institute: "Korea Institute of Chemistry",
-      country: "South Korea",
-      title: "Senior Researcher",
-    },
-      {
-      name: "Dr. Jane Kim",
-      role: "International Member",
-      institute: "Korea Institute of Chemistry",
-      country: "South Korea",
-      title: "Senior Researcher",
-    },
-      {
-      name: "Dr. Jane Kim",
-      role: "International Member",
-      institute: "Korea Institute of Chemistry",
-      country: "South Korea",
-      title: "Senior Researcher",
-    },
-      {
-      name: "Dr. Jane Kim",
-      role: "International Member",
-      institute: "Korea Institute of Chemistry",
-      country: "South Korea",
-      title: "Senior Researcher",
-    },
-  ]
+  const steeringCommitteeList = [
+    "Carlos Castro-Acuna, Mexico (2021, 2023)",
+    "I-Jy Chang, Chinese Taipei (2023)",
+    "Clément Guibert, France (2022, 2024)",
+    "JL Kiappes, UK/USA (2023), Chair",
+    "Ben Pilgrim, UK (2021, 2023)",
+    "Yunus Emre Türkmen, Turkey (2022, 2024)",
+    "Badr Al-Majrathi, Saudi Arabia (2024)",
+    "Abdallah El Marhoune, UAE (2025)",
+    "Turaboy Shermatov, Uzbekistan (2026)",
+    "Elise Li, Chinese Taipei (2027)",
+  ];
 
   const committeeSections: CommitteeSection[] = [
     {
@@ -203,16 +117,12 @@ export default function Icho2026Page() {
       title: "Organizing Committee",
       members: organizingCommittee,
     },
-    {
-      title: "International Steering Committee",
-      members: steeringCommittee,
-    },
-  ]
+  ];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0 z-0" id="">
+      <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-sky-500/5 to-amber-500/5"></div>
         <div className="absolute top-24 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float"></div>
         <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed"></div>
@@ -228,24 +138,44 @@ export default function Icho2026Page() {
             <ScrollText className="w-4 h-4 text-emerald-500" />
             <span>Committee & Program Overview</span>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">IChO 2026</h1>
+          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
+            IChO 2026
+          </h1>
           <p className="text-lg text-slate-700 max-w-3xl mx-auto font-light">
-            Discover the brilliant minds behind the Olympiad and download the official program.
+            Discover the brilliant minds behind the Olympiad and download the
+            official program.
           </p>
         </div>
 
         {/* Section Renderer */}
-      {committeeSections.map((section, index) => (
-  <div key={index} className="space-y-4" id={section.title.toLowerCase().replace(/\s+/g, "-")}>
-    <h2 className="text-3xl font-bold text-slate-800">{section.title}</h2>
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {section.members.map((member, idx) => (
-        <Card key={idx} member={member} />
-      ))}
-    </div>
-  </div>
-))}
+        {committeeSections.map((section, index) => (
+          <div
+            key={index}
+            className="space-y-4"
+            id={section.title.toLowerCase().replace(/\s+/g, "-")}
+          >
+            <h2 className="text-3xl font-bold text-slate-800">
+              {section.title}
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {section.members.map((member, idx) => (
+                <Card key={idx} member={member} />
+              ))}
+            </div>
+          </div>
+        ))}
 
+        {/* Steering Committee List */}
+        <div className="space-y-4" id="international-steering-committee">
+          <h2 className="text-3xl font-bold text-slate-800">
+            International Steering Committee
+          </h2>
+          <ul className="list-disc pl-6 text-slate-700 space-y-1">
+            {steeringCommitteeList.map((member, idx) => (
+              <li key={idx}>{member}</li>
+            ))}
+          </ul>
+        </div>
 
         {/* Program PDF Download */}
         <div className="text-center pt-8" id="program">
@@ -260,5 +190,5 @@ export default function Icho2026Page() {
         </div>
       </div>
     </section>
-  )
+  );
 }
