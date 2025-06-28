@@ -221,7 +221,7 @@ export default function Icho2026Page() {
       institute: "A.S. Sadykov Bioorganic Chemistry Institute",
       country: "Uzbekistan",
       title: "Leading Researcher of Complex Compounds Lab",
-      image: "/team/xamid.png",
+      image: "/team/khamid.png",
     },
     {
       name: "Abdujalil Sidiqov",
@@ -296,6 +296,105 @@ export default function Icho2026Page() {
       image: "/team/mirumid.jpg",
     },
   ];
+  const internationalScientificCommittee: CommitteeMember[] = [
+    {
+      name: "JL Kiappes",
+      role: "Committee member",
+      institute: "Dept of Chemistry",
+      country: "USA",
+      title: "Associate Professor (Teaching)",
+      image: "/team/js.JPG",
+    },
+    {
+      name: "Alexander Kirillovich Gladilin",
+      role: "Committee member",
+      institute: "Lomonosov Moscow State University",
+      country: "Russia",
+      title: "Professor",
+      image: "/team/gladilin.JPG",
+    },
+    {
+      name: "Vadim Eremin",
+      role: "Committee member",
+      institute: "Lomonosov Moscow State University",
+      country: "Russia",
+      title: "Professor",
+      image: "/team/eremin.jpg",
+    },
+    {
+      name: "Dr Ben Pilgrim",
+      role: "Committee member",
+      institute: "University of Nottingham",
+      country: "United Kingdom",
+      title: "Associate Professor",
+      image: "/team/ben.jpg",
+    },
+    {
+      name: "Zhihan Nan",
+      role: "Committee member",
+      institute: "Harvard University",
+      country: "USA",
+      title: "PhD Candidate",
+      image: "/team/nan.jpg",
+    },
+    {
+      name: "Yunus Türkmen",
+      role: "Committee member",
+      institute: "Bilkent University Department of Chemistry",
+      country: "Turkey",
+      title: "Professor",
+      image: "/team/yunus.jpg",
+    },
+    {
+      name: "Filip Ilievski",
+      role: "Committee member",
+      institute: "ETH Zurich University",
+      country: "Switzerland",
+      title: "PhD Student",
+      image: "/team/filip.jpg",
+    },
+    {
+      name: "Andrei Shved",
+      role: "Committee member",
+      institute: "ETH Zurich University",
+      country: "Switzerland",
+      title: "Research Fellow",
+      image: "/team/andrei.jpg",
+    },
+    {
+      name: "Alex Koronatov",
+      role: "Committee member",
+      institute: "Technion",
+      country: "Croatia",
+      title: "PhD Student",
+      image: "/team/alex.jpg",
+    },
+    {
+      name: "Prof. Gábor Magyarfalvi",
+      role: "Committee member",
+      institute: "Eötvös Loránd University",
+      country: "Hungary",
+      title: "Assistant Professor",
+      image: "/team/gabor.JPG",
+    },
+    {
+      name: "Filip Ilievski",
+      role: "Committee member",
+      institute: "Uppsala University",
+      country: "Sweden",
+      title: "PhD Student",
+      image: "/team/filip_uppsala.png",
+    },
+    {
+      name: "Prof. Petra Menova",
+      role: "Committee member",
+      institute: "—",
+      country: "Czech Republic",
+      title:
+        "Chair of the Scientific Committee of the IChO 2018 – Specialist in Organic Chemistry and Biochemistry",
+      image: "/team/petra.JPG",
+    },
+  ];
 
   const steeringCommitteeList = [
     "Carlos Castro-Acuna, Mexico (2021, 2023)",
@@ -322,6 +421,10 @@ export default function Icho2026Page() {
     {
       title: "Scientific Committee",
       members: scientificCommittee,
+    },
+    {
+      title: "International Scientific Committee",
+      members: internationalScientificCommittee,
     },
   ];
 

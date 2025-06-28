@@ -18,6 +18,8 @@ export function Navigation() {
     { name: "Supervisory Committee", href: "/icho-2026#supervisory-committee" },
     { name: "Scientific Committee", href: "/icho-2026#scientific-committee" },
     { name: "Organizing Committee", href: "/icho-2026#organizing-committee" },
+    { name: "International Scientific Committee", href: "/icho-2026#international-scientific-committee" },
+  
     { name: "International Steering Committee", href: "/icho-2026#international-steering-committee" },
     { name: "Program", href: "/icho-2026#program" },
   ],
