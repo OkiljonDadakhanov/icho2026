@@ -15,7 +15,7 @@ export default function ContactUsPage() {
                 <MapPin className="h-6 w-6 mr-3 mt-1 text-blue-600 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">Address:</h3>
-                  <p>Science Olympiad Center (ARBIChO)</p>
+                  <p>Science Olympiad Center </p>
                   <p>100099, Otchopar-1, Darvozakent Street, House 60</p>
                   <p>Yunusobod District, Tashkent, Uzbekistan</p>
                 </div>
@@ -41,9 +41,7 @@ export default function ContactUsPage() {
             <p className="text-gray-700">
               Monday – Friday: 9:00 AM – 6:00 PM (GMT+5, Tashkent Time)
             </p>
-            <p className="text-gray-700 mt-2">
-              Contact person: Murodbek Islamov
-            </p>
+          
           </div>
         </div>
       </main>
