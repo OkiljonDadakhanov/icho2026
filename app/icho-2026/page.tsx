@@ -26,7 +26,7 @@ const Card = ({ member }: { member: CommitteeMember }) => (
         alt={member.name}
         width={64}
         height={64}
-        className="object-cover"
+        className="w-full h-full object-cover"
       />
     </div>
     <div className="text-slate-800">
@@ -316,12 +316,12 @@ export default function Icho2026Page() {
       members: supervisoryCommittee,
     },
     {
-      title: "Scientific Committee",
-      members: scientificCommittee,
-    },
-    {
       title: "Organizing Committee",
       members: organizingCommittee,
+    },
+    {
+      title: "Scientific Committee",
+      members: scientificCommittee,
     },
   ];
 
