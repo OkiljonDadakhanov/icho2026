@@ -1,14 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { CalendarDays, MapPin, Users, ChevronRight, PlayCircle, Sparkles } from "lucide-react"
-import Link from "next/link"
-import { VideoPlayer } from "@/components/video-player"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  CalendarDays,
+  MapPin,
+  Users,
+  ChevronRight,
+  PlayCircle,
+  Sparkles,
+} from "lucide-react";
+import Link from "next/link";
+import { VideoPlayer } from "@/components/video-player";
 
 export function Hero() {
-  const [isVideoOpen, setIsVideoOpen] = useState(false)
-  const introVideoUrl = "https://www.youtube.com/embed/MsnCtB7kCUU?autoplay=1"
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const introVideoUrl = "https://www.youtube.com/embed/MsnCtB7kCUU?autoplay=1";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100">
@@ -29,12 +36,12 @@ export function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center space-y-8">
           {/* Logo with modern styling */}
-          <div className="relative inline-block">
+          <div className="relative flex items-center justify-center">
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-sky-500 rounded-full blur-xl opacity-20 animate-pulse-gentle"></div>
             <img
-              src="/images/images.jpg"
+              src="/images/logo-without-bg.png"
               alt="IChO 2026 Logo"
-              className="relative w-44 h-44 md:w-32 md:h-32 mx-auto rounded-2xl shadow-2xl bg-white/80 backdrop-blur-sm p-3 border border-white/20"
+              className="relative w-32 h-32 md:w-44 md:h-44 mx-auto rounded-2xl shadow-2xl bg-white/80 backdrop-blur-sm p-3 border border-white/20"
             />
           </div>
 
@@ -66,14 +73,18 @@ export function Hero() {
               <div className="p-2 bg-sky-100 rounded-xl">
                 <MapPin className="h-5 w-5 text-sky-600" />
               </div>
-              <span className="font-semibold text-slate-700">Tashkent, Uzbekistan</span>
+              <span className="font-semibold text-slate-700">
+                Tashkent, Uzbekistan
+              </span>
             </div>
 
             <div className="flex items-center gap-3 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="p-2 bg-amber-100 rounded-xl">
                 <Users className="h-5 w-5 text-amber-600" />
               </div>
-              <span className="font-semibold text-slate-700">80+ Countries</span>
+              <span className="font-semibold text-slate-700">
+                80+ Countries
+              </span>
             </div>
           </div>
 
@@ -88,8 +99,6 @@ export function Hero() {
 
           {/* Modern CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-   
-
             <Button
               size="lg"
               variant="outline"
@@ -103,13 +112,18 @@ export function Hero() {
 
           {/* Modern footer text */}
           <p className="text-sm text-slate-500 font-light pt-8 max-w-2xl mx-auto">
-            Join us in Tashkent for an extraordinary celebration of scientific excellence, cultural exchange, and the
-            future of chemistry education.
+            Join us in Tashkent for an extraordinary celebration of scientific
+            excellence, cultural exchange, and the future of chemistry
+            education.
           </p>
         </div>
       </div>
 
-      <VideoPlayer isOpen={isVideoOpen} setIsOpen={setIsVideoOpen} videoUrl={introVideoUrl} />
+      <VideoPlayer
+        isOpen={isVideoOpen}
+        setIsOpen={setIsVideoOpen}
+        videoUrl={introVideoUrl}
+      />
     </section>
-  )
+  );
 }
