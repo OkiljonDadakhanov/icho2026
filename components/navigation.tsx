@@ -1,29 +1,44 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { ChevronDown, Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
-  {
-  name: "IChO 2026",
-  href: "/icho-2026",
-  dropdown: [
-    { name: "IChO 2026", href: "/icho-2026" },
-    { name: "Supervisory Committee", href: "/icho-2026#supervisory-committee" },
-    { name: "Scientific Committee", href: "/icho-2026#scientific-committee" },
-    { name: "Organizing Committee", href: "/icho-2026#organizing-committee" },
-    { name: "International Scientific Committee", href: "/icho-2026#international-scientific-committee" },
-  
-    { name: "International Steering Committee", href: "/icho-2026#international-steering-committee" },
-    { name: "Program", href: "/icho-2026#program" },
-  ],
-},
+    {
+      name: "IChO 2026",
+      href: "/icho-2026",
+      dropdown: [
+        { name: "IChO 2026", href: "/icho-2026" },
+        {
+          name: "Supervisory Committee",
+          href: "/icho-2026#supervisory-committee",
+        },
+        {
+          name: "Scientific Committee",
+          href: "/icho-2026#scientific-committee",
+        },
+        {
+          name: "Organizing Committee",
+          href: "/icho-2026#organizing-committee",
+        },
+        {
+          name: "International Scientific Committee",
+          href: "/icho-2026#international-scientific-committee",
+        },
+
+        {
+          name: "International Steering Committee",
+          href: "/icho-2026#international-steering-committee",
+        },
+        { name: "Program", href: "/icho-2026#program" },
+      ],
+    },
     { name: "Partnership", href: "/partnership" },
     { name: "Uzbekistan", href: "/uzbekistan" },
     {
@@ -39,16 +54,15 @@ export function Navigation() {
       name: "Competetions",
       href: "/competetions",
       dropdown: [
-                { name: "Competetions", href: "/competetions" },
+        { name: "Competetions", href: "/competetions" },
         { name: "Exam information", href: "/exam-info" },
         { name: "Problems", href: "/problems" },
         { name: "Results", href: "/results" },
       ],
     },
-   
 
     { name: "Contact Us", href: "/contact" },
-  ]
+  ];
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
@@ -57,11 +71,10 @@ export function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
               <img
-                src="/images/images.jpg"
+                src="/images/logo-without-bg.png"
                 alt="IChO 2026 Logo Icon"
-                className="w-20 h-26 " 
+                className="w-20 h-26 "
               />
-         
             </Link>
           </div>
 
@@ -97,8 +110,16 @@ export function Navigation() {
 
           {/* Mobile menu button */}
           <div className="lg:hidden">
-            <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -137,5 +158,5 @@ export function Navigation() {
         )}
       </div>
     </nav>
-  )
+  );
 }

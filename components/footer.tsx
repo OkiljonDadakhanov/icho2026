@@ -19,7 +19,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <Image
-                src="/images/images.jpg"
+                src="/images/logo-without-bg.png"
                 alt="IChO 2026 Logo"
                 width={150}
                 height={150}
