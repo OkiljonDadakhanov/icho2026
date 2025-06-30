@@ -55,6 +55,8 @@ export function Navigation() {
       href: "/competetions",
       dropdown: [
         { name: "Competetions", href: "/competetions" },
+        { name: "Participants", href: "/participants" },
+        { name: "Theoretical Exam", href: "/competetions/theoretical-exam" },
         { name: "Exam information", href: "/exam-info" },
         { name: "Problems", href: "/problems" },
         { name: "Results", href: "/results" },
