@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   MapPin,
   Clock,
@@ -152,6 +151,15 @@ export default function UzbekistanPage() {
               modern innovation
             </span>
           </p>
+
+          {/* 🎥 Video Block */}
+          <div className="mt-10">
+            <video
+              src="https://alxorazmiy.nyc3.cdn.digitaloceanspaces.com/0624.mp4"
+              controls
+              className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg"
+            />
+          </div>
         </div>
       </section>
 
