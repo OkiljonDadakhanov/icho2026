@@ -377,14 +377,7 @@ export default function Icho2026Page() {
       title: "Assistant Professor",
       image: "/team/gabor.JPG",
     },
-    {
-      name: "Filip Ilievski",
-      role: "Committee member",
-      institute: "Uppsala University",
-      country: "Sweden",
-      title: "PhD Student",
-      image: "/team/filip_uppsala.png",
-    },
+
     {
       name: "Prof. Petra Menova",
       role: "Committee member",
