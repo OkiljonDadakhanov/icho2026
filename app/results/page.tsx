@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { FileText, Calendar, Download } from "lucide-react"
+import { FileText, Calendar, Download } from "lucide-react";
 
 export default function ResultsPage() {
   const mockYears = [
     { year: 2025, host: "Switzerland", file: "/files/icho2025_results.pdf" },
     { year: 2024, host: "Saudi Arabia", file: "/files/icho2024_results.pdf" },
     { year: 2023, host: "Switzerland", file: "/files/icho2023_results.pdf" },
-    { year: 2022, host: "China", file: "/files/icho2022_results.pdf" }
-  ]
+    { year: 2022, host: "China", file: "/files/icho2022_results.pdf" },
+  ];
 
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
@@ -28,9 +28,12 @@ export default function ResultsPage() {
             <FileText className="w-4 h-4 text-emerald-500" />
             <span>Results & Problems Archive</span>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">Previous Olympiads</h1>
+          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
+            Previous Olympiads
+          </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Access past results, exam problems, and statistics from previous International Chemistry Olympiads.
+            Access past results, exam problems, and statistics from previous
+            International Chemistry Olympiads.
           </p>
         </div>
 
@@ -45,20 +48,14 @@ export default function ResultsPage() {
                 <Calendar className="text-emerald-500 w-5 h-5" />
                 <h3 className="text-xl font-semibold">IChO {item.year}</h3>
               </div>
-              <p className="text-slate-700 text-sm">Host Country: <strong>{item.host}</strong></p>
-              <a
-                href={item.file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-2 text-sm text-emerald-700 font-medium hover:underline"
-              >
-                <Download className="w-4 h-4" />
-                Download PDF
-              </a>
+              <p className="text-slate-700 text-sm">
+                Host Country: <strong>{item.host}</strong>
+              </p>
+              <p className="text-sm text-slate-500 italic mt-2">Coming soon</p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -55,6 +55,12 @@ export default function PartnershipPage() {
       tier: "Partner",
       description: "Supporting excellence in teaching",
     },
+    {
+      name: "National University of Uzbekistan named after Mirzo Ulugbek",
+      logo: "/logos/milliy.png",
+      tier: "Partner",
+      description: "Education and research partner",
+    },
   ];
 
   const partnershipOpportunities = [
