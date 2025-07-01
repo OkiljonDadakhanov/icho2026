@@ -13,8 +13,8 @@ import { VideoPlayer } from "@/components/video-player";
 
 export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const introVideoUrl = "https://www.youtube.com/embed/MsnCtB7kCUU?autoplay=1";
-  const backgroundVideoUrl = "/main.MOV"; // Make sure the file exists in public/videos/
+  // const introVideoUrl = "https://www.youtube.com/embed/MsnCtB7kCUU?autoplay=1";
+  const backgroundVideoUrl = "/main.MOV";
 
   return (
     <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
@@ -39,20 +39,23 @@ export function Hero() {
       {/* 🌟 Hero Content */}
       <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center space-y-8">
-          {/* Logo */}
-        
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
+            <Sparkles className="w-4 h-4 text-emerald-500" />
+            <span>
+              58th International Chemistry Olympiad – A Global Celebration of
+              Science
+            </span>
+          </div>
 
           {/* Title */}
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
-              <Sparkles className="w-4 h-4 text-emerald-500" />
-              <span>58th International Chemistry Olympiad</span>
-            </div>
-
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight">
-              <span className="block text-slate-900 mb-2">Chemistry</span>
+              <span className="block bg-gradient-to-r from-emerald-600 via-sky-600 to-amber-600 bg-clip-text text-transparent mb-2">
+                58th International
+              </span>
               <span className="block bg-gradient-to-r from-emerald-600 via-sky-600 to-amber-600 bg-clip-text text-transparent">
-                Olympiad 2026
+                Chemistry Olympiad
               </span>
             </h1>
           </div>
@@ -70,7 +73,7 @@ export function Hero() {
                 <MapPin className="h-5 w-5 text-sky-600" />
               </div>
               <span className="font-semibold text-slate-700">
-                Tashkent, Uzbekistan
+                Hosted in vibrant Tashkent, Uzbekistan
               </span>
             </div>
             <div className="flex items-center gap-3 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -78,22 +81,22 @@ export function Hero() {
                 <Users className="h-5 w-5 text-amber-600" />
               </div>
               <span className="font-semibold text-slate-700">
-                80+ Countries
+                Delegations from over 80 countries
               </span>
             </div>
           </div>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
-            Where brilliant minds converge to push the boundaries of
-            <span className="font-semibold bg-gradient-to-r from-emerald-600 to-sky-600 bg-clip-text text-transparent">
-              {" "}
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto font-light leading-relaxed">
+            Bringing together the world’s brightest young chemists to shape the
+            future of{" "}
+            <span className="font-semibold text-white text-transparent">
               chemical innovation
             </span>
           </p>
 
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button
               size="lg"
               variant="outline"
@@ -101,24 +104,24 @@ export function Hero() {
               onClick={() => setIsVideoOpen(true)}
             >
               <PlayCircle className="mr-2 h-5 w-5 text-emerald-600 group-hover:scale-110 transition-transform" />
-              Watch Intro
+              Watch Intro Video
             </Button>
-          </div>
+          </div> */}
 
           {/* Footer */}
-          <p className="text-sm text-slate-500 font-light pt-8 max-w-2xl mx-auto">
-            Join us in Tashkent for an extraordinary celebration of scientific
-            excellence, cultural exchange, and the future of chemistry
-            education.
+          <p className="text-sm text-white font-light pt-8 max-w-2xl mx-auto">
+            Be part of an unforgettable event in Tashkent—celebrating scientific
+            excellence, global friendship, and the next generation of chemistry
+            leaders.
           </p>
         </div>
       </div>
 
-      <VideoPlayer
+      {/* <VideoPlayer
         isOpen={isVideoOpen}
         setIsOpen={setIsVideoOpen}
         videoUrl={introVideoUrl}
-      />
+      /> */}
     </section>
   );
 }
