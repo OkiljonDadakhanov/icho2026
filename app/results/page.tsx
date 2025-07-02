@@ -4,10 +4,8 @@ import { FileText, Calendar, Download } from "lucide-react";
 
 export default function ResultsPage() {
   const mockYears = [
-    { year: 2025, host: "Switzerland", file: "/files/icho2025_results.pdf" },
-    { year: 2024, host: "Saudi Arabia", file: "/files/icho2024_results.pdf" },
-    { year: 2023, host: "Switzerland", file: "/files/icho2023_results.pdf" },
-    { year: 2022, host: "China", file: "/files/icho2022_results.pdf" },
+    { year: 2026, host: "Uzbekistan", file: "/files/icho2025_results.pdf" },
+   
   ];
 
   return (
@@ -29,11 +27,10 @@ export default function ResultsPage() {
             <span>Results & Problems Archive</span>
           </div>
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            Previous Olympiads
+            IChO 2026 Olympiad's results
           </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Access past results, exam problems, and statistics from previous
-            International Chemistry Olympiads.
+            Access the results, and statistics from IChO 2026 Olympiad, hosted in Uzbekistan.
           </p>
         </div>
 
