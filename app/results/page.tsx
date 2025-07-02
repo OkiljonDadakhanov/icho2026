@@ -24,7 +24,7 @@ export default function ResultsPage() {
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
             <FileText className="w-4 h-4 text-emerald-500" />
-            <span>Results & Problems Archive</span>
+            <span>Results Archive</span>
           </div>
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
             IChO 2026 Olympiad's results
