@@ -27,10 +27,10 @@ export function Navigation() {
           name: "Organizing Committee",
           href: "/icho-2026#organizing-committee",
         },
-        {
-          name: "International Scientific Committee",
-          href: "/icho-2026#international-scientific-committee",
-        },
+        // {
+        //   name: "International Scientific Committee",
+        //   href: "/icho-2026#international-scientific-committee",
+        // },
 
         {
           name: "International Steering Committee",
