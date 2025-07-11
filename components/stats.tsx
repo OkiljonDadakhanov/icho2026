@@ -4,7 +4,7 @@ export function Stats() {
   const stats = [
     {
       icon: Globe2,
-      number: "80+",
+      number: "90+",
       label: "Participating Countries",
       description: "From every continent",
     },
@@ -22,7 +22,7 @@ export function Stats() {
     },
     {
       icon: TrendingUp,
-      number: "300+",
+      number: "350+",
       label: "Young Scientists",
       description: "Competing annually",
     },

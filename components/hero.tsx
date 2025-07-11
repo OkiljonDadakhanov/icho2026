@@ -81,7 +81,7 @@ export function Hero() {
                 <Users className="h-5 w-5 text-amber-600" />
               </div>
               <span className="font-semibold text-slate-700">
-                Delegations from over 80 countries
+                Delegations from over 90 countries
               </span>
             </div>
           </div>

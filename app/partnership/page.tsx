@@ -96,8 +96,8 @@ export default function PartnershipPage() {
   ];
 
   const impactStats = [
-    { number: "80+", label: "Countries Participating" },
-    { number: "300+", label: "Student Participants" },
+    { number: "90+", label: "Countries Participating" },
+    { number: "350+", label: "Student Participants" },
     { number: "500+", label: "Educators & Officials" },
     { number: "10M+", label: "Global Media Reach" },
   ];
