@@ -165,7 +165,7 @@ export default function Icho2026Page() {
       image: "/team/azimjon.png",
     },
     {
-      name: "Musurmonov Rabbimov",
+      name: "Musurmonov Rabbim",
       role: "Committee member",
       institute: "—",
       country: "Uzbekistan",
