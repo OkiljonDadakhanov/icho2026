@@ -51,10 +51,10 @@ export function Navigation() {
       ],
     },
     {
-      name: "Competetions",
+      name: "Competitions",
       href: "/competetions",
       dropdown: [
-        { name: "Competetions", href: "/competetions" },
+        { name: "Competitions", href: "/competetions" },
         { name: "Participants", href: "/participants" },
         { name: "Exam information", href: "/exam-info" },
         { name: "Problems", href: "/problems" },
