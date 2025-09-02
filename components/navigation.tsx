@@ -11,10 +11,9 @@ export function Navigation() {
   const navItems = [
     { name: "Home", href: "/" },
     {
-      name: "IChO 2026",
+      name: "Organization",
       href: "/icho-2026",
       dropdown: [
-        { name: "IChO 2026", href: "/icho-2026" },
         {
           name: "Supervisory Committee",
           href: "/icho-2026#supervisory-committee",
