@@ -42,12 +42,12 @@ const Card = ({ member }: { member: CommitteeMember }) => (
 export default function Icho2026Page() {
   const supervisoryCommittee: CommitteeMember[] = [
     {
-      name: "Khilola Umarova",
+      name: "Karimova Ezozkhan",
       role: "Chairman",
       institute: "Ministry of Pre-school and School Education",
       country: "Uzbekistan",
       title: "Chairman of the National Supervisory Committee",
-      image: "/team/umarova.jpg",
+      image: "/team/ezozhon.png",
     },
     {
       name: "Shavkat Umurzoqov",
@@ -191,10 +191,18 @@ export default function Icho2026Page() {
     {
       name: "Fayyoz Tuychiev",
       role: "Committee member",
-      institute: "—",
+      institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "—",
       image: "/team/fayyoz.jpg",
+    },
+    {
+      name: "Okiljon Dadakhonov",
+      role: "Committee member",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "Software Engineer",
+      image: "/team/akilhan.jpg",
     },
   ];
 
@@ -296,107 +304,14 @@ export default function Icho2026Page() {
       image: "/team/mirumid.jpg",
     },
   ];
-  // const internationalScientificCommittee: CommitteeMember[] = [
-  //   {
-  //     name: "JL Kiappes",
-  //     role: "Committee member",
-  //     institute: "Dept of Chemistry",
-  //     country: "USA",
-  //     title: "Associate Professor (Teaching)",
-  //     image: "/team/js.JPG",
-  //   },
-  //   {
-  //     name: "Alexander Kirillovich Gladilin",
-  //     role: "Committee member",
-  //     institute: "Lomonosov Moscow State University",
-  //     country: "Russia",
-  //     title: "Professor",
-  //     image: "/team/gladilin.JPG",
-  //   },
-  //   {
-  //     name: "Vadim Eremin",
-  //     role: "Committee member",
-  //     institute: "Lomonosov Moscow State University",
-  //     country: "Russia",
-  //     title: "Professor",
-  //     image: "/team/eremin.jpg",
-  //   },
-  //   {
-  //     name: "Dr Ben Pilgrim",
-  //     role: "Committee member",
-  //     institute: "University of Nottingham",
-  //     country: "United Kingdom",
-  //     title: "Associate Professor",
-  //     image: "/team/ben.jpg",
-  //   },
-  //   {
-  //     name: "Zhihan Nan",
-  //     role: "Committee member",
-  //     institute: "Harvard University",
-  //     country: "USA",
-  //     title: "PhD Candidate",
-  //     image: "/team/nan.jpg",
-  //   },
-  //   {
-  //     name: "Yunus Türkmen",
-  //     role: "Committee member",
-  //     institute: "Bilkent University Department of Chemistry",
-  //     country: "Turkey",
-  //     title: "Professor",
-  //     image: "/team/yunus.jpg",
-  //   },
-  //   {
-  //     name: "Filip Ilievski",
-  //     role: "Committee member",
-  //     institute: "ETH Zurich University",
-  //     country: "Switzerland",
-  //     title: "PhD Student",
-  //     image: "/team/filip.jpg",
-  //   },
-  //   {
-  //     name: "Andrei Shved",
-  //     role: "Committee member",
-  //     institute: "ETH Zurich University",
-  //     country: "Switzerland",
-  //     title: "Research Fellow",
-  //     image: "/team/andrei.jpg",
-  //   },
-  //   {
-  //     name: "Alex Koronatov",
-  //     role: "Committee member",
-  //     institute: "Technion",
-  //     country: "Croatia",
-  //     title: "PhD Student",
-  //     image: "/team/alex.jpg",
-  //   },
-  //   {
-  //     name: "Prof. Gábor Magyarfalvi",
-  //     role: "Committee member",
-  //     institute: "Eötvös Loránd University",
-  //     country: "Hungary",
-  //     title: "Assistant Professor",
-  //     image: "/team/gabor.JPG",
-  //   },
-
-  //   {
-  //     name: "Prof. Petra Menova",
-  //     role: "Committee member",
-  //     institute: "—",
-  //     country: "Czech Republic",
-  //     title:
-  //       "Chair of the Scientific Committee of the IChO 2018 – Specialist in Organic Chemistry and Biochemistry",
-  //     image: "/team/petra.JPG",
-  //   },
-  // ];
 
   const steeringCommitteeList = [
-    "Carlos Castro-Acuna, Mexico (2021, 2023)",
     "I-Jy Chang, Chinese Taipei (2023)",
     "Clément Guibert, France (2022, 2024)",
     "JL Kiappes, UK/USA (2023), Chair",
-    "Ben Pilgrim, UK (2021, 2023)",
+    "Gábor Magyarfalvi, Hungary (2025)",
+    "Andrei Shved, Switzerland (2025)",
     "Yunus Emre Türkmen, Turkey (2022, 2024)",
-    "Badr Al-Majrathi, Saudi Arabia (2024)",
     "Abdallah El Marhoune, UAE (2025)",
     "Turaboy Shermatov, Uzbekistan (2026)",
     "Elise Li, Chinese Taipei (2027)",
@@ -404,21 +319,14 @@ export default function Icho2026Page() {
 
   const committeeSections: CommitteeSection[] = [
     {
-      title: "National Supervisory Committee",
+      title: "Supervisory Committee",
       members: supervisoryCommittee,
     },
     {
       title: "Organizing Committee",
       members: organizingCommittee,
     },
-    {
-      title: "Scientific Committee",
-      members: scientificCommittee,
-    },
-    // {
-    //   title: "International Scientific Committee",
-    //   members: internationalScientificCommittee,
-    // },
+    // (Scientific Committee will be rendered after the Steering list)
   ];
 
   return (
@@ -449,7 +357,7 @@ export default function Icho2026Page() {
           </p>
         </div>
 
-        {/* Section Renderer */}
+        {/* Section Renderer — Supervisory, Organizing */}
         {committeeSections.map((section, index) => (
           <div
             key={index}
@@ -467,7 +375,7 @@ export default function Icho2026Page() {
           </div>
         ))}
 
-        {/* Steering Committee List */}
+        {/* International Steering Committee (moved up) */}
         <div className="space-y-4" id="international-steering-committee">
           <h2 className="text-3xl font-bold text-slate-800">
             International Steering Committee
@@ -477,6 +385,18 @@ export default function Icho2026Page() {
               <li key={idx}>{member}</li>
             ))}
           </ul>
+        </div>
+
+        {/* Scientific Committee (now after Steering) */}
+        <div className="space-y-4" id="scientific-committee">
+          <h2 className="text-3xl font-bold text-slate-800">
+            Scientific Committee
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {scientificCommittee.map((member, idx) => (
+              <Card key={idx} member={member} />
+            ))}
+          </div>
         </div>
 
         {/* Program PDF Download */}

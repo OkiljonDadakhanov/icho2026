@@ -55,10 +55,7 @@ export default function FinalReport() {
                 Award Distribution
               </h3>
               <ul className="list-disc list-inside text-slate-700 text-base font-light space-y-1">
-                <li>Gold: 33 students</li>
-                <li>Silver: 65 students</li>
-                <li>Bronze: 97 students</li>
-                <li>Honorable Mentions: 45</li>
+                <li>Medals in a 1:2:3 ratio</li>
               </ul>
             </div>
           </div>

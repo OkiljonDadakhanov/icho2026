@@ -72,39 +72,7 @@ export default function Problems() {
           </p>
         </div>
 
-        {/* Problem Types */}
-        <div className="grid sm:grid-cols-2 gap-8">
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <div className="flex items-center gap-3">
-              <Brain className="text-emerald-600 w-6 h-6" />
-              <h2 className="text-2xl font-semibold text-slate-800">
-                Theoretical Problems
-              </h2>
-            </div>
-            <ul className="list-disc list-inside text-slate-700 text-lg font-light space-y-1">
-              <li>Organic Reaction Mechanisms</li>
-              <li>Physical Chemistry Calculations</li>
-              <li>Inorganic Structure Analysis</li>
-              <li>Thermodynamics & Equilibria</li>
-              <li>Real-world chemical applications</li>
-            </ul>
-          </div>
-
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <div className="flex items-center gap-3">
-              <FlaskRound className="text-amber-600 w-6 h-6" />
-              <h2 className="text-2xl font-semibold text-slate-800">
-                Practical Tasks
-              </h2>
-            </div>
-            <ul className="list-disc list-inside text-slate-700 text-lg font-light space-y-1">
-              <li>Titration & quantitative analysis</li>
-              <li>Synthesis of unknown compounds</li>
-              <li>Instrumental techniques (e.g. pH, spectrometry)</li>
-              <li>Observation & inference</li>
-            </ul>
-          </div>
-        </div>
+      
 
         {/* Downloads for Past Problems */}
         <div className="space-y-6 pt-12">

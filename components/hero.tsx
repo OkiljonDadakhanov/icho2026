@@ -66,7 +66,9 @@ export function Hero() {
               <div className="p-2 bg-emerald-100 rounded-xl">
                 <CalendarDays className="h-5 w-5 text-emerald-600" />
               </div>
-              <span className="font-semibold text-slate-700">mid-July 2026</span>
+              <span className="font-semibold text-slate-700">
+                mid-July 2026
+              </span>
             </div>
             <div className="flex items-center gap-3 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="p-2 bg-sky-100 rounded-xl">
@@ -88,11 +90,7 @@ export function Hero() {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto font-light leading-relaxed">
-            Bringing together the world’s brightest young chemists to shape the
-            future of{" "}
-            <span className="font-semibold text-white text-transparent">
-              chemical innovation
-            </span>
+            Transforming Elements, Connecting the World.
           </p>
 
           {/* CTA */}
