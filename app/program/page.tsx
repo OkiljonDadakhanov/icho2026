@@ -54,48 +54,10 @@ export default function ProgramSection({
         </div>
 
         {/* PDF Viewer */}
-        <div className="mx-auto max-w-5xl w-full space-y-4">
-          <div className="bg-white/70 backdrop-blur-sm border border-white/30 rounded-2xl shadow-lg p-3">
-            {/* Responsive wrapper: keeps a good aspect ratio on small screens, uses tall view on large */}
-            <div className="relative w-full overflow-hidden rounded-xl">
-              {/* Small/medium: fixed ratio */}
-              <div className="block lg:hidden aspect-[4/3]">
-                <iframe
-                  src={`${pdfUrl}#view=FitH`}
-                  title="IChO Program PDF"
-                  className="w-full h-full"
-                  loading="lazy"
-                />
-              </div>
-              {/* Large and up: tall viewport */}
-              <div className="hidden lg:block" style={{ height: "80vh" }}>
-                <iframe
-                  src={`${pdfUrl}#view=FitH`}
-                  title="IChO Program PDF"
-                  className="w-full h-full"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Fallback (if iframe blocked) */}
-              <noscript>
-                <object
-                  data={pdfUrl}
-                  type="application/pdf"
-                  width="100%"
-                  height="800"
-                >
-                  <p>
-                    Your browser can’t display PDFs. Please{" "}
-                    <a href={pdfUrl}>download the program</a>.
-                  </p>
-                </object>
-              </noscript>
-            </div>
-          </div>
+       
 
           {/* Actions */}
-          <div className="flex items-center justify-center gap-3">
+          {/* <div className="flex items-center justify-center gap-3">
             <Link
               href={pdfUrl}
               target="_blank"
@@ -104,9 +66,9 @@ export default function ProgramSection({
               <Download className="w-4 h-4" />
               Open / Download PDF
             </Link>
-          </div>
+          </div> */}
         </div>
-      </div>
+     
     </section>
   );
 }
