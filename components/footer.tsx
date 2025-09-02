@@ -17,6 +17,13 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
+            <Image
+              src="/logos/main_logo.png"
+              alt="IChO 2026 Logo"
+              width={150}
+              height={150}
+              className="mb-4"
+            />
       <p className="mb-6">Watch us on social media: </p>
           
             <div className="flex space-x-4">
