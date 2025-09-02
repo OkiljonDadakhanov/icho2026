@@ -39,6 +39,7 @@ export function Navigation() {
         { name: "Program", href: "/icho-2026#program" },
       ],
     },
+    { name: "Programme", href: "/program" },
     { name: "Partnership", href: "/partnership" },
     { name: "Uzbekistan", href: "/uzbekistan" },
     {
@@ -47,7 +48,7 @@ export function Navigation() {
       dropdown: [
         { name: "About", href: "/about" },
         { name: "Regulations", href: "/about/regulations" },
-        { name: "Final report", href: "/about/final-report" },
+        // { name: "Final report", href: "/about/final-report" },
       ],
     },
     {
