@@ -23,7 +23,7 @@ export default function Regulations() {
             <span>IChO Regulations</span>
           </div>
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            Rules & Guidelines
+            Regulations
           </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
             Ensure fair and transparent participation at the International

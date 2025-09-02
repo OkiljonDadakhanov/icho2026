@@ -63,15 +63,14 @@ export function Navigation() {
     <nav className="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header row */}
-        <div className="flex justify-between items-center min-h-24 lg:min-h-28">
-          {/* Brand */}
-          <div className="flex items-center shrink-0">
+        <div className="flex justify-between items-center min-h-16 lg:min-h-20">
+          {/* Brand (slightly shifted left) */}
+          <div className="flex items-center shrink-0 -ml-1 sm:-ml-2 lg:-ml-3">
             <Link href="/" className="block" aria-label="IChO 2026 Home">
-              {/* Big horizontal logo controlled by height */}
               <img
                 src="/logos/nav_logo.png"
                 alt="IChO 2026 Logo"
-                className="block h-16 sm:h-20 lg:h-24 w-auto object-contain"
+                className="block h-8 sm:h-12 lg:h-14 w-auto object-contain"
               />
             </Link>
           </div>
