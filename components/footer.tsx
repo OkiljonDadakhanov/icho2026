@@ -17,18 +17,8 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <Image
-                src="/images/logo-without-bg.png"
-                alt="IChO 2026 Logo"
-                width={150}
-                height={150}
-                className="h-12 w-12 rounded-lg"
-              />
-            </div>
-            <p className="text-gray-400 mb-6">
-              Fostering global talent and unity through chemistry since 1968.
-            </p>
+      <p className="mb-6">Watch us on social media: </p>
+          
             <div className="flex space-x-4">
               <Link
                 href="#"

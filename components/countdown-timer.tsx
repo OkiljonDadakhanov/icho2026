@@ -124,15 +124,7 @@ export default function CountdownTimer() {
 
         {/* Bottom Message with Chemical Equation Style */}
         <div className="relative">
-          <div className="inline-flex items-center space-x-3 text-gray-700 text-lg md:text-xl bg-white/60 backdrop-blur-sm rounded-full px-8 py-4 shadow-lg">
-            <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-green-500 rounded-full animate-pulse"></div>
-            <span className="font-semibold">Excellence</span>
-            <span className="text-2xl">+</span>
-            <span className="font-semibold">Innovation</span>
-            <span className="text-2xl">→</span>
-            <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-green-600">Chemistry Future</span>
-            <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-orange-500 rounded-full animate-pulse delay-500"></div>
-          </div>
+         
         </div>
       </div>
 
