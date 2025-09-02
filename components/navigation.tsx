@@ -35,7 +35,7 @@ export function Navigation() {
           name: "International Steering Committee",
           href: "/icho-2026#international-steering-committee",
         },
-        { name: "Program", href: "/icho-2026#program" },
+        // { name: "Program", href: "/icho-2026#program" },
       ],
     },
     { name: "Programme", href: "/program" },

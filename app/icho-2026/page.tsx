@@ -401,7 +401,7 @@ export default function Icho2026Page() {
 
         {/* Program PDF Download */}
         <div className="text-center pt-8" id="program">
-          <Link
+          {/* <Link
             href="/program.pdf"
             target="_blank"
             download
@@ -409,7 +409,7 @@ export default function Icho2026Page() {
           >
             <Download className="w-5 h-5" />
             Download Program (PDF)
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
