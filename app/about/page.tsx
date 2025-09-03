@@ -1,69 +1,252 @@
-"use client"
+"use client";
 
-import { Sparkles } from "lucide-react"
+import React from "react";
+import Image from "next/image";
+import {
+  BookOpen,
+  Target,
+  FlaskConical,
+  Users2,
+  Award,
+  Globe2,
+  Languages,
+} from "lucide-react";
 
-export default function AboutIchoPage() {
+export default function AboutIcho() {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-sky-500/5 to-amber-500/5"></div>
-        <div className="absolute top-24 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed"></div>
-        <div className="absolute bottom-32 left-20 w-40 h-40 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl -rotate-6 animate-float-slow"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-      </div>
+    <section className="relative overflow-hidden bg-[radial-gradient(1100px_600px_at_10%_0%,rgba(16,185,129,0.08),transparent_50%),radial-gradient(1000px_500px_at_90%_10%,rgba(56,189,248,0.08),transparent_55%)]">
+      {/* subtle grid */}
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.04)_1px,transparent_1px)] bg-[size:44px_44px]" />
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
-        <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
-            <Sparkles className="w-4 h-4 text-emerald-500" />
-            <span>About the Olympiad</span>
+      <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-14">
+        {/* Header */}
+        <header className="flex flex-col items-center text-center gap-6">
+          <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+            <Image
+              src="/images/icho.png"
+              alt="IChO Logo"
+              fill
+              sizes="80px"
+              className="object-contain"
+              priority
+            />
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            International Chemistry Olympiad
-          </h1>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            The IChO is a prestigious annual competition where the brightest high school chemistry students from around the world showcase their skills and passion for science.
-          </p>
-        </div>
+          <div className="space-y-3">
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-emerald-200/60 bg-white/70 px-4 py-1.5 text-sm text-emerald-700 backdrop-blur">
+              <BookOpen className="h-4 w-4" />
+              About the International Chemistry Olympiad (IChO)
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              The World’s Premier Chemistry Competition for Students
+            </h1>
+            <p className="mx-auto max-w-3xl text-lg text-slate-700">
+              IChO is an annual academic competition that gathers the brightest
+              secondary-school chemists from 80+ countries to tackle advanced
+              theoretical and experimental problems in chemistry.
+            </p>
+          </div>
+        </header>
 
-        {/* Section 1: History */}
-        <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-          <h2 className="text-3xl font-semibold text-slate-800">History & Background</h2>
-          <p className="text-slate-700 text-lg font-light">
-            The first IChO was held in 1968 in Czechoslovakia, bringing together students from several Eastern European countries. Since then, it has grown into a global event, with over 80 countries participating annually.
-          </p>
-        </div>
+        {/* Key Summary */}
+        <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <FactChip title="Founded" value="1968 • Prague, Czechoslovakia" />
+          <FactChip
+            title="Participants"
+            value="80+ countries • 300+ students / year"
+          />
+          <FactChip
+            title="Format"
+            value="Two 5-hour exams: Practical + Theoretical"
+          />
+          <FactChip
+            title="Team"
+            value="Up to 4 students + 2 mentors per country"
+          />
+        </section>
 
-        {/* Section 2: Objectives */}
-        <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-          <h2 className="text-3xl font-semibold text-slate-800">Mission & Goals</h2>
-          <ul className="list-disc list-inside text-slate-700 text-lg font-light space-y-2">
-            <li>Promote international contacts in chemistry education.</li>
-            <li>Motivate gifted students to pursue scientific careers.</li>
-            <li>Encourage excellence and innovation in teaching chemistry.</li>
-            <li>Foster friendship and collaboration among young chemists worldwide.</li>
+        {/* Purpose & Mission */}
+        <section className="grid gap-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+          <HeaderRow
+            icon={<Target className="h-5 w-5 text-emerald-600" />}
+            title="Purpose & Mission"
+          />
+          <ul className="grid gap-2 text-slate-700 sm:grid-cols-2">
+            <li className="leading-relaxed">
+              Inspire a deep interest in chemistry among young students.
+            </li>
+            <li className="leading-relaxed">
+              Develop problem-solving through challenging theoretical and
+              experimental tasks.
+            </li>
+            <li className="leading-relaxed">
+              Promote international collaboration and cultural exchange.
+            </li>
+            <li className="leading-relaxed">
+              Build lifelong friendships and strengthen global cooperation in
+              science and education.
+            </li>
           </ul>
-        </div>
+        </section>
 
-        {/* Section 3: Format */}
-        <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-          <h2 className="text-3xl font-semibold text-slate-800">Competition Format</h2>
-          <p className="text-slate-700 text-lg font-light">
-            The Olympiad consists of two challenging parts: a theoretical exam and a practical laboratory exam. These test students' knowledge, creativity, and problem-solving skills in various branches of chemistry.
-          </p>
-        </div>
+        {/* Competition Structure */}
+        <section className="grid gap-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+          <HeaderRow
+            icon={<Users2 className="h-5 w-5 text-sky-600" />}
+            title="Competition Structure"
+          />
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-3">
+              <h3 className="font-semibold text-slate-900">Delegations</h3>
+              <p className="text-slate-700">
+                Each country sends up to <b>4 students</b> and <b>2 mentors</b>{" "}
+                (one as Head Mentor). Scientific observers and guests may also
+                attend.
+              </p>
+            </div>
+            <div className="space-y-3">
+              <h3 className="font-semibold text-slate-900">Examinations</h3>
+              <ul className="space-y-2 text-slate-700">
+                <li className="flex items-start gap-2">
+                  <FlaskConical className="mt-0.5 h-4 w-4 text-amber-600" />
+                  <span>
+                    <b>Practical (Experimental)</b> — laboratory techniques,
+                    data analysis, and experimental problem-solving.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <BookOpen className="mt-0.5 h-4 w-4 text-indigo-600" />
+                  <span>
+                    <b>Theoretical</b> — advanced topics across all areas of
+                    chemistry.
+                  </span>
+                </li>
+              </ul>
+              <p className="text-slate-700">
+                Each exam lasts <b>five hours</b> and emphasizes knowledge,
+                creativity, and critical thinking.
+              </p>
+            </div>
+          </div>
+        </section>
 
-        {/* Section 4: Uzbekistan Host */}
-        <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-          <h2 className="text-3xl font-semibold text-slate-800">IChO 2026 in Tashkent</h2>
-          <p className="text-slate-700 text-lg font-light">
-            Uzbekistan is proud to host the 58th International Chemistry Olympiad in its vibrant capital, Tashkent. Participants will enjoy a rich program that combines academic excellence with cultural exploration.
+        {/* Awards & Recognition */}
+        <section className="grid gap-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+          <HeaderRow
+            icon={<Award className="h-5 w-5 text-rose-600" />}
+            title="Awards & Recognition"
+          />
+          <p className="text-slate-700">
+            IChO recognizes <b>individual</b> excellence. Students are ranked by
+            overall score and may receive:
           </p>
-        </div>
+          <ul className="grid gap-2 text-slate-700 sm:grid-cols-2">
+            <li>Gold, Silver, and Bronze Medals</li>
+            <li>Honourable Mentions</li>
+            <li>
+              Special Awards — Highest Overall Score, Best Theoretical, Best
+              Practical
+            </li>
+          </ul>
+        </section>
+
+        {/* Global Reach & Language */}
+        <section className="grid gap-6 rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+          <HeaderRow
+            icon={<Globe2 className="h-5 w-5 text-teal-600" />}
+            title="Global Reach"
+          />
+          <p className="text-slate-700">
+            From a 3-country start in 1968, IChO now brings together hundreds of
+            students from <b>80+ nations</b> annually. Hosting rotates each
+            year, giving participants the chance to discover new cultures, build
+            international friendships, and experience world-class scientific
+            collaboration.
+          </p>
+          <div className="flex items-center gap-2 text-slate-700">
+            <Languages className="h-4 w-4 text-slate-600" />
+            <span>
+              <b>Official language:</b> English (mentors translate exams into
+              local languages).
+            </span>
+          </div>
+        </section>
+
+        {/* Key Facts table */}
+        <section className="rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-sm backdrop-blur">
+          <h3 className="mb-4 text-xl font-semibold text-slate-900">
+            Key Facts
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-slate-700">
+              <tbody className="[&>tr:not(:last-child)]:border-b [&>tr:not(:last-child)]:border-slate-200">
+                <FactRow k="Founded" v="1968 (Prague, Czechoslovakia)" />
+                <FactRow
+                  k="Participating Countries"
+                  v="80+ nations from all continents"
+                />
+                <FactRow k="Annual Participants" v="300+ students" />
+                <FactRow
+                  k="Competition Format"
+                  v="Two exams: 5-hour Practical + 5-hour Theoretical"
+                />
+                <FactRow
+                  k="Medal Distribution"
+                  v="Gold ≈ top 12%, Silver ≈ next 22%, Bronze ≈ next 32%"
+                />
+                <FactRow
+                  k="Special Awards"
+                  v="Highest Overall • Best Theoretical • Best Practical"
+                />
+                <FactRow
+                  k="Hosting System"
+                  v="Organized by a different country every year"
+                />
+                <FactRow
+                  k="Team Structure"
+                  v="Up to 4 students + 2 mentors per country"
+                />
+                <FactRow
+                  k="IChO Flag Symbolism"
+                  v="Five flames: Thallium (green), Calcium (orange), Sodium (yellow), Copper (blue-green), Strontium (red)"
+                />
+              </tbody>
+            </table>
+          </div>
+        </section>
       </div>
     </section>
-  )
+  );
+}
+
+/* ---------- helpers ---------- */
+
+function FactChip({ title, value }: { title: string; value: string }) {
+  return (
+    <div className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm backdrop-blur">
+      <p className="text-xs uppercase tracking-wide text-slate-500">{title}</p>
+      <p className="mt-1 text-slate-900">{value}</p>
+    </div>
+  );
+}
+
+function HeaderRow({ icon, title }: { icon: React.ReactNode; title: string }) {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-100">
+        {icon}
+      </span>
+      <h2 className="text-lg font-semibold text-slate-900 sm:text-xl">
+        {title}
+      </h2>
+    </div>
+  );
+}
+
+function FactRow({ k, v }: { k: string; v: string }) {
+  return (
+    <tr className="align-top">
+      <th className="w-52 px-0 py-3 pr-4 text-slate-500">{k}</th>
+      <td className="py-3">{v}</td>
+    </tr>
+  );
 }
