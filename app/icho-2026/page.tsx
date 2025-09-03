@@ -172,14 +172,7 @@ export default function Icho2026Page() {
       title: "—",
       image: "/team/rabbim.png",
     },
-    {
-      name: "Jangirov Jurabek",
-      role: "Committee member",
-      institute: "—",
-      country: "Uzbekistan",
-      title: "—",
-      image: "/team/jurabek.png",
-    },
+   
     {
       name: "Umarkhodjaev Akromkhuja",
       role: "Committee member",

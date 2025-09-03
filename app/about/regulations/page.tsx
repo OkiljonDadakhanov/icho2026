@@ -15,7 +15,7 @@ export default function Regulations() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-10">
         {/* Header */}
         <div className="text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
@@ -25,81 +25,27 @@ export default function Regulations() {
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
             Regulations
           </h1>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Ensure fair and transparent participation at the International
-            Chemistry Olympiad by following these core regulations.
+          <p className="text-slate-600">
+            View the full IChO 2026 Regulations PDF below.
           </p>
         </div>
 
-        {/* Regulation Items */}
-        <div className="grid gap-8">
-          {/* 1 */}
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              1. Eligibility
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Participants must be secondary school students under the age of
-              20, who have not commenced university studies and are selected
-              through their national competition.
-            </p>
-          </div>
-
-          {/* 2 */}
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              2. Team Composition
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Each participating country may send up to four student competitors
-              and two accompanying adults (mentors).
-            </p>
-          </div>
-
-          {/* 3 */}
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              3. Exam Structure
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              The Olympiad includes one theoretical and one practical exam. Each
-              exam is designed to assess a broad understanding of chemistry,
-              creativity, and problem-solving skills.
-            </p>
-          </div>
-
-          {/* 4 */}
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              4. Conduct & Fairness
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              Any form of cheating, communication during exams, or violation of
-              ethical conduct may result in disqualification of individuals or
-              entire teams.
-            </p>
-          </div>
-
-          {/* 5 */}
-          <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-800">
-              5. Language
-            </h2>
-            <p className="text-slate-700 text-lg font-light">
-              English is the official language of IChO. All tasks, discussions,
-              and materials are translated by each country's mentors into their
-              students' native language.
-            </p>
+        {/* PDF Viewer */}
+        <div className="bg-white/70 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl overflow-hidden">
+          {/* Maintain a nice viewing area on desktop, full height on mobile */}
+          <div className="aspect-[3/4] md:aspect-[16/9]">
+            <iframe
+              src="/regulations.pdf"
+              title="IChO 2026 Regulations"
+              className="w-full h-full"
+              // Some browsers need this to allow inline viewing
+              allow="accelerometer; clipboard-read; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
           </div>
         </div>
 
         {/* Download Button */}
-        <div className="mt-12 text-center space-y-6">
-          <p className="text-slate-700 text-lg font-light max-w-2xl mx-auto">
-            For complete details and special participation procedures, we
-            encourage you to download the full IChO 2026 Regulations document.
-          </p>
-
+        <div className="text-center">
           <Link
             href="/regulations.pdf"
             target="_blank"
@@ -109,6 +55,9 @@ export default function Regulations() {
             <Download className="w-5 h-5" />
             Download Regulations (PDF)
           </Link>
+          <p className="mt-3 text-sm text-slate-500">
+            If the PDF doesn’t load, use the download button.
+          </p>
         </div>
       </div>
     </section>
