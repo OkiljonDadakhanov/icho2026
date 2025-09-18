@@ -56,6 +56,16 @@ export function Navigation() {
         { name: "Results", href: "/results" },
       ],
     },
+    {
+      name: "Media & Press",
+      href: "/press",
+      dropdown: [
+        { name: "Press-release", href: "/press" },
+        { name: "Catalyzers", href: "/catalyzer" },
+        { name: "Gallery - photos & videos", href: "/gallery" },
+        { name: "Report book", href: "/report" },
+      ],
+    },
     { name: "Contact Us", href: "/contact" },
   ];
 
