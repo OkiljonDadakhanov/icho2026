@@ -22,7 +22,6 @@ export async function getNewsList(): Promise<NewsItem[]> {
         excerpt:
           "Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are actively underway. Today, the meeting of the Scientific Committee responsible for organizing the Olympiad at the highest level has begun.",
         contentHtml: `
-        
           <h2>IChO 2026: Meeting of the Scientific Committee Launched with International and Local Experts</h2>
           <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are actively underway. Today, the meeting of the Scientific Committee responsible for organizing the Olympiad at the highest level has begun.</p>
           <p>✅ The meeting is attended by Vice President of the Academy of Sciences, Academician Sh. Sagdullaev; Deputy Minister of Preschool and School Education A. Turdiyev; Director of the Center for Academic Olympiads and member of the IChO Steering Committee T. Shermatov; as well as 12 international experts from the United Kingdom, USA, Switzerland, Sweden, Uruguay, Czech Republic, Turkey, Russia, Saudi Arabia, and 30 local experts.</p>
@@ -41,15 +40,14 @@ export async function getNewsList(): Promise<NewsItem[]> {
           <p>❗️ The activities will continue until September 28.</p>
 
           <div class="my-6 space-y-4">
-  <img src="/news/opening1.jpg" alt="Opening ceremony 1" class="rounded-xl shadow-md" />
-  <img src="/news/opening2.jpg" alt="Opening ceremony 2" class="rounded-xl shadow-md" />
-  <img src="/news/opening3.jpg" alt="Opening ceremony 3" class="rounded-xl shadow-md" />
-</div>
-
-
+            <img src="/news/opening1.jpg" alt="Opening ceremony 1" class="rounded-xl shadow-md" />
+            <img src="/news/opening2.jpg" alt="Opening ceremony 2" class="rounded-xl shadow-md" />
+            <img src="/news/opening3.jpg" alt="Opening ceremony 3" class="rounded-xl shadow-md" />
+          </div>
         `,
         cover: "/news/frame.jpg",
-        published_at: new Date().toISOString(),
+        // Hard-coded to 26 September 2025, 14:18 (UTC+5: Tashkent)
+        published_at: "2025-09-26T14:18:00+05:00",
       },
     ];
   }
@@ -61,7 +59,6 @@ export async function getNewsList(): Promise<NewsItem[]> {
 
 export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
   if (!BASE) {
-    // Demo single item when no API is configured
     if (slug !== "icho-2026-scientific-committee") return null;
     const [first] = await getNewsList();
     return first;
