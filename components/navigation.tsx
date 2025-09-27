@@ -61,6 +61,7 @@ export function Navigation() {
       href: "/press",
       dropdown: [
         { name: "Press-release", href: "/press" },
+      { name: 'News', href: '/press/news' },
         { name: "Catalyzers", href: "/catalyzer" },
         { name: "Gallery - photos & videos", href: "/gallery" },
         { name: "Report book", href: "/report" },
