@@ -103,7 +103,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/news"
+                  href="/press/news"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   News & Media

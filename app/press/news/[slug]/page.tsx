@@ -3,10 +3,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getNewsBySlug } from "@/lib/news";
 
-type Props = { params: { slug: string } };
+type Params = { slug: string };
 
-export async function generateMetadata({ params }: Props) {
-  const item = await getNewsBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { slug } = await params;
+  const item = await getNewsBySlug(slug);
   if (!item) return { title: "News" };
   return {
     title: `${item.title} – News`,
@@ -19,8 +24,13 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function NewsDetailPage({ params }: Props) {
-  const item = await getNewsBySlug(params.slug);
+export default async function NewsDetailPage({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { slug } = await params;
+  const item = await getNewsBySlug(slug);
   if (!item) return notFound();
 
   return (
@@ -44,7 +54,12 @@ export default async function NewsDetailPage({ params }: Props) {
 
         {item.cover && (
           <div className="relative my-6 h-72 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-sm">
-            <Image src={item.cover} alt={item.title} fill className="object-cover" />
+            <Image
+              src={item.cover}
+              alt={item.title}
+              fill
+              className="object-cover"
+            />
           </div>
         )}
 

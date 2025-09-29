@@ -20,7 +20,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
         slug: "icho-2026-scientific-committee",
         title: "IChO 2026: Meeting of the Scientific Committee",
         excerpt:
-          "Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are actively underway. The meeting of the Scientific Committee responsible for organizing the Olympiad at the highest level has begun.",
+          "Preparations for IChO 2026 are actively underway. The Scientific Committee meeting has launched with international and local experts.",
         contentHtml: `
           <p><b>#IChO_2026<br/>#Preparation</b></p>
 
@@ -56,8 +56,72 @@ export async function getNewsList(): Promise<NewsItem[]> {
         `,
         cover: "/news/frame.jpg",
         // Hard-coded to 26 September 2025, 14:18 (UTC+5: Tashkent)
-        published_at: "2025-09-26T14:18:00+05:00",
+        published_at: "2025-09-26T14:18:40+05:00",
       },
+      {
+        id: 2,
+        slug: "icho-2026-venues-inspection-day-2",
+        title: "IChO 2026: Venues for the Olympiad Inspected",
+        excerpt:
+          "On September 27, Scientific Committee members inspected potential exam venues and participant hotels, and reviewed practical tasks under real lab conditions.",
+        contentHtml: `
+          <p><b>#Preparation<br/>#Day_2</b></p>
+
+          <h2>IChO 2026: Venues for the Olympiad Inspected</h2>
+
+          <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are progressing intensively.</p>
+
+          <p>On September 27, members of the Scientific Committee responsible for ensuring the high-level organization of the Olympiad visited the possible venues.</p>
+
+          <p>📍 In the first half of the day, the Scientific Committee members were introduced to potential locations for the Olympiad examinations as well as the hotels being prepared for participants. Afterwards, the experts reviewed the practical tasks of the Olympiad under real laboratory conditions.</p>
+
+          <p>⚡️ For information: both international and national professors, highly qualified specialists, and scholars have been involved in the Scientific Committee for the organization of the Olympiad.</p>
+
+          <p>ℹ️ As a reminder, the Science Olympiad Center of Uzbekistan is carrying out large-scale and systematic preparations to host this prestigious international competition at the highest level.</p>
+
+          <p>❗️The program will continue until September 28.</p>
+
+          <div class="my-6 space-y-4">
+            <img src="/news/day22.jpg" alt="Venue inspection 1" class="rounded-xl shadow-md" />
+            <img src="/news/day2.jpg" alt="Venue inspection 2" class="rounded-xl shadow-md" />
+            <img src="/news/day21.jpg" alt="Venue inspection 3" class="rounded-xl shadow-md" />
+          </div>
+        `,
+        cover: "/news/day2main.jpg",
+        // 27 September 2025, late afternoon Tashkent time (UTC+5)
+        published_at: "2025-09-27T17:56:43+05:00",
+      },
+      {
+  id: 3,
+  slug: "icho-2026-preparations-full-swing",
+  title: "IChO 2026: Preparations Are in Full Swing!",
+  excerpt:
+    "Practical and theoretical tasks were analyzed for compliance with international standards, difficulty balance, safety, and equal participation.",
+  contentHtml: `
+    <p><b>#IChO_2026<br/>#Preparation</b></p>
+
+    <h2>IChO 2026: Preparations Are in Full Swing!</h2>
+
+    <p>📢 During today’s session, the practical and theoretical tasks designed for the Olympiad were thoroughly analyzed, with particular attention given to their compliance with international standards.</p>
+
+    <p>Experts focused on the content and level of difficulty of each task, as well as on their potential to improve independent thinking and experimental skills among students.</p>
+
+    <p>In addition, the tasks were reviewed from the perspective of safety regulations, laboratory conditions, and ensuring equal participation opportunities for contestants from all countries.</p>
+
+    <p>⚡️ For information:<br/>
+    The final versions of the theoretical and practical tasks will be approved by the international and national Scientific Committees and subsequently included in the official regulations of IChO 2026.</p>
+
+    <div class="my-6 space-y-4">
+      <img src="/news/prep1.jpg" alt="Task review session 1" class="rounded-xl shadow-md" />
+      <img src="/news/prep2.jpg" alt="Task review session 2" class="rounded-xl shadow-md" />
+      <img src="/news/prep3.jpg" alt="Task review session 2" class="rounded-xl shadow-md" />
+    </div>
+  `,
+  cover: "/news/prepmain.jpg",
+  // 28 September 2025, 16:10 (UTC+5: Tashkent)
+  published_at: "2025-09-28T16:13:07+05:00",
+}
+
     ];
   }
 
@@ -68,9 +132,8 @@ export async function getNewsList(): Promise<NewsItem[]> {
 
 export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
   if (!BASE) {
-    if (slug !== "icho-2026-scientific-committee") return null;
-    const [first] = await getNewsList();
-    return first;
+    const list = await getNewsList();
+    return list.find((n) => n.slug === slug) ?? null;
   }
 
   const res = await fetch(`${BASE}/${slug}`, { next: { revalidate: 1800 } });
