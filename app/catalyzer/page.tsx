@@ -6,8 +6,6 @@ import { Download } from "lucide-react";
 
 type Issue = {
   number: number;
-  title: string;       // optional, not shown in caption (we keep design minimal)
-  date?: string;
   cover: string;       // image path
   pdf: string;         // pdf path
 };
@@ -29,8 +27,6 @@ const ISSUES: Issue[] = [
   // },
   {
     number: 1,
-    title: "Grain in Ear",
-    date: "2022/06/10",
     cover: "/images/catalyzer1.png", // replace when you have cover #1
     pdf: "/catalyzer.pdf",
   },
@@ -90,9 +86,7 @@ export default function CatalyzerPage() {
                 </div>
 
                 {/* Optional small meta under the caption (subtle like the ref) */}
-                {issue.date && (
-                  <p className="mt-1 text-xs text-slate-400">IChO2022 • {issue.date}</p>
-                )}
+               
               </div>
             </article>
           ))}
