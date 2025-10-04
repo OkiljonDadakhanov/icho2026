@@ -43,6 +43,7 @@ export function Navigation() {
         { name: "Regulations", href: "/about/regulations" },
         { name: "Past IChOs", href: "/previous-icho" },
         { name: "Future IChOs", href: "/future-icho" },
+        { name: "IChO key dates", href: "/key-dates" },
       ],
     },
     {
