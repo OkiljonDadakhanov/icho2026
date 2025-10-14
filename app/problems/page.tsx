@@ -53,23 +53,7 @@ export default function Problems() {
               country code ISO-3)
             </li>
           </ul>
-          <h3 className="font-semibold text-slate-800 pt-4">
-            Preparatory Problems
-          </h3>
-          <p className="text-slate-700 text-lg font-light">
-            The IChO 2026 Preparatory Problems, along with their solutions, have
-            been released via Olympify to mentors for reading and translation.
-          </p>
-          <p className="text-slate-700 text-lg font-light">
-            If any country mentors are not able to access the problems via
-            Olympify, please contact us at:{" "}
-            <a
-              href="mailto:icho2026@olympcenter.uz"
-              className="text-emerald-600 font-medium"
-            >
-              icho2026@olympcenter.uz
-            </a>
-          </p>
+         
         </div>
 
       
