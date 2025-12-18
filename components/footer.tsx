@@ -43,7 +43,7 @@ export function Footer() {
               </Link>
 
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/fan-olimpiadalari-markazi/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
