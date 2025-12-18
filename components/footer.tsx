@@ -8,6 +8,7 @@ import {
   Phone,
   MapPin,
   Linkedin,
+    Send,
 } from "lucide-react";
 
 export function Footer() {
@@ -28,10 +29,17 @@ export function Footer() {
           
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/InternationalChemistryOlympiad/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Facebook className="h-5 w-5" />
+              </Link>
+
+              <Link
+                href="https://t.me/icho_uzbekistan"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Send className="h-5 w-5" />
               </Link>
 
               <Link
@@ -43,13 +51,12 @@ export function Footer() {
 
               <Link
                 href="https://www.instagram.com/icho_2026uz/"
-                
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="#"
+                href="http://bit.ly/olimpdep"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Youtube className="h-5 w-5" />
@@ -111,7 +118,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/results/exams"
+                  href="/previous-icho"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Past Exams

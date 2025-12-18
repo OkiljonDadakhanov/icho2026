@@ -24,7 +24,7 @@ export default function ContactUsPage() {
                 <Mail className="h-6 w-6 mr-3 mt-1 text-blue-600 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold">Email:</h3>
-                  <p>info@olympcenter.uz</p>
+                  <p>icho2026@olympcenter.uz</p>
                 </div>
               </div>
               <div className="flex items-start">
