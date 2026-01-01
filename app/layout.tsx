@@ -15,14 +15,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body>
-      <Navigation />
-
+    <html lang="en" className="overflow-x-hidden m-0 p-0">
+      <body className="overflow-x-hidden w-full max-w-full m-0 p-0 leading-none">
+        <Navigation />
         {children}
-      <Footer />
-        
-        </body>
+        <Footer />
+      </body>
     </html>
   )
 }

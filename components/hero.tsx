@@ -17,27 +17,27 @@ export function Hero() {
   const backgroundVideoUrl = "/main.MOV";
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-black w-full max-w-full m-0 z-10">
       {/* 🔁 Video Background */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-70"
+        className="absolute inset-0 w-full h-full object-cover z-[1] opacity-70 max-w-full"
       >
         <source src={backgroundVideoUrl} type="video/mp4" />
       </video>
 
       {/* 🔳 Overlay & Visuals */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-emerald-500/10 via-white/10 to-amber-500/10 mix-blend-lighten pointer-events-none" />
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float z-10"></div>
-      <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed z-10"></div>
-      <div className="absolute bottom-32 left-20 w-40 h-40 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl -rotate-6 animate-float-slow z-10"></div>
-      <div className="absolute inset-0 z-10 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
+      <div className="absolute inset-0 z-[2] bg-gradient-to-br from-emerald-500/10 via-white/10 to-amber-500/10 mix-blend-lighten pointer-events-none" />
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float z-[2]"></div>
+      <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed z-[2]"></div>
+      <div className="absolute bottom-32 left-20 w-40 h-40 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl -rotate-6 animate-float-slow z-[2]"></div>
+      <div className="absolute inset-0 z-[2] bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:64px_64px] pointer-events-none" />
 
       {/* 🌟 Hero Content */}
-      <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative z-[3] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center space-y-8">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">

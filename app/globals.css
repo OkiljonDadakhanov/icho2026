@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 @layer utilities {
@@ -96,6 +111,39 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  /* Ensure nav is at the very top */
+  nav {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* Remove spacing between nav and first section */
+  nav + *,
+  nav ~ *:not(footer) {
+    margin-top: 0 !important;
+  }
+  nav + div,
+  nav + div > *:first-child {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  section:first-of-type,
+  body > div:first-child > div:first-child > section:first-of-type {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /* Remove any spacing from hidden elements and cursor debugging elements */
+  div[hidden],
+  [data-cursor-element-id] {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
 }
 
 @keyframes gradient-xy {
@@ -135,24 +183,35 @@ body {
   animation-delay: 4s;
 }
 
-/* Ensure body/html take full height for hero */
-html,
-body {
-  height: 100%;
-}
+/* Next.js root div - ensure no spacing */
 body > div:first-child {
-  /* Next.js root div */
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
+/* Main content wrapper */
 body > div:first-child > div:first-child {
-  /* Main content wrapper */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
+
 main {
-  /* If you wrap page content in <main> */
   flex-grow: 1;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
