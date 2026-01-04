@@ -40,7 +40,7 @@ export default function Problems() {
           <p className="text-slate-700 text-lg font-light">
             The IChO 2026 exam problems, solutions, and translations will be
             available for download on this page after the competition concludes
-            in mid-July 2026.
+            in 10-19 July 2026.
           </p>
           <ul className="list-disc list-inside text-slate-700 text-lg font-light space-y-1">
             <li>
