@@ -46,7 +46,7 @@ export default function Icho2026Page() {
       role: "Chairman",
       institute: "Ministry of Pre-school and School Education",
       country: "Uzbekistan",
-      title: "Chairman of the National Supervisory Committee",
+      title: "Chairman of the Supervisory Committee",
       image: "/team/ezozhon.png",
     },
     {
@@ -54,7 +54,7 @@ export default function Icho2026Page() {
       role: "Co-Chairman",
       institute: "Mayor of Tashkent",
       country: "Uzbekistan",
-      title: "Co-Chairman of the National Supervisory Committee",
+      title: "Co-Chairman of the Supervisory Committee",
       image: "/team/shavkat.png",
     },
     {
@@ -199,104 +199,104 @@ export default function Icho2026Page() {
     },
   ];
 
-  // const scientificCommittee: CommitteeMember[] = [
-  //   {
-  //     name: "Shavkat Ayupov",
-  //     role: "Committee member",
-  //     institute: "Uzbekistan Academy of Sciences",
-  //     country: "Uzbekistan",
-  //     title: "President",
-  //     image: "/team/shavkat.jpg",
-  //   },
-  //   {
-  //     name: "Shamansur Sagdullaev",
-  //     role: "Committee member",
-  //     institute: "Institute of Plant Chemistry",
-  //     country: "Uzbekistan",
-  //     title: "Director",
-  //     image: "/team/shamansur.jpg",
-  //   },
-  //   {
-  //     name: "Khamid Khodjaniyazov",
-  //     role: "Committee member",
-  //     institute: "A.S. Sadykov Bioorganic Chemistry Institute",
-  //     country: "Uzbekistan",
-  //     title: "Leading Researcher of Complex Compounds Lab",
-  //     image: "/team/khamid.png",
-  //   },
-  //   {
-  //     name: "Abdujalil Sidiqov",
-  //     role: "Committee member",
-  //     institute: "Tashkent Institute of Chemical Technology",
-  //     country: "Uzbekistan",
-  //     title: "Professor",
-  //     image: "/team/abdujalil.png",
-  //   },
-  //   {
-  //     name: "Burkhon Elmurodov",
-  //     role: "Committee member",
-  //     institute: "Institute of Chemistry of Plant Substances",
-  //     country: "Uzbekistan",
-  //     title: "Deputy Director",
-  //     image: "/team/elmurod.png",
-  //   },
-  //   {
-  //     name: "Khamidulla Tukhtaev",
-  //     role: "Committee member",
-  //     institute: "—",
-  //     country: "Uzbekistan",
-  //     title: "IChO Gold Medalist – 2012",
-  //     image: "/team/xamid.png",
-  //   },
-  //   {
-  //     name: "Bekhzod Boltaev",
-  //     role: "Committee member",
-  //     institute: "—",
-  //     country: "Uzbekistan",
-  //     title: "IChO Gold Medalist – 2013, 2014",
-  //     image: "/team/bekzod.png",
-  //   },
-  //   {
-  //     name: "Muzaffar Maksumov",
-  //     role: "Committee member",
-  //     institute: "University of Siegen",
-  //     country: "Uzbekistan",
-  //     title: "Graduate",
-  //     image: "/team/muzaffar.png",
-  //   },
-  //   {
-  //     name: "Azimjon Jamolov",
-  //     role: "Committee member",
-  //     institute: "Nanyang Technological University",
-  //     country: "Uzbekistan",
-  //     title: "Student in Singapore",
-  //     image: "/team/azim.png",
-  //   },
-  //   {
-  //     name: "Islomjon Karimov",
-  //     role: "Committee member",
-  //     institute: "Bilkent University in Ankara",
-  //     country: "Uzbekistan",
-  //     title: "Student",
-  //     image: "/team/islom.png",
-  //   },
-  //   {
-  //     name: "Maftuna Badalova",
-  //     role: "Committee member",
-  //     institute: "Nanyang Technological University",
-  //     country: "Uzbekistan",
-  //     title: "Student in Singapore",
-  //     image: "/team/maftuna.jpg",
-  //   },
-  //   {
-  //     name: "Mirumid Mirakbarov",
-  //     role: "Committee member",
-  //     institute: "Higher School of Economics (HSE), Moscow",
-  //     country: "Uzbekistan",
-  //     title: "Master’s student",
-  //     image: "/team/mirumid.jpg",
-  //   },
-  // ];
+  const scientificCommittee: CommitteeMember[] = [
+    {
+      name: "Shavkat Ayupov",
+      role: "Committee member",
+      institute: "Uzbekistan Academy of Sciences",
+      country: "Uzbekistan",
+      title: "President",
+      image: "/team/shavkat.jpg",
+    },
+    {
+      name: "Shamansur Sagdullaev",
+      role: "Committee member",
+      institute: "Institute of Plant Chemistry",
+      country: "Uzbekistan",
+      title: "Director",
+      image: "/team/shamansur.jpg",
+    },
+    {
+      name: "Khamid Khodjaniyazov",
+      role: "Committee member",
+      institute: "A.S. Sadykov Bioorganic Chemistry Institute",
+      country: "Uzbekistan",
+      title: "Leading Researcher of Complex Compounds Lab",
+      image: "/team/khamid.png",
+    },
+    {
+      name: "Abdujalil Sidiqov",
+      role: "Committee member",
+      institute: "Tashkent Institute of Chemical Technology",
+      country: "Uzbekistan",
+      title: "Professor",
+      image: "/team/abdujalil.png",
+    },
+    {
+      name: "Burkhon Elmurodov",
+      role: "Committee member",
+      institute: "Institute of Chemistry of Plant Substances",
+      country: "Uzbekistan",
+      title: "Deputy Director",
+      image: "/team/elmurod.png",
+    },
+    {
+      name: "Khamidulla Tukhtaev",
+      role: "Committee member",
+      institute: "—",
+      country: "Uzbekistan",
+      title: "IChO Gold Medalist – 2012",
+      image: "/team/xamid.png",
+    },
+    {
+      name: "Bekhzod Boltaev",
+      role: "Committee member",
+      institute: "—",
+      country: "Uzbekistan",
+      title: "IChO Gold Medalist – 2013, 2014",
+      image: "/team/bekzod.png",
+    },
+    {
+      name: "Muzaffar Maksumov",
+      role: "Committee member",
+      institute: "University of Siegen",
+      country: "Uzbekistan",
+      title: "Graduate",
+      image: "/team/muzaffar.png",
+    },
+    {
+      name: "Azimjon Jamolov",
+      role: "Committee member",
+      institute: "Nanyang Technological University",
+      country: "Uzbekistan",
+      title: "Student in Singapore",
+      image: "/team/azim.png",
+    },
+    {
+      name: "Islomjon Karimov",
+      role: "Committee member",
+      institute: "Bilkent University in Ankara",
+      country: "Uzbekistan",
+      title: "Student",
+      image: "/team/islom.png",
+    },
+    {
+      name: "Maftuna Badalova",
+      role: "Committee member",
+      institute: "Nanyang Technological University",
+      country: "Uzbekistan",
+      title: "Student in Singapore",
+      image: "/team/maftuna.jpg",
+    },
+    {
+      name: "Mirumid Mirakbarov",
+      role: "Committee member",
+      institute: "Higher School of Economics (HSE), Moscow",
+      country: "Uzbekistan",
+      title: "Master's student",
+      image: "/team/mirumid.jpg",
+    },
+  ];
 
   const steeringCommitteeList = [
     "I-Jy Chang, Chinese Taipei (2023)",
@@ -319,7 +319,6 @@ export default function Icho2026Page() {
       title: "Organizing Committee",
       members: organizingCommittee,
     },
-    // (Scientific Committee will be rendered after the Steering list)
   ];
 
   return (
@@ -380,8 +379,8 @@ export default function Icho2026Page() {
           </ul>
         </div>
 
-        {/* Scientific Committee (now after Steering) */}
-        {/* <div className="space-y-4" id="scientific-committee">
+        {/* Scientific Committee */}
+        <div className="space-y-4" id="scientific-committee">
           <h2 className="text-3xl font-bold text-slate-800">
             Scientific Committee
           </h2>
@@ -390,7 +389,7 @@ export default function Icho2026Page() {
               <Card key={idx} member={member} />
             ))}
           </div>
-        </div> */}
+        </div>
 
         {/* Program PDF Download */}
         <div className="text-center pt-8" id="program">
