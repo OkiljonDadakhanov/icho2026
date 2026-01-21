@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 export function Navigation() {
@@ -34,9 +36,9 @@ export function Navigation() {
     },
     {
       name: "Competitions",
-      href: "/competetions",
+      href: "/competitions",
       dropdown: [
-        { name: "Competitions", href: "/competetions" },
+        { name: "Competitions", href: "/competitions" },
         { name: "Participants", href: "/participants" },
         { name: "Exam information", href: "/exam-info" },
         { name: "Problems", href: "/problems" },
@@ -67,19 +69,22 @@ export function Navigation() {
         {/* Header */}
         <div className="flex justify-between items-center h-20 lg:h-24">
           {/* Logo */}
-          <a href="/" className="flex items-center" aria-label="IChO 2026 Home">
-            <img
+          <Link href="/" className="flex items-center" aria-label="IChO 2026 Home">
+            <Image
               src="/logos/nav_logo.png"
               alt="IChO 2026 Logo"
+              width={160}
+              height={40}
               className="h-8 lg:h-10 w-auto object-contain"
+              priority
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-4 xl:gap-6">
             {navItems.map((item) => (
               <div key={item.name} className="relative group">
-                <a
+                <Link
                   href={item.href}
                   className={`flex items-center py-2 text-sm xl:text-[15px] font-medium text-gray-700 hover:text-green-600 transition-colors whitespace-nowrap ${
                     item.dropdown ? "gap-1" : ""
@@ -89,7 +94,7 @@ export function Navigation() {
                   {item.dropdown && (
                     <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
                   )}
-                </a>
+                </Link>
 
                 {item.dropdown && (
                   <div className="absolute left-0 top-full w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999]">
@@ -97,13 +102,13 @@ export function Navigation() {
                     <div className="bg-white rounded-lg shadow-xl border border-gray-100">
                       <div className="py-2">
                         {item.dropdown.map((subItem) => (
-                          <a
+                          <Link
                             key={subItem.name}
                             href={subItem.href}
                             className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors"
                           >
                             {subItem.name}
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -130,13 +135,13 @@ export function Navigation() {
               {navItems.map((item) => (
                 <div key={item.name}>
                   <div className="flex items-center justify-between">
-                    <a
+                    <Link
                       href={item.href}
                       className="flex-1 px-4 py-2.5 text-base font-medium text-gray-800 hover:text-green-600 hover:bg-gray-50 rounded-lg"
                       onClick={() => !item.dropdown && setIsOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                     {item.dropdown && (
                       <button
                         onClick={() => toggleMobileDropdown(item.name)}
@@ -154,14 +159,14 @@ export function Navigation() {
                   {item.dropdown && openDropdown === item.name && (
                     <div className="pl-4 pr-2 py-1 space-y-1 bg-gray-50 rounded-lg mx-2 mt-1">
                       {item.dropdown.map((subItem) => (
-                        <a
+                        <Link
                           key={subItem.name}
                           href={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-600 hover:text-green-600 hover:bg-white rounded-lg"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}

@@ -5,9 +5,65 @@ import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "IChO 2026",
-  description: "IChO 2026 - Uzbekistan",
-  generator: "IChO 2026 - Uzbekistan",
+  title: {
+    default: "IChO 2026 | 58th International Chemistry Olympiad - Tashkent, Uzbekistan",
+    template: "%s | IChO 2026",
+  },
+  description:
+    "The 58th International Chemistry Olympiad (IChO 2026) will be held in Tashkent, Uzbekistan from July 10-19, 2026. Join delegations from over 90 countries celebrating scientific excellence.",
+  keywords: [
+    "IChO 2026",
+    "International Chemistry Olympiad",
+    "Chemistry Olympiad",
+    "Tashkent",
+    "Uzbekistan",
+    "Science Competition",
+    "Chemistry Competition",
+    "58th IChO",
+  ],
+  authors: [{ name: "IChO 2026 Organizing Committee" }],
+  creator: "IChO 2026 Organizing Committee",
+  metadataBase: new URL("https://icho2026.uz"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://icho2026.uz",
+    siteName: "IChO 2026",
+    title: "IChO 2026 | 58th International Chemistry Olympiad",
+    description:
+      "The 58th International Chemistry Olympiad will be held in Tashkent, Uzbekistan from July 10-19, 2026. Transforming Elements, Connecting the World.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "IChO 2026 - 58th International Chemistry Olympiad in Tashkent, Uzbekistan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IChO 2026 | 58th International Chemistry Olympiad",
+    description:
+      "Join us in Tashkent, Uzbekistan for the 58th International Chemistry Olympiad, July 10-19, 2026.",
+    images: ["/images/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({

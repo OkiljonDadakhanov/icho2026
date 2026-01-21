@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 const countries = [
   { name: "Afghanistan", code: "af" },
   { name: "Argentina", code: "ar" },
@@ -120,11 +122,10 @@ export default function ParticipantsPage() {
               key={name}
               className="flex flex-col items-center justify-center space-y-2 border rounded-lg p-4 shadow hover:shadow-md transition"
             >
-              <img
-                src={`https://flagcdn.com/32x24/${code}.png`}
-                srcSet={`https://flagcdn.com/32x24/${code}.png 2x, https://flagcdn.com/48x36/${code}.png 3x`}
-                width="32"
-                height="24"
+              <Image
+                src={`https://flagcdn.com/48x36/${code}.png`}
+                width={48}
+                height={36}
                 alt={name}
                 className="rounded shadow"
               />

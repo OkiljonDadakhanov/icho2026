@@ -1,6 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
+import { EVENT } from "@/lib/constants"
+
+const TARGET_DATE = EVENT.targetDate.getTime()
 
 export default function CountdownTimer() {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,26 +13,59 @@ export default function CountdownTimer() {
     seconds: 0,
   })
 
-  useEffect(() => {
-    // Set target date to July 1, 2026
-    const targetDate = new Date("2026-07-10T00:00:00Z").getTime()
+  const calculateTimeLeft = useCallback(() => {
+    const now = new Date().getTime()
+    const difference = TARGET_DATE - now
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime()
-      const difference = targetDate - now
-
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000),
-        })
-      }
-    }, 1000)
-
-    return () => clearInterval(timer)
+    if (difference > 0) {
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((difference % (1000 * 60)) / 1000),
+      })
+    }
   }, [])
+
+  useEffect(() => {
+    // Calculate immediately on mount
+    calculateTimeLeft()
+
+    let timer: NodeJS.Timeout | null = null
+
+    const startTimer = () => {
+      if (!timer) {
+        timer = setInterval(calculateTimeLeft, 1000)
+      }
+    }
+
+    const stopTimer = () => {
+      if (timer) {
+        clearInterval(timer)
+        timer = null
+      }
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopTimer()
+      } else {
+        calculateTimeLeft() // Update immediately when tab becomes visible
+        startTimer()
+      }
+    }
+
+    // Start timer initially
+    startTimer()
+
+    // Listen for visibility changes
+    document.addEventListener("visibilitychange", handleVisibilityChange)
+
+    return () => {
+      stopTimer()
+      document.removeEventListener("visibilitychange", handleVisibilityChange)
+    }
+  }, [calculateTimeLeft])
 
   const timeUnits = [
     { value: timeLeft.days, label: "Days", color: "from-blue-500 to-indigo-600", element: "H₂O" },
