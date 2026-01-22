@@ -31,15 +31,13 @@ export default function Regulations() {
         </div>
 
         {/* PDF Viewer */}
-        <div className="bg-white/70 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl overflow-hidden">
-          {/* Maintain a nice viewing area on desktop, full height on mobile */}
-          <div className="aspect-[3/4] md:aspect-[16/9]">
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
+          <div className="aspect-[3/4] md:aspect-[16/10]">
             <iframe
-              src="/regulations.pdf"
+              src="/regulations.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
               title="IChO 2026 Regulations"
-              className="w-full h-full"
-              // Some browsers need this to allow inline viewing
-              allow="accelerometer; clipboard-read; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className="w-full h-full border-0"
+              style={{ backgroundColor: "white" }}
             />
           </div>
         </div>

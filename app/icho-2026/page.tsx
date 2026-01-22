@@ -47,7 +47,7 @@ export default function Icho2026Page() {
       institute: "Ministry of Pre-school and School Education",
       country: "Uzbekistan",
       title: "Chairman of the Supervisory Committee",
-      image: "/team/ezozhon.png",
+      image: "/team/ezoza.jpg",
     },
     {
       name: "Shavkat Umurzoqov",

@@ -52,7 +52,7 @@ export default function AboutIcho() {
           <FactChip title="Founded" value="1968 • Prague, Czechoslovakia" />
           <FactChip
             title="Participants"
-            value="80+ countries • 300+ students / year"
+            value="90+ countries • 350+ participants / year"
           />
           <FactChip
             title="Format"
@@ -182,9 +182,9 @@ export default function AboutIcho() {
                 <FactRow k="Founded" v="1968 (Prague, Czechoslovakia)" />
                 <FactRow
                   k="Participating Countries"
-                  v="80+ nations from all continents"
+                  v="90+ nations from all continents"
                 />
-                <FactRow k="Annual Participants" v="300+ students" />
+                <FactRow k="Annual Participants" v="350+ participants" />
                 <FactRow
                   k="Competition Format"
                   v="Two exams: 5-hour Practical + 5-hour Theoretical"

@@ -11,9 +11,8 @@ type FutureEdition = {
 };
 
 const FUTURE_EDITIONS: FutureEdition[] = [
-  { year: 2025, ordinal: "57th IChO", country: "United Arab Emirates", date: "July 2025" },
-  { year: 2026, ordinal: "58th IChO", country: "Uzbekistan" },            // month TBD
-  { year: 2027, ordinal: "59th IChO", country: "Chinese Taipei" },        // month TBD
+  { year: 2027, ordinal: "59th IChO", country: "Chinese Taipei" },
+  { year: 2028, ordinal: "60th IChO", country: "Italy" },
 ];
 
 function renderDate(e: FutureEdition) {

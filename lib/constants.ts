@@ -25,7 +25,7 @@ export const SOCIAL_LINKS = {
 
 // Contact Information
 export const CONTACT = {
-  email: "info@icho2026.uz",
+  email: "icho2026@olympcenter.uz",
   website: "https://icho2026.uz",
 } as const;
 

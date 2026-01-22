@@ -23,7 +23,15 @@ export default function UzbekistanPage() {
 
   const attractions = [
     {
+      name: "Tashkent",
+      region: "Tashkent City",
+      image: "/images/tashkent.jpeg",
+      description: "Dynamic capital blending tradition with innovation",
+      category: "Modern",
+    },
+    {
       name: "Registan Square",
+      region: "Samarkand Region",
       image: "/images/registan.jpg",
       description:
         "The heart of ancient Samarkand, featuring stunning Islamic architecture",
@@ -31,21 +39,17 @@ export default function UzbekistanPage() {
     },
     {
       name: "Bukhara Old City",
+      region: "Bukhara Region",
       image: "/images/bukhara.jpg",
       description: "UNESCO World Heritage site with 1000+ years of history",
       category: "Cultural",
     },
     {
       name: "Khiva Ichan-Kala",
+      region: "Khorezm Region",
       image: "/images/khiva.jpg",
       description: "Living museum of Central Asian architecture",
       category: "Historical",
-    },
-    {
-      name: "Tashkent Modern City",
-      image: "/images/tashkent.jpeg",
-      description: "Dynamic capital blending tradition with innovation",
-      category: "Modern",
     },
   ];
 
@@ -243,9 +247,12 @@ export default function UzbekistanPage() {
                           </span>
                         </div>
                       </div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                      <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-emerald-600 transition-colors">
                         {attraction.name}
                       </h3>
+                      <p className="text-emerald-600 text-xs font-medium mb-2">
+                        {attraction.region}
+                      </p>
                       <p className="text-slate-600 text-sm leading-relaxed">
                         {attraction.description}
                       </p>
