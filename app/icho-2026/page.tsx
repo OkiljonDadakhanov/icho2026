@@ -31,10 +31,10 @@ const Card = ({ member }: { member: CommitteeMember }) => (
     </div>
     <div className="text-slate-800">
       <h3 className="text-lg font-bold">{member.name}</h3>
-      <p className="text-sm text-slate-600">{member.role}</p>
-      <p className="text-sm mt-1">{member.institute}</p>
+      {member.title && <p className="text-sm text-slate-600">{member.title}</p>}
+      {member.role && !member.title && <p className="text-sm text-slate-600">{member.role}</p>}
+      {member.institute && <p className="text-sm mt-1">{member.institute}</p>}
       <p className="text-sm text-slate-500">{member.country}</p>
-      <p className="text-sm italic mt-1">{member.title}</p>
     </div>
   </div>
 );
@@ -42,9 +42,9 @@ const Card = ({ member }: { member: CommitteeMember }) => (
 export default function Icho2026Page() {
   const supervisoryCommittee: CommitteeMember[] = [
     {
-      name: "Karimova Ezozkhan",
-      role: "Chairman",
-      institute: "Ministry of Pre-school and School Education",
+      name: "Karimova Ezozkhon",
+      role: "",
+      institute: "Minister of Preschool and School Education",
       country: "Uzbekistan",
       title: "Chairman of the Supervisory Committee",
       image: "/team/ezoza.jpg",
@@ -54,7 +54,7 @@ export default function Icho2026Page() {
       role: "Co-Chairman",
       institute: "Mayor of Tashkent",
       country: "Uzbekistan",
-      title: "Co-Chairman of the Supervisory Committee",
+      title: "",
       image: "/team/shavkat.png",
     },
     {
@@ -298,16 +298,78 @@ export default function Icho2026Page() {
     },
   ];
 
-  const steeringCommitteeList = [
-    "I-Jy Chang, Chinese Taipei (2023)",
-    "Clément Guibert, France (2022, 2024)",
-    "JL Kiappes, UK/USA (2023), Chair",
-    "Gábor Magyarfalvi, Hungary (2025)",
-    "Andrei Shved, Switzerland (2025)",
-    "Yunus Emre Türkmen, Turkey (2022, 2024)",
-    "Abdallah El Marhoune, UAE (2025)",
-    "Turaboy Shermatov, Uzbekistan (2026)",
-    "Elise Li, Chinese Taipei (2027)",
+  const steeringCommittee: CommitteeMember[] = [
+    {
+      name: "I-Jy Chang",
+      role: "Committee Member",
+      institute: "",
+      country: "Chinese Taipei",
+      title: "Member (2023)",
+      image: "/steering/Chang.jpg",
+    },
+    {
+      name: "Clément Guibert",
+      role: "Committee Member",
+      institute: "",
+      country: "France",
+      title: "Member (2022, 2024)",
+      image: "/steering/Clément.jpg",
+    },
+    {
+      name: "JL Kiappes",
+      role: "Chair",
+      institute: "",
+      country: "UK/USA",
+      title: "Chair (2023)",
+      image: "/steering/JL.jpg",
+    },
+    {
+      name: "Gábor Magyarfalvi",
+      role: "Committee Member",
+      institute: "",
+      country: "Hungary",
+      title: "Member (2025)",
+      image: "/steering/Gábor.jpg",
+    },
+    {
+      name: "Andrei Shved",
+      role: "Committee Member",
+      institute: "",
+      country: "Switzerland",
+      title: "Member (2025)",
+      image: "/steering/Andrei.jpg",
+    },
+    {
+      name: "Yunus Emre Türkmen",
+      role: "Committee Member",
+      institute: "",
+      country: "Turkey",
+      title: "Member (2022, 2024)",
+      image: "/steering/yunus.jpg",
+    },
+    {
+      name: "United Arab Emirates",
+      role: "Committee Member",
+      institute: "",
+      country: "UAE",
+      title: "Member (2025)",
+    },
+    {
+      name: "Turaboy Shermatov",
+      role: "Committee Member",
+      institute: "",
+      country: "Uzbekistan",
+      title: "Member (2026)",
+      image: "/steering/toraboy.jpg",
+    },
+    {
+      name: "Elise Li",
+      role: "Committee Member",
+      institute: "",
+      country: "Chinese Taipei",
+      title: "Member (2027)",
+      image: "/steering/Elise.jpg",
+    },
   ];
 
   const committeeSections: CommitteeSection[] = [
@@ -318,6 +380,10 @@ export default function Icho2026Page() {
     {
       title: "Organizing Committee",
       members: organizingCommittee,
+    },
+    {
+      title: "International Steering Committee",
+      members: steeringCommittee,
     },
   ];
 
@@ -367,17 +433,6 @@ export default function Icho2026Page() {
           </div>
         ))}
 
-        {/* International Steering Committee (moved up) */}
-        <div className="space-y-4" id="international-steering-committee">
-          <h2 className="text-3xl font-bold text-slate-800">
-            International Steering Committee
-          </h2>
-          <ul className="list-disc pl-6 text-slate-700 space-y-1">
-            {steeringCommitteeList.map((member, idx) => (
-              <li key={idx}>{member}</li>
-            ))}
-          </ul>
-        </div>
 
         {/* Scientific Committee */}
         <div className="space-y-4" id="scientific-committee">
