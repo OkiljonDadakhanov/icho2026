@@ -205,7 +205,7 @@ export default function KeyDatesPage() {
                 58th IChO Event Dates
               </div>
               <div className="text-2xl sm:text-3xl font-bold">
-                1 – 10 July 2026
+                10 – 19 July 2026
               </div>
               <div className="text-white/90">Tashkent, Uzbekistan</div>
             </div>

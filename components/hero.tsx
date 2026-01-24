@@ -62,7 +62,7 @@ export function Hero() {
                 <CalendarDays className="h-5 w-5 text-emerald-600" />
               </div>
               <span className="font-semibold text-slate-700">
-                 10-19 July
+                10–19 July 2026
               </span>
             </div>
             <div className="flex items-center gap-3 px-6 py-3 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">

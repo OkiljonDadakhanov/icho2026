@@ -32,6 +32,45 @@ export default function Problems() {
           </p>
         </div>
 
+        {/* IChO 2025 Theoretical & Practical */}
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-800 text-center">
+            IChO 2025 Problems
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <a
+              href="/problems/theory.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:bg-white/90 hover:shadow-xl hover:scale-[1.02] transition-all"
+            >
+              <div className="p-2.5 bg-sky-100 rounded-xl flex-shrink-0">
+                <Brain className="w-6 h-6 text-sky-600" />
+              </div>
+              <div className="flex-1 min-w-0 text-left">
+                <span className="font-semibold text-slate-800 block">Theoretical</span>
+                <span className="text-sm text-slate-500">IChO 2025 (PDF)</span>
+              </div>
+              <Download className="w-5 h-5 text-slate-400 flex-shrink-0" />
+            </a>
+            <a
+              href="/problems/practical.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-6 py-4 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:bg-white/90 hover:shadow-xl hover:scale-[1.02] transition-all"
+            >
+              <div className="p-2.5 bg-emerald-100 rounded-xl flex-shrink-0">
+                <FlaskRound className="w-6 h-6 text-emerald-600" />
+              </div>
+              <div className="flex-1 min-w-0 text-left">
+                <span className="font-semibold text-slate-800 block">Practical</span>
+                <span className="text-sm text-slate-500">IChO 2025 (PDF)</span>
+              </div>
+              <Download className="w-5 h-5 text-slate-400 flex-shrink-0" />
+            </a>
+          </div>
+        </div>
+
         {/* IChO 2026 Notes */}
         <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
           <h2 className="text-2xl font-semibold text-slate-800">
@@ -40,7 +79,7 @@ export default function Problems() {
           <p className="text-slate-700 text-lg font-light">
             The IChO 2026 exam problems, solutions, and translations will be
             available for download on this page after the competition concludes
-            in 10-19 July 2026.
+            in 10–19 July 2026.
           </p>
           <ul className="list-disc list-inside text-slate-700 text-lg font-light space-y-1">
             <li>
@@ -53,10 +92,7 @@ export default function Problems() {
               country code ISO-3)
             </li>
           </ul>
-         
         </div>
-
-      
 
         {/* Downloads for Past Problems */}
         <div className="space-y-6 pt-12">

@@ -39,6 +39,28 @@ const Card = ({ member }: { member: CommitteeMember }) => (
   </div>
 );
 
+type IntSciMember = {
+  name: string;
+  role: string;
+  image: string;
+};
+
+const IntSciCard = ({ member }: { member: IntSciMember }) => (
+  <div className="flex flex-col items-center text-center">
+    <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-slate-200 shadow-md mb-3 flex-shrink-0">
+      <Image
+        src={member.image}
+        alt={member.name}
+        width={128}
+        height={128}
+        className="w-full h-full object-cover"
+      />
+    </div>
+    <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">{member.name}</h3>
+    <p className="text-sm text-slate-600 mt-1 leading-snug">{member.role}</p>
+  </div>
+);
+
 export default function Icho2026Page() {
   const supervisoryCommittee: CommitteeMember[] = [
     {
@@ -199,10 +221,10 @@ export default function Icho2026Page() {
     },
   ];
 
-  const scientificCommittee: CommitteeMember[] = [
+  const nationalScientificCommittee: CommitteeMember[] = [
     {
       name: "Shavkat Ayupov",
-      role: "Committee member",
+      role: "",
       institute: "Uzbekistan Academy of Sciences",
       country: "Uzbekistan",
       title: "President",
@@ -210,7 +232,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Shamansur Sagdullaev",
-      role: "Committee member",
+      role: "",
       institute: "Institute of Plant Chemistry",
       country: "Uzbekistan",
       title: "Director",
@@ -218,7 +240,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Khamid Khodjaniyazov",
-      role: "Committee member",
+      role: "",
       institute: "A.S. Sadykov Bioorganic Chemistry Institute",
       country: "Uzbekistan",
       title: "Leading Researcher of Complex Compounds Lab",
@@ -226,7 +248,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Abdujalil Sidiqov",
-      role: "Committee member",
+      role: "",
       institute: "Tashkent Institute of Chemical Technology",
       country: "Uzbekistan",
       title: "Professor",
@@ -234,7 +256,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Burkhon Elmurodov",
-      role: "Committee member",
+      role: "",
       institute: "Institute of Chemistry of Plant Substances",
       country: "Uzbekistan",
       title: "Deputy Director",
@@ -242,23 +264,23 @@ export default function Icho2026Page() {
     },
     {
       name: "Khamidulla Tukhtaev",
-      role: "Committee member",
-      institute: "—",
+      role: "",
+      institute: "",
       country: "Uzbekistan",
       title: "IChO Gold Medalist – 2012",
       image: "/team/xamid.png",
     },
     {
       name: "Bekhzod Boltaev",
-      role: "Committee member",
-      institute: "—",
+      role: "",
+      institute: "",
       country: "Uzbekistan",
       title: "IChO Gold Medalist – 2013, 2014",
       image: "/team/bekzod.png",
     },
     {
       name: "Muzaffar Maksumov",
-      role: "Committee member",
+      role: "",
       institute: "University of Siegen",
       country: "Uzbekistan",
       title: "Graduate",
@@ -266,7 +288,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Azimjon Jamolov",
-      role: "Committee member",
+      role: "",
       institute: "Nanyang Technological University",
       country: "Uzbekistan",
       title: "Student in Singapore",
@@ -274,7 +296,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Islomjon Karimov",
-      role: "Committee member",
+      role: "",
       institute: "Bilkent University in Ankara",
       country: "Uzbekistan",
       title: "Student",
@@ -282,7 +304,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Maftuna Badalova",
-      role: "Committee member",
+      role: "",
       institute: "Nanyang Technological University",
       country: "Uzbekistan",
       title: "Student in Singapore",
@@ -290,7 +312,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Mirumid Mirakbarov",
-      role: "Committee member",
+      role: "",
       institute: "Higher School of Economics (HSE), Moscow",
       country: "Uzbekistan",
       title: "Master's student",
@@ -348,7 +370,7 @@ export default function Icho2026Page() {
       image: "/steering/yunus.jpg",
     },
     {
-      name: "United Arab Emirates",
+      name: "Abdallah El Marhoune",
       role: "Committee Member",
       institute: "",
       country: "UAE",
@@ -372,19 +394,35 @@ export default function Icho2026Page() {
     },
   ];
 
+  const internationalScientificCommittee: IntSciMember[] = [
+    {
+      name: "Shamansur Sagdullaev",
+      role: "Vice-President of Academy of Sciences of Uzbekistan, Chairman of Scientific Committee",
+      image: "/international/Shomansur.jpg",
+    },
+    {
+      name: "Alexander Gladilin Kirillovich",
+      role: "Professor at Lomonosov Moscow State University, Co-Chairman of Scientific Committee",
+      image: "/international/Alexander.jpg",
+    },
+    { name: "Andrei Shved", role: "Committee member", image: "/international/Andrei.jpg" },
+    { name: "Yunus Emre Türkmen", role: "Committee member", image: "/international/yunus.jpg" },
+    { name: "Ben Samuel Pilgrim", role: "Committee member", image: "/international/Samuel.jpg" },
+    { name: "Filip Ilievski", role: "Committee member", image: "/international/Ilievski.jpg" },
+    { name: "Nan Zhihan", role: "Committee member", image: "/international/Zhihan.jpg" },
+    {
+      name: "Koronatov Aleksandr Nikolayevich",
+      role: "Committee member",
+      image: "/international/aleksandr.jpg",
+    },
+    { name: "Bulat Garifullin", role: "Committee member", image: "/international/Bulat.jpg" },
+    { name: "Petra Menova", role: "Committee member", image: "/international/Petra.jpg" },
+  ];
+
   const committeeSections: CommitteeSection[] = [
-    {
-      title: "Supervisory Committee",
-      members: supervisoryCommittee,
-    },
-    {
-      title: "Organizing Committee",
-      members: organizingCommittee,
-    },
-    {
-      title: "International Steering Committee",
-      members: steeringCommittee,
-    },
+    { title: "Supervisory Committee", members: supervisoryCommittee },
+    { title: "International Steering Committee", members: steeringCommittee },
+    { title: "Organizing Committee", members: organizingCommittee },
   ];
 
   return (
@@ -434,13 +472,25 @@ export default function Icho2026Page() {
         ))}
 
 
-        {/* Scientific Committee */}
-        <div className="space-y-4" id="scientific-committee">
+        {/* International Scientific Committee */}
+        <div className="space-y-8" id="international-scientific-committee">
+          <h2 className="text-3xl font-bold text-slate-800 text-center">
+            International Scientific Committee of IChO 2026
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-10 place-items-center">
+            {internationalScientificCommittee.map((member, idx) => (
+              <IntSciCard key={idx} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* National Scientific Committee */}
+        <div className="space-y-4" id="national-scientific-committee">
           <h2 className="text-3xl font-bold text-slate-800">
-            Scientific Committee
+            National Scientific Committee
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {scientificCommittee.map((member, idx) => (
+            {nationalScientificCommittee.map((member, idx) => (
               <Card key={idx} member={member} />
             ))}
           </div>
