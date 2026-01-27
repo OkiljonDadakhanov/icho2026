@@ -12,12 +12,13 @@ import {
   Award,
   Users,
   GraduationCap,
+  Handshake,
 } from "lucide-react";
 
 type Partner = {
   name: string;
   logo: string;
-  tier: "Main Sponsor" | "Organizer" | "Academic Partner";
+  tier: "Main Sponsor" | "Organizer" | "Sponsor" | "Academic Partner";
   description: string;
 };
 
@@ -43,6 +44,15 @@ export default function PartnershipPage() {
       logo: "/logos/agentlik.png",
       tier: "Organizer",
       description: "Supporting gifted education across Uzbekistan",
+    },
+  ];
+
+  const sponsors: Partner[] = [
+    {
+      name: "Huawei",
+      logo: "/logos/huawei.png",
+      tier: "Sponsor",
+      description: "Global technology partner supporting IChO 2026",
     },
   ];
 
@@ -231,6 +241,23 @@ export default function PartnershipPage() {
               <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 {organizers.map((partner, index) => (
                   <PartnerCard key={index} partner={partner} />
+                ))}
+              </div>
+            </div>
+
+            {/* Sponsors */}
+            <div className="mb-16">
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-violet-300"></div>
+                <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-100 to-purple-100 rounded-full">
+                  <Handshake className="w-5 h-5 text-violet-600" />
+                  <span className="text-violet-800 font-semibold">Sponsors</span>
+                </div>
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-violet-300"></div>
+              </div>
+              <div className="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+                {sponsors.map((partner, index) => (
+                  <PartnerCard key={index} partner={partner} size="large" />
                 ))}
               </div>
             </div>

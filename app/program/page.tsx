@@ -17,19 +17,17 @@ type DaySchedule = {
 };
 
 const VENUE_INFO = {
-  location: "CAEx (Central Asian Expo Center)",
+  location: "National University of Uzbekistan & Central Asian Expo Center",
   studentResidence: "New Uzbekistan Hotels",
-  mentorResidence: "Wyndham Hotel",
-  juryResidence: "Hyatt Regency",
+  mentorResidence: "Wyndham Hotel & Hyatt Regency Hotel",
+  juryResidence: "Wyndham Hotel & Hyatt Regency Hotel",
   organizer: "Science Olympiad Center",
   website: "https://www.icho2026.uz/",
   excursions: [
     "Samarkand",
-    "New Uzbekistan Park",
-    "Victory Park",
-    "Tashkent City",
-    "S.A. Azimov Physical-Technical Institute (The Physics-Sun Institute)",
-    "Center of Islamic Civilization",
+    "Sun Institute",
+    "Islamic Civilisation Center",
+    "Sport Complex",
   ],
 };
 

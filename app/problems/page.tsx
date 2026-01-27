@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Brain, Download, BookOpenCheck, FlaskRound } from "lucide-react";
+import { Download, BookOpenCheck } from "lucide-react";
 
 export default function Problems() {
   return (
@@ -32,45 +32,6 @@ export default function Problems() {
           </p>
         </div>
 
-        {/* IChO 2025 Theoretical & Practical */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-slate-800 text-center">
-            IChO 2025 Problems
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-            <a
-              href="/problems/theory.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-4 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:bg-white/90 hover:shadow-xl hover:scale-[1.02] transition-all"
-            >
-              <div className="p-2.5 bg-sky-100 rounded-xl flex-shrink-0">
-                <Brain className="w-6 h-6 text-sky-600" />
-              </div>
-              <div className="flex-1 min-w-0 text-left">
-                <span className="font-semibold text-slate-800 block">Theoretical</span>
-                <span className="text-sm text-slate-500">IChO 2025 (PDF)</span>
-              </div>
-              <Download className="w-5 h-5 text-slate-400 flex-shrink-0" />
-            </a>
-            <a
-              href="/problems/practical.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-6 py-4 bg-white/70 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg hover:bg-white/90 hover:shadow-xl hover:scale-[1.02] transition-all"
-            >
-              <div className="p-2.5 bg-emerald-100 rounded-xl flex-shrink-0">
-                <FlaskRound className="w-6 h-6 text-emerald-600" />
-              </div>
-              <div className="flex-1 min-w-0 text-left">
-                <span className="font-semibold text-slate-800 block">Practical</span>
-                <span className="text-sm text-slate-500">IChO 2025 (PDF)</span>
-              </div>
-              <Download className="w-5 h-5 text-slate-400 flex-shrink-0" />
-            </a>
-          </div>
-        </div>
-
         {/* IChO 2026 Notes */}
         <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
           <h2 className="text-2xl font-semibold text-slate-800">
@@ -97,10 +58,10 @@ export default function Problems() {
         {/* Downloads for Past Problems */}
         <div className="space-y-6 pt-12">
           <h2 className="text-2xl font-semibold text-slate-800 text-center">
-            Download Past IChO Problems (2019–2024)
+            Download Past IChO Problems (2020–2025)
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto">
-            {[2024, 2023, 2022, 2021, 2020, 2019].map((year) => (
+            {[2025, 2024, 2023, 2022, 2021, 2020].map((year) => (
               <a
                 key={year}
                 href={`/problems/exam${year}.pdf`}

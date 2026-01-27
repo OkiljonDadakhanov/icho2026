@@ -163,22 +163,6 @@ export default function Icho2026Page() {
       image: "/team/davron.png",
     },
     {
-      name: "Ilkhom Siradjev",
-      role: "Committee member",
-      institute: "—",
-      country: "Uzbekistan",
-      title: "—",
-      image: "/team/ilhom.png",
-    },
-    {
-      name: "Faridun Kushnazarov",
-      role: "Committee member",
-      institute: "—",
-      country: "Uzbekistan",
-      title: "—",
-      image: "/team/faridun.png",
-    },
-    {
       name: "Azimjon Abdulkhaev",
       role: "Committee member",
       institute: "—",
@@ -221,122 +205,284 @@ export default function Icho2026Page() {
     },
   ];
 
-  const nationalScientificCommittee: CommitteeMember[] = [
+  const scientificCommitteeCoChairs: CommitteeMember[] = [
     {
-      name: "Shavkat Ayupov",
-      role: "",
-      institute: "Uzbekistan Academy of Sciences",
+      name: "Prof. Shamansur Sagdullaev",
+      role: "Co-Chair",
+      institute: "Yunusov Institute of the Chemistry of Plant Substances",
       country: "Uzbekistan",
-      title: "President",
-      image: "/team/shavkat.jpg",
+      title: "Co-Chair of Scientific Committee",
+      image: "/international/Shomansur.jpg",
     },
     {
-      name: "Shamansur Sagdullaev",
-      role: "",
-      institute: "Institute of Plant Chemistry",
-      country: "Uzbekistan",
-      title: "Director",
-      image: "/team/shamansur.jpg",
+      name: "Prof. Alexander Gladilin",
+      role: "Co-Chair",
+      institute: "Moscow State University",
+      country: "Russia",
+      title: "Co-Chair of Scientific Committee",
+      image: "/international/Alexander.jpg",
+    },
+  ];
+
+  const scientificCommitteeMembers: CommitteeMember[] = [
+    {
+      name: "Prof. Vadim Eremin",
+      role: "Author & Reviewer",
+      institute: "Moscow State University",
+      country: "Russia",
+      title: "",
+      image: "/international/Eremin.jpg",
     },
     {
-      name: "Khamid Khodjaniyazov",
-      role: "",
-      institute: "A.S. Sadykov Bioorganic Chemistry Institute",
-      country: "Uzbekistan",
-      title: "Leading Researcher of Complex Compounds Lab",
-      image: "/team/khamid.png",
-    },
-    {
-      name: "Abdujalil Sidiqov",
-      role: "",
-      institute: "Tashkent Institute of Chemical Technology",
-      country: "Uzbekistan",
-      title: "Professor",
-      image: "/team/abdujalil.png",
-    },
-    {
-      name: "Burkhon Elmurodov",
-      role: "",
-      institute: "Institute of Chemistry of Plant Substances",
-      country: "Uzbekistan",
-      title: "Deputy Director",
-      image: "/team/elmurod.png",
-    },
-    {
-      name: "Khamidulla Tukhtaev",
-      role: "",
-      institute: "",
-      country: "Uzbekistan",
-      title: "IChO Gold Medalist – 2012",
+      name: "Dr. Khamidulla Tukhtaev",
+      role: "Author & Reviewer",
+      institute: "King Abdullah University of Science and Technology",
+      country: "Saudi Arabia",
+      title: "",
       image: "/team/xamid.png",
     },
     {
-      name: "Bekhzod Boltaev",
-      role: "",
-      institute: "",
+      name: "Bekhzodbek Boltaev",
+      role: "Author & Reviewer",
+      institute: "National Medical Center",
       country: "Uzbekistan",
-      title: "IChO Gold Medalist – 2013, 2014",
+      title: "",
       image: "/team/bekzod.png",
     },
     {
-      name: "Muzaffar Maksumov",
-      role: "",
-      institute: "University of Siegen",
+      name: "Prof. Ben Pilgrim",
+      role: "Author & Reviewer",
+      institute: "University of Nottingham",
+      country: "UK",
+      title: "",
+      image: "/international/Samuel.jpg",
+    },
+    {
+      name: "Prof. Yunus Turkmen",
+      role: "Author & Reviewer",
+      institute: "Middle East Technical University",
+      country: "Turkey",
+      title: "",
+      image: "/international/yunus.jpg",
+    },
+    {
+      name: "Prof. Burkhon Elmuradov",
+      role: "Author & Reviewer",
+      institute: "Yunusov Institute of the Chemistry of Plant Substances",
       country: "Uzbekistan",
-      title: "Graduate",
-      image: "/team/muzaffar.png",
+      title: "",
+      image: "/team/elmurod.png",
+    },
+    {
+      name: "Prof. Petra Menova",
+      role: "Author & Reviewer",
+      institute: "University of Chemistry and Technology",
+      country: "Czech Republic",
+      title: "",
+      image: "/international/Petra.jpg",
+    },
+    {
+      name: "Prof. Khamid Khodjaniyozov",
+      role: "Author & Reviewer",
+      institute: "Sadikov Institute of Bioorganic Chemistry",
+      country: "Uzbekistan",
+      title: "",
+      image: "/team/khamid.png",
+    },
+    {
+      name: "Dr. Andrei Shved",
+      role: "Author & Reviewer",
+      institute: "Lucerne International School",
+      country: "Switzerland",
+      title: "",
+      image: "/international/Andrei.jpg",
+    },
+    {
+      name: "Dr. Askar Abdurazakov",
+      role: "Author & Reviewer",
+      institute: "Yunusov Institute of the Chemistry of Plant Substances",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Dr. Bulat Garifullin",
+      role: "Author & Reviewer",
+      institute: "Hospital No. 13 in Ufa",
+      country: "Russia",
+      title: "",
+      image: "/international/Bulat.jpg",
+    },
+    {
+      name: "Dr. Abdurakhim Nabiev",
+      role: "Author & Reviewer",
+      institute: "Tashkent Institute of Chemical Technology",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Aleksandr Koronatov",
+      role: "Author & Reviewer",
+      institute: "Technion – Israel Institute of Technology",
+      country: "Israel",
+      title: "",
+      image: "/international/aleksandr.jpg",
     },
     {
       name: "Azimjon Jamolov",
-      role: "",
+      role: "Author & Reviewer",
       institute: "Nanyang Technological University",
-      country: "Uzbekistan",
-      title: "Student in Singapore",
+      country: "Singapore",
+      title: "",
       image: "/team/azim.png",
     },
     {
-      name: "Islomjon Karimov",
-      role: "",
-      institute: "Bilkent University in Ankara",
+      name: "Mirumid Mirakbarov",
+      role: "Author & Reviewer",
+      institute: "Higher School of Economics",
+      country: "Russia",
+      title: "",
+      image: "/team/mirumid.jpg",
+    },
+    {
+      name: "Boburbek Boltaev",
+      role: "Author & Reviewer",
+      institute: "Cardiovascular Surgery Center \"American Hospital\"",
       country: "Uzbekistan",
-      title: "Student",
+      title: "",
+    },
+    {
+      name: "Islomjon Karimov",
+      role: "Author & Reviewer",
+      institute: "Center for Advanced Technologies",
+      country: "Uzbekistan",
+      title: "",
       image: "/team/islom.png",
     },
     {
+      name: "Filip Ilievski",
+      role: "Author & Reviewer",
+      institute: "Uppsala University",
+      country: "Sweden",
+      title: "",
+      image: "/international/Ilievski.jpg",
+    },
+    {
+      name: "Zhihan Nan",
+      role: "Author & Reviewer",
+      institute: "Harvard University",
+      country: "USA",
+      title: "",
+      image: "/international/Zhihan.jpg",
+    },
+    {
       name: "Maftuna Badalova",
-      role: "",
+      role: "Author & Reviewer",
       institute: "Nanyang Technological University",
-      country: "Uzbekistan",
-      title: "Student in Singapore",
+      country: "Singapore",
+      title: "",
       image: "/team/maftuna.jpg",
     },
     {
-      name: "Mirumid Mirakbarov",
-      role: "",
-      institute: "Higher School of Economics (HSE), Moscow",
+      name: "Azizbek Nazarov",
+      role: "Author & Reviewer",
+      institute: "Tashkent State Medical University",
       country: "Uzbekistan",
-      title: "Master's student",
-      image: "/team/mirumid.jpg",
+      title: "",
+    },
+    {
+      name: "Elyorbek Adkhamov",
+      role: "Author & Reviewer",
+      institute: "Pirogov University",
+      country: "Russia",
+      title: "",
+    },
+    {
+      name: "Biloliddin Zukhriddinov",
+      role: "Author & Reviewer",
+      institute: "Central Asia University",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Mirjahon Muhammadov",
+      role: "Author & Reviewer",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Ibrohim Temurov",
+      role: "Author & Reviewer",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Saida Abdullaeva",
+      role: "Author & Reviewer",
+      institute: "Tashkent State Medical University",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Sherzod Shaymatov",
+      role: "Author & Reviewer",
+      institute: "Tashkent State Medical University",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Daler Rahimov",
+      role: "Author & Reviewer",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Abdulloh Mahmudov",
+      role: "Author & Reviewer",
+      institute: "Massachusetts Institute of Technology",
+      country: "USA",
+      title: "",
+    },
+    {
+      name: "Akhror Bahodirov",
+      role: "Author & Reviewer",
+      institute: "Moscow Institute of Physics and Technology",
+      country: "Russia",
+      title: "",
+    },
+    {
+      name: "Durdona Mukhtorkhodjaeva",
+      role: "Author & Reviewer",
+      institute: "D. Mendeleev University of Chemical Technology of Russia in Tashkent",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Firdavs Sobirov",
+      role: "Author & Reviewer",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Ikromiddin Boymahammadov",
+      role: "Author & Reviewer",
+      institute: "New Uzbekistan University",
+      country: "Uzbekistan",
+      title: "",
+    },
+    {
+      name: "Kirill Kozlov",
+      role: "Author & Reviewer",
+      institute: "N. D. Zelinsky Institute of Organic Chemistry",
+      country: "Russia",
+      title: "",
     },
   ];
 
   const steeringCommittee: CommitteeMember[] = [
-    {
-      name: "I-Jy Chang",
-      role: "Committee Member",
-      institute: "",
-      country: "Chinese Taipei",
-      title: "Member (2023)",
-      image: "/steering/Chang.jpg",
-    },
-    {
-      name: "Clément Guibert",
-      role: "Committee Member",
-      institute: "",
-      country: "France",
-      title: "Member (2022, 2024)",
-      image: "/steering/Clément.jpg",
-    },
     {
       name: "JL Kiappes",
       role: "Chair",
@@ -354,12 +500,20 @@ export default function Icho2026Page() {
       image: "/steering/Gábor.jpg",
     },
     {
-      name: "Andrei Shved",
+      name: "Clément Guibert",
       role: "Committee Member",
       institute: "",
-      country: "Switzerland",
-      title: "Member (2025)",
-      image: "/steering/Andrei.jpg",
+      country: "France",
+      title: "Member (2022, 2024)",
+      image: "/steering/Clément.jpg",
+    },
+    {
+      name: "I-Jy Chang",
+      role: "Committee Member",
+      institute: "",
+      country: "Chinese Taipei",
+      title: "Member (2023)",
+      image: "/steering/Chang.jpg",
     },
     {
       name: "Yunus Emre Türkmen",
@@ -368,6 +522,14 @@ export default function Icho2026Page() {
       country: "Turkey",
       title: "Member (2022, 2024)",
       image: "/steering/yunus.jpg",
+    },
+    {
+      name: "Andrei Shved",
+      role: "Committee Member",
+      institute: "",
+      country: "Switzerland",
+      title: "Member (2025)",
+      image: "/steering/Andrei.jpg",
     },
     {
       name: "Abdallah El Marhoune",
@@ -392,31 +554,6 @@ export default function Icho2026Page() {
       title: "Member (2027)",
       image: "/steering/Elise.jpg",
     },
-  ];
-
-  const internationalScientificCommittee: IntSciMember[] = [
-    {
-      name: "Shamansur Sagdullaev",
-      role: "Vice-President of Academy of Sciences of Uzbekistan, Chairman of Scientific Committee",
-      image: "/international/Shomansur.jpg",
-    },
-    {
-      name: "Alexander Gladilin Kirillovich",
-      role: "Professor at Lomonosov Moscow State University, Co-Chairman of Scientific Committee",
-      image: "/international/Alexander.jpg",
-    },
-    { name: "Andrei Shved", role: "Committee member", image: "/international/Andrei.jpg" },
-    { name: "Yunus Emre Türkmen", role: "Committee member", image: "/international/yunus.jpg" },
-    { name: "Ben Samuel Pilgrim", role: "Committee member", image: "/international/Samuel.jpg" },
-    { name: "Filip Ilievski", role: "Committee member", image: "/international/Ilievski.jpg" },
-    { name: "Nan Zhihan", role: "Committee member", image: "/international/Zhihan.jpg" },
-    {
-      name: "Koronatov Aleksandr Nikolayevich",
-      role: "Committee member",
-      image: "/international/aleksandr.jpg",
-    },
-    { name: "Bulat Garifullin", role: "Committee member", image: "/international/Bulat.jpg" },
-    { name: "Petra Menova", role: "Committee member", image: "/international/Petra.jpg" },
   ];
 
   const committeeSections: CommitteeSection[] = [
@@ -472,25 +609,26 @@ export default function Icho2026Page() {
         ))}
 
 
-        {/* International Scientific Committee */}
-        <div className="space-y-8" id="international-scientific-committee">
-          <h2 className="text-3xl font-bold text-slate-800 text-center">
-            International Scientific Committee of IChO 2026
+        {/* Scientific Committee */}
+        <div className="space-y-8" id="scientific-committee">
+          <h2 className="text-3xl font-bold text-slate-800">
+            Scientific Committee
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-6 gap-y-10 place-items-center">
-            {internationalScientificCommittee.map((member, idx) => (
-              <IntSciCard key={idx} member={member} />
+
+          <h3 className="text-xl font-semibold text-slate-700">
+            Co-Chairs of Scientific Committee
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {scientificCommitteeCoChairs.map((member, idx) => (
+              <Card key={idx} member={member} />
             ))}
           </div>
-        </div>
 
-        {/* National Scientific Committee */}
-        <div className="space-y-4" id="national-scientific-committee">
-          <h2 className="text-3xl font-bold text-slate-800">
-            National Scientific Committee
-          </h2>
+          <h3 className="text-xl font-semibold text-slate-700">
+            Authors and Reviewers
+          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {nationalScientificCommittee.map((member, idx) => (
+            {scientificCommitteeMembers.map((member, idx) => (
               <Card key={idx} member={member} />
             ))}
           </div>
