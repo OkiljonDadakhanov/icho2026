@@ -129,7 +129,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/xGQ9E-qYxWg/hqdefault.jpg",
-        published_at: "2026-01-18T12:00:00+05:00",
+        published_at: "2026-01-27T12:00:00+05:00",
       },
       {
         id: 11,
@@ -155,7 +155,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/TDpkzVpsz6s/hqdefault.jpg",
-        published_at: "2026-01-17T12:00:00+05:00",
+        published_at: "2026-01-25T12:00:00+05:00",
       },
       {
         id: 10,
@@ -185,7 +185,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/Gx0ktfjYJqs/hqdefault.jpg",
-        published_at: "2026-01-14T12:00:00+05:00",
+        published_at: "2026-01-26T12:00:00+05:00",
       },
       {
         id: 9,
@@ -215,7 +215,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/CAAY2y91_HQ/hqdefault.jpg",
-        published_at: "2026-01-12T12:00:00+05:00",
+        published_at: "2026-01-22T12:00:00+05:00",
       },
       {
         id: 8,
@@ -259,7 +259,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/TG74k0OLdIc/hqdefault.jpg",
-        published_at: "2026-01-10T12:00:00+05:00",
+        published_at: "2026-01-24T12:00:00+05:00",
       },
       {
         id: 7,
@@ -295,7 +295,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/AcNbuVoiPk8/hqdefault.jpg",
-        published_at: "2026-01-16T12:00:00+05:00",
+        published_at: "2026-01-23T12:00:00+05:00",
       },
       {
         id: 6,
@@ -339,7 +339,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "https://i.ytimg.com/vi/Vd7Fq9Yn3Zo/hqdefault.jpg",
-        published_at: "2026-01-15T12:00:00+05:00",
+        published_at: "2026-01-21T12:00:00+05:00",
       },
       {
         id: 5,
@@ -431,7 +431,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
         `,
         cover: "/news/new1.jpg",
         // Recent date for the opening ceremony
-        published_at: "2026-01-15T10:00:00+05:00",
+        published_at: "2026-01-20T10:00:00+05:00",
       },
       {
   id: 3,
