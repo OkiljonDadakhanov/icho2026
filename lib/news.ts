@@ -16,6 +16,92 @@ export async function getNewsList(): Promise<NewsItem[]> {
     // Demo data when no API is configured
     return [
       {
+        id: 14,
+        slug: "icho-2025-concluded-next-station-uzbekistan",
+        title: "The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!",
+        excerpt:
+          "The 57th International Chemistry Olympiad - IChO 2025, held at the highest level in Dubai, United Arab Emirates. The Uzbekistan national team achieved remarkable success.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO_2025</span>
+          </div>
+
+          <p>The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!</p>
+
+          <p>⚡️The 57th International Chemistry Olympiad - IChO 2025, held at the highest level in Dubai, United Arab Emirates.</p>
+
+          <p>📢The Uzbekistan national team achieved remarkable success at this prestigious Olympiad, recording the best result in our country's history of participation.</p>
+
+          <p>🚩During the closing ceremony, the IChO flag was symbolically handed over to Uzbekistan.</p>
+
+          <p>📍In 2026, Uzbekistan will proudly host the 58th International Chemistry Olympiad!</p>
+
+          <p>🇺🇿This is not only a sign of international trust in the field of science but also an important step for our country in encouraging the scientific potential of the younger generation.</p>
+
+          <div class="image-gallery">
+            <img src="/news/news2nda.jpg" alt="IChO 2025 ceremony 1" />
+            <img src="/news/news2ndb.jpg" alt="IChO 2025 ceremony 2" />
+            <img src="/news/news2ndc.jpg" alt="IChO 2025 ceremony 3" />
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.icho2026.uz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
+              <span>✅</span> Website
+            </a>
+            <a href="https://t.me/icho_uzbekistan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Telegram
+            </a>
+            <a href="https://www.facebook.com/InternationalChemistryOlympiad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Facebook
+            </a>
+            <a href="https://www.instagram.com/icho.official/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors">
+              <span>🌐</span> Instagram
+            </a>
+          </div>
+        `,
+        cover: "/news/news2nda.jpg",
+        published_at: "2026-01-29T12:00:00+05:00",
+      },
+      {
+        id: 13,
+        slug: "icho-2026-first-catalyzer-published",
+        title: "IChO – 2026: The First Catalyzer Has Been Published",
+        excerpt:
+          "In this issue, readers can find comprehensive information about Uzbekistan, the host country of the 58th International Chemistry Olympiad.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO2026</span>
+            <span class="hashtag">#Catalyzer</span>
+          </div>
+
+          <p>IChO – 2026: The First Catalyzer Has Been Published</p>
+
+          <p>In this issue, readers can find comprehensive information about Uzbekistan, the host country of the 58th International Chemistry Olympiad.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">📖 More details</p>
+            <p><a href="https://www.icho2026.uz/catalyzer" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-medium">Read the Catalyzer ⬅️</a></p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.icho2026.uz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
+              <span>✅</span> Website
+            </a>
+            <a href="https://t.me/icho_uzbekistan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Telegram
+            </a>
+            <a href="https://www.facebook.com/InternationalChemistryOlympiad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Facebook
+            </a>
+            <a href="https://www.instagram.com/icho.official/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors">
+              <span>🌐</span> Instagram
+            </a>
+          </div>
+        `,
+        cover: "/images/catalyzer1.png",
+        published_at: "2026-01-28T12:00:00+05:00",
+      },
+      {
         id: 12,
         slug: "icho-2026-accommodation-new-uzbekistan-park-visit",
         title: "IChO 2026: Site Visit to Accommodation Facilities and \"New Uzbekistan\" Park",

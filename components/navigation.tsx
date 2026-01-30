@@ -16,8 +16,8 @@ export function Navigation() {
       href: "/icho-2026",
       dropdown: [
         { name: "Supervisory Committee", href: "/icho-2026#supervisory-committee" },
-        { name: "Organizing Committee", href: "/icho-2026#organizing-committee" },
         { name: "Steering Committee", href: "/icho-2026#international-steering-committee" },
+        { name: "Organizing Committee", href: "/icho-2026#organizing-committee" },
         { name: "Scientific Committee", href: "/icho-2026#scientific-committee" },
       ],
     },
