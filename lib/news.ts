@@ -434,44 +434,6 @@ export async function getNewsList(): Promise<NewsItem[]> {
         published_at: "2026-01-15T10:00:00+05:00",
       },
       {
-        id: 4,
-        slug: "icho-2026-committee-members-samarkand",
-        title: "IChO 2026: Committee Members in SAMARKAND!",
-        excerpt:
-          "As part of the preparation process for IChO 2026, members of the Steering, Scientific, and Organizing Committees visited Samarkand, exploring its rich cultural and scientific heritage.",
-        contentHtml: `
-          <p>As part of the preparation process for the International Chemistry Olympiad, members of the Steering, Scientific, and Organizing Committees visited Samarkand city, the Pearl of Central Asia.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/nKWvpePEVkI"
-                title="IChO 2026: Committee Members in SAMARKAND!"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-3">🏛 Cultural Tour Program</p>
-            <p>The visit program began with a tour of the <a href="https://meros.uz/object/gori-amir-maqbarasi" target="_blank" rel="noopener noreferrer">Amir Temur Mausoleum</a>. Afterwards, the guests had the opportunity to explore the historic <a href="https://uzbekistan.travel/uz/o/registon-ma" target="_blank" rel="noopener noreferrer">Registan Square</a>.</p>
-          </div>
-
-          <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-3">🌐 Educational Tour</p>
-            <p>During the cultural and educational tour, committee members visited the <a href="https://uzbekistan.travel/uz/o/qiyinchilik" target="_blank" rel="noopener noreferrer">Observatory</a> of Mirzo Ulugbek and a traditional carpet-weaving factory, where they observed the handcrafting of carpets rich in national patterns. This allowed them to gain deep insight into the country's rich scientific and cultural heritage.</p>
-          </div>
-
-          <p>🌐 This visit serves to strengthen international cooperation and expand cultural ties within the framework of the Olympiad.</p>
-        `,
-        cover: "https://i.ytimg.com/vi/nKWvpePEVkI/hqdefault.jpg",
-        published_at: "2025-09-29T12:00:00+05:00",
-      },
-      {
   id: 3,
   slug: "icho-2026-preparations-full-swing",
   title: "IChO 2026: Preparations Are in Full Swing!",
@@ -610,6 +572,35 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/news/frame.jpg",
         // Hard-coded to 26 September 2025, 14:18 (UTC+5: Tashkent)
         published_at: "2025-09-26T14:18:40+05:00",
+      },
+      {
+        id: 0,
+        slug: "icho-2026-committee-members-samarkand",
+        title: "IChO 2026: Committee Members in SAMARKAND!",
+        excerpt:
+          "As part of the preparation process for IChO 2026, members of the Steering, Scientific, and Organizing Committees visited Samarkand city, the Pearl of Central Asia.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO_2026</span>
+            <span class="hashtag">#Preparation</span>
+          </div>
+
+          <p><strong>IChO 2026: Committee Members in SAMARKAND!</strong></p>
+
+          <p>📚 As part of the preparation process for the International Chemistry Olympiad, members of the Steering, Scientific, and Organizing Committees visited to #Samarkand city the Pearl of #CentralAsia.</p>
+
+          <p>🌐 This visit serves to strengthen international cooperation and expand cultural ties within the framework of the #Olympiad.</p>
+
+          <div class="image-gallery">
+            <img src="/news/sam.jpg" alt="Samarkand visit 1" />
+            <img src="/news/sam1.jpg" alt="Samarkand visit 2" />
+            <img src="/news/sam2.jpg" alt="Samarkand visit 3" />
+            <img src="/news/sam3.jpg" alt="Samarkand visit 4" />
+            <img src="/news/sam4.jpg" alt="Samarkand visit 5" />
+          </div>
+        `,
+        cover: "/news/sam.jpg",
+        published_at: "2025-09-25T12:00:00+05:00",
       },
 
     ];
