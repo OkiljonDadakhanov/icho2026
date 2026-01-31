@@ -15,8 +15,9 @@ export async function getNewsList(): Promise<NewsItem[]> {
   if (!BASE) {
     // Demo data when no API is configured
     return [
+      // 1. The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!
       {
-        id: 14,
+        id: 16,
         slug: "icho-2025-concluded-next-station-uzbekistan",
         title: "The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!",
         excerpt:
@@ -62,8 +63,9 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/news/news2nda.jpg",
         published_at: "2026-01-29T12:00:00+05:00",
       },
+      // 2. IChO – 2026: The First Catalyzer Has Been Published
       {
-        id: 13,
+        id: 15,
         slug: "icho-2026-first-catalyzer-published",
         title: "IChO – 2026: The First Catalyzer Has Been Published",
         excerpt:
@@ -101,124 +103,149 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/images/catalyzer1.png",
         published_at: "2026-01-28T12:00:00+05:00",
       },
+      // 3. IChO 2026: Meeting of the Scientific Committee
       {
-        id: 12,
-        slug: "icho-2026-accommodation-new-uzbekistan-park-visit",
-        title: "IChO 2026: Site Visit to Accommodation Facilities and \"New Uzbekistan\" Park",
+        id: 14,
+        slug: "icho-2026-scientific-committee",
+        title: "IChO 2026: Meeting of the Scientific Committee",
         excerpt:
-          "The Steering, Scientific, and Organizing Committee members conducted a site visit to the accommodation facilities for Olympiad participants and the \"New Uzbekistan\" Park.",
+          "Preparations for IChO 2026 are actively underway. The Scientific Committee meeting has launched with international and local experts.",
         contentHtml: `
-          <p>The Steering, Scientific, and Organizing Committee members conducted a site visit to the accommodation facilities for Olympiad participants and the "New Uzbekistan" Park.</p>
+          <div class="hashtags">
+            <span class="hashtag">#IChO_2026</span>
+            <span class="hashtag">#Preparation</span>
+          </div>
 
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/xGQ9E-qYxWg"
-                title="IChO 2026: Site Visit to Accommodation and New Uzbekistan Park"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
+          <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are actively underway.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">✅ The meeting is attended by:</p>
+            <ul class="space-y-2">
+              <li>Vice President of the Academy of Science, Academician Sh. Sagdullaev</li>
+              <li>Deputy Minister of Preschool and School Education A. Turdiyev</li>
+              <li>Director of the Science Olympiad Center and member of the IChO Steering Committee T. Shermatov</li>
+              <li>12 international experts from the United Kingdom, USA, Switzerland, Sweden, Uruguay, Czech Republic, Turkey, Russia, Saudi Arabia</li>
+              <li>30 local experts</li>
+            </ul>
           </div>
 
           <div class="info-box">
-            <p class="font-semibold text-slate-900">📹 Key highlights demonstrated in the video.</p>
+            <p class="font-semibold text-slate-900 mb-2">⚡️ For reference</p>
+            <p>Professors, leading specialists, and scientists have been engaged in both the international and national Scientific Committees to support the organization of the Olympiad.</p>
+          </div>
+
+          <h3>In particular:</h3>
+
+          <div class="bg-slate-50 p-6 rounded-xl my-6">
+            <p class="font-semibold text-slate-900 mb-3">➡️ International Scientific Committee includes:</p>
+            <ul class="space-y-2">
+              <li>➖ Scholars from Harvard University, Bilkent University, and the Swiss Federal Institute of Technology (ETH Zurich)</li>
+              <li>➖ Professors in the field from Lomonosov Moscow State University and the University of Chemistry and Technology in Prague</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-xl my-6">
+            <p class="font-semibold text-slate-900 mb-3">➡️ National Scientific Committee includes:</p>
+            <ul class="space-y-2">
+              <li>➖ Distinguished professors in the field of chemistry, young scientists conducting research at prestigious foreign universities, as well as former Olympiad winners</li>
+            </ul>
+          </div>
+
+          <p>ℹ️ As a reminder, the Science Olympiad Center is carrying out large-scale and systematic preparations to host this prestigious international Olympiad at the highest level.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900">❗️ The meeting will continue until September 28.</p>
+          </div>
+
+          <div class="image-gallery">
+            <img src="/news/opening1.jpg" alt="Opening ceremony 1" />
+            <img src="/news/opening2.jpg" alt="Opening ceremony 2" />
+            <img src="/news/opening3.jpg" alt="Opening ceremony 3" />
           </div>
         `,
-        cover: "https://i.ytimg.com/vi/xGQ9E-qYxWg/hqdefault.jpg",
-        published_at: "2026-01-27T12:00:00+05:00",
+        cover: "/news/frame.jpg",
+        published_at: "2025-09-26T14:18:40+05:00",
       },
+      // 4. IChO 2026: Venues for the Olympiad Inspected
+      {
+        id: 13,
+        slug: "icho-2026-venues-inspection-day-2",
+        title: "IChO 2026: Venues for the Olympiad Inspected",
+        excerpt:
+          "On September 27, Scientific Committee members inspected potential exam venues and participant hotels, and reviewed practical tasks under real lab conditions.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#Preparation</span>
+            <span class="hashtag">#Day_2</span>
+          </div>
+
+          <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are progressing intensively.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">📍 Venue Inspection</p>
+            <p>On September 27, members of the Scientific Committee responsible for ensuring the high-level organization of the Olympiad visited the possible venues.</p>
+            <p class="mt-3">In the first half of the day, the Scientific Committee members were introduced to potential locations for the Olympiad examinations as well as the hotels being prepared for participants. Afterwards, the experts reviewed the practical tasks of the Olympiad under real laboratory conditions.</p>
+          </div>
+
+          <div class="info-box">
+            <p class="font-semibold text-slate-900 mb-2">⚡️ For information</p>
+            <p>Both international and national professors, highly qualified specialists, and scholars have been involved in the Scientific Committee for the organization of the Olympiad.</p>
+          </div>
+
+          <p>ℹ️ As a reminder, the Science Olympiad Center of Uzbekistan is carrying out large-scale and systematic preparations to host this prestigious international competition at the highest level.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900">❗️ The program will continue until September 28.</p>
+          </div>
+
+          <div class="image-gallery">
+            <img src="/news/day22.jpg" alt="Venue inspection 1" />
+            <img src="/news/day2.jpg" alt="Venue inspection 2" />
+            <img src="/news/day21.jpg" alt="Venue inspection 3" />
+          </div>
+        `,
+        cover: "/news/day2main.jpg",
+        published_at: "2025-09-27T17:56:43+05:00",
+      },
+      // 5. IChO 2026: Preparations Are in Full Swing!
+      {
+        id: 12,
+        slug: "icho-2026-preparations-full-swing",
+        title: "IChO 2026: Preparations Are in Full Swing!",
+        excerpt:
+          "Practical and theoretical tasks were analyzed for compliance with international standards, difficulty balance, safety, and equal participation.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO_2026</span>
+            <span class="hashtag">#Preparation</span>
+          </div>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">📢 Task Analysis Session</p>
+            <p>During today's session, the practical and theoretical tasks designed for the Olympiad were thoroughly analyzed, with particular attention given to their compliance with international standards.</p>
+          </div>
+
+          <p>Experts focused on the content and level of difficulty of each task, as well as on their potential to improve independent thinking and experimental skills among students.</p>
+
+          <p>In addition, the tasks were reviewed from the perspective of safety regulations, laboratory conditions, and ensuring equal participation opportunities for contestants from all countries.</p>
+
+          <div class="info-box">
+            <p class="font-semibold text-slate-900 mb-2">⚡️ For information</p>
+            <p>The final versions of the theoretical and practical tasks will be approved by the international and national Scientific Committees and subsequently included in the official regulations of IChO 2026.</p>
+          </div>
+
+          <div class="image-gallery">
+            <img src="/news/prep1.jpg" alt="Task review session 1" />
+            <img src="/news/prep2.jpg" alt="Task review session 2" />
+            <img src="/news/prep3.jpg" alt="Task review session 3" />
+          </div>
+        `,
+        cover: "/news/prepmain.jpg",
+        published_at: "2025-09-28T16:13:07+05:00",
+      },
+      // 6. IChO 2026: Another Key Preparation Stage is going!
       {
         id: 11,
-        slug: "icho-2026-podcast",
-        title: "IChO 2026: Podcast",
-        excerpt:
-          "Watch the IChO 2026 podcast discussing the preparations and insights into the upcoming 58th International Chemistry Olympiad.",
-        contentHtml: `
-          <p>Watch the IChO 2026 podcast discussing the preparations and insights into the upcoming 58th International Chemistry Olympiad.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/TDpkzVpsz6s"
-                title="IChO 2026: Podcast"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-        `,
-        cover: "https://i.ytimg.com/vi/TDpkzVpsz6s/hqdefault.jpg",
-        published_at: "2026-01-25T12:00:00+05:00",
-      },
-      {
-        id: 10,
-        slug: "icho-2026-caex-center-visit",
-        title: "IChO 2026: Committee Members Visit CaEX Center",
-        excerpt:
-          "Members of the Steering, Scientific, and Organizing Committees visited the CaEX center where academic exams will be held.",
-        contentHtml: `
-          <p>Members of the Steering, Scientific, and Organizing Committees visited the CaEX center where academic exams will be held.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/Gx0ktfjYJqs"
-                title="IChO 2026: Committee Members Visit CaEX Center"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900">❗️ Committee meeting will last until January 18.</p>
-          </div>
-        `,
-        cover: "https://i.ytimg.com/vi/Gx0ktfjYJqs/hqdefault.jpg",
-        published_at: "2026-01-26T12:00:00+05:00",
-      },
-      {
-        id: 9,
-        slug: "icho-2026-opening-ceremony-scientific-steering-joint-meeting",
-        title: "IChO 2026: OPENING CEREMONY of the Scientific and Steering Committee Joint Meeting",
-        excerpt:
-          "See the highlights from the Opening Ceremony of the Scientific and Steering Committee Joint Meeting for IChO 2026.",
-        contentHtml: `
-          <p>You can see the highlights from the Opening Ceremony of the Scientific and Steering Committee Joint Meeting.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/CAAY2y91_HQ"
-                title="IChO 2026: OPENING CEREMONY of the Scientific and Steering Committee Joint Meeting"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900">❗️ Committee meeting will last until January 18.</p>
-          </div>
-        `,
-        cover: "https://i.ytimg.com/vi/CAAY2y91_HQ/hqdefault.jpg",
-        published_at: "2026-01-22T12:00:00+05:00",
-      },
-      {
-        id: 8,
         slug: "icho-2026-another-key-preparation-stage",
         title: "IChO 2026: Another Key Preparation Stage is going!",
         excerpt:
@@ -261,88 +288,9 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "https://i.ytimg.com/vi/TG74k0OLdIc/hqdefault.jpg",
         published_at: "2026-01-24T12:00:00+05:00",
       },
+      // 7. IChO 2026: Opening Ceremony of the Steering, Scientific and Organizing Committees Joint Meeting was held
       {
-        id: 7,
-        slug: "icho-2026-hotel-inspection-opening-ceremony-venue",
-        title: "IChO 2026: Preparations are progressing",
-        excerpt:
-          "Members of the Steering, Scientific, and Organizing Committees, along with national team leaders, conducted detailed inspections of designated hotels and the International Forum Palace for the Opening Ceremony.",
-        contentHtml: `
-          <p>As part of the preparations for the International Chemistry Olympiad (IChO) 2026, members of the Steering, Scientific, and Organizing Committees, along with national team leaders conducted detailed inspections of the hotels designated for official accommodation.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/AcNbuVoiPk8"
-                title="IChO 2026: Preparations are progressing"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-3">🏛 Opening Ceremony Venue Review</p>
-            <p>In addition, the International Forum Palace planned to host the Opening Ceremony of IChO 2026 was thoroughly reviewed, with particular attention given to its facilities, capacity, and overall readiness.</p>
-          </div>
-
-          <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-2">📹 Video Report</p>
-            <p>More details are presented in the video report above.</p>
-          </div>
-        `,
-        cover: "https://i.ytimg.com/vi/AcNbuVoiPk8/hqdefault.jpg",
-        published_at: "2026-01-23T12:00:00+05:00",
-      },
-      {
-        id: 6,
-        slug: "icho-2026-national-university-laboratory-visit",
-        title: "IChO 2026: On-site preparation for laboratory procedures",
-        excerpt:
-          "Members of the Steering, Scientific, and Organizing Committees visited the National University of Uzbekistan to review laboratory facilities and ensure compliance with international standards.",
-        contentHtml: `
-          <p>Members of the Steering, Scientific, and Organizing Committees made a visit to the National University of Uzbekistan, where the laboratory sessions of the Olympiad are planned to be held.</p>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/Vd7Fq9Yn3Zo"
-                title="IChO 2026: On-site preparation for laboratory procedures"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-3">💠 During the visit, the following aspects were thoroughly reviewed:</p>
-            <ul class="space-y-2">
-              <li>➖ the condition of laboratory facilities</li>
-              <li>➖ technical equipment and safety requirements</li>
-              <li>➖ compliance with international standards</li>
-            </ul>
-          </div>
-
-          <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-2">❗️ Important Note</p>
-            <p>These processes represent an important stage in ensuring that the Olympiad is organized at a high level and that comfortable and safe conditions are provided for participants.</p>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900">⚡️ Preparatory activities within the framework of IChO 2026 are continuing consistently.</p>
-          </div>
-        `,
-        cover: "https://i.ytimg.com/vi/Vd7Fq9Yn3Zo/hqdefault.jpg",
-        published_at: "2026-01-21T12:00:00+05:00",
-      },
-      {
-        id: 5,
+        id: 10,
         slug: "icho-2026-opening-ceremony-committees-meeting",
         title: "IChO 2026: Opening Ceremony of the Steering, Scientific and Organizing Committees Joint Meeting was held",
         excerpt:
@@ -430,151 +378,186 @@ export async function getNewsList(): Promise<NewsItem[]> {
           </div>
         `,
         cover: "/news/new1.jpg",
-        // Recent date for the opening ceremony
         published_at: "2026-01-20T10:00:00+05:00",
       },
+      // 8. IChO 2026: OPENING CEREMONY of the Scientific and Steering Committee Joint Meeting
       {
-  id: 3,
-  slug: "icho-2026-preparations-full-swing",
-  title: "IChO 2026: Preparations Are in Full Swing!",
-  excerpt:
-    "Practical and theoretical tasks were analyzed for compliance with international standards, difficulty balance, safety, and equal participation.",
-  contentHtml: `
-    <div class="hashtags">
-      <span class="hashtag">#IChO_2026</span>
-      <span class="hashtag">#Preparation</span>
-    </div>
-
-    <div class="highlight-box">
-      <p class="font-semibold text-slate-900 mb-2">📢 Task Analysis Session</p>
-      <p>During today's session, the practical and theoretical tasks designed for the Olympiad were thoroughly analyzed, with particular attention given to their compliance with international standards.</p>
-    </div>
-
-    <p>Experts focused on the content and level of difficulty of each task, as well as on their potential to improve independent thinking and experimental skills among students.</p>
-
-    <p>In addition, the tasks were reviewed from the perspective of safety regulations, laboratory conditions, and ensuring equal participation opportunities for contestants from all countries.</p>
-
-    <div class="info-box">
-      <p class="font-semibold text-slate-900 mb-2">⚡️ For information</p>
-      <p>The final versions of the theoretical and practical tasks will be approved by the international and national Scientific Committees and subsequently included in the official regulations of IChO 2026.</p>
-    </div>
-
-    <div class="image-gallery">
-      <img src="/news/prep1.jpg" alt="Task review session 1" />
-      <img src="/news/prep2.jpg" alt="Task review session 2" />
-      <img src="/news/prep3.jpg" alt="Task review session 3" />
-    </div>
-  `,
-  cover: "/news/prepmain.jpg",
-  // 28 September 2025, 16:10 (UTC+5: Tashkent)
-  published_at: "2025-09-28T16:13:07+05:00",
-},
-      {
-        id: 2,
-        slug: "icho-2026-venues-inspection-day-2",
-        title: "IChO 2026: Venues for the Olympiad Inspected",
+        id: 9,
+        slug: "icho-2026-opening-ceremony-scientific-steering-joint-meeting",
+        title: "IChO 2026: OPENING CEREMONY of the Scientific and Steering Committee Joint Meeting",
         excerpt:
-          "On September 27, Scientific Committee members inspected potential exam venues and participant hotels, and reviewed practical tasks under real lab conditions.",
+          "See the highlights from the Opening Ceremony of the Scientific and Steering Committee Joint Meeting for IChO 2026.",
         contentHtml: `
-          <div class="hashtags">
-            <span class="hashtag">#Preparation</span>
-            <span class="hashtag">#Day_2</span>
+          <p>You can see the highlights from the Opening Ceremony of the Scientific and Steering Committee Joint Meeting.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/CAAY2y91_HQ"
+                title="IChO 2026: OPENING CEREMONY of the Scientific and Steering Committee Joint Meeting"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
           </div>
 
-          <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are progressing intensively.</p>
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900">❗️ Committee meeting will last until January 18.</p>
+          </div>
+        `,
+        cover: "https://i.ytimg.com/vi/CAAY2y91_HQ/hqdefault.jpg",
+        published_at: "2026-01-22T12:00:00+05:00",
+      },
+      // 9. IChO 2026: Committee Members Visit CaEX Center
+      {
+        id: 8,
+        slug: "icho-2026-caex-center-visit",
+        title: "IChO 2026: Committee Members Visit CaEX Center",
+        excerpt:
+          "Members of the Steering, Scientific, and Organizing Committees visited the CaEX center where academic exams will be held.",
+        contentHtml: `
+          <p>Members of the Steering, Scientific, and Organizing Committees visited the CaEX center where academic exams will be held.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/Gx0ktfjYJqs"
+                title="IChO 2026: Committee Members Visit CaEX Center"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
+          </div>
 
           <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-2">📍 Venue Inspection</p>
-            <p>On September 27, members of the Scientific Committee responsible for ensuring the high-level organization of the Olympiad visited the possible venues.</p>
-            <p class="mt-3">In the first half of the day, the Scientific Committee members were introduced to potential locations for the Olympiad examinations as well as the hotels being prepared for participants. Afterwards, the experts reviewed the practical tasks of the Olympiad under real laboratory conditions.</p>
+            <p class="font-semibold text-slate-900">❗️ Committee meeting will last until January 18.</p>
+          </div>
+        `,
+        cover: "https://i.ytimg.com/vi/Gx0ktfjYJqs/hqdefault.jpg",
+        published_at: "2026-01-26T12:00:00+05:00",
+      },
+      // 10. IChO 2026: Site Visit to Accommodation Facilities and "New Uzbekistan" Park
+      {
+        id: 7,
+        slug: "icho-2026-accommodation-new-uzbekistan-park-visit",
+        title: "IChO 2026: Site Visit to Accommodation Facilities and \"New Uzbekistan\" Park",
+        excerpt:
+          "The Steering, Scientific, and Organizing Committee members conducted a site visit to the accommodation facilities for Olympiad participants and the \"New Uzbekistan\" Park.",
+        contentHtml: `
+          <p>The Steering, Scientific, and Organizing Committee members conducted a site visit to the accommodation facilities for Olympiad participants and the "New Uzbekistan" Park.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/xGQ9E-qYxWg"
+                title="IChO 2026: Site Visit to Accommodation and New Uzbekistan Park"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
           </div>
 
           <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-2">⚡️ For information</p>
-            <p>Both international and national professors, highly qualified specialists, and scholars have been involved in the Scientific Committee for the organization of the Olympiad.</p>
-          </div>
-
-          <p>ℹ️ As a reminder, the Science Olympiad Center of Uzbekistan is carrying out large-scale and systematic preparations to host this prestigious international competition at the highest level.</p>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900">❗️ The program will continue until September 28.</p>
-          </div>
-
-          <div class="image-gallery">
-            <img src="/news/day22.jpg" alt="Venue inspection 1" />
-            <img src="/news/day2.jpg" alt="Venue inspection 2" />
-            <img src="/news/day21.jpg" alt="Venue inspection 3" />
+            <p class="font-semibold text-slate-900">📹 Key highlights demonstrated in the video.</p>
           </div>
         `,
-        cover: "/news/day2main.jpg",
-        // 27 September 2025, late afternoon Tashkent time (UTC+5)
-        published_at: "2025-09-27T17:56:43+05:00",
+        cover: "https://i.ytimg.com/vi/xGQ9E-qYxWg/hqdefault.jpg",
+        published_at: "2026-01-27T12:00:00+05:00",
       },
+      // 11. IChO 2026: On-site preparation for laboratory procedures
       {
-        id: 1,
-        slug: "icho-2026-scientific-committee",
-        title: "IChO 2026: Meeting of the Scientific Committee",
+        id: 6,
+        slug: "icho-2026-national-university-laboratory-visit",
+        title: "IChO 2026: On-site preparation for laboratory procedures",
         excerpt:
-          "Preparations for IChO 2026 are actively underway. The Scientific Committee meeting has launched with international and local experts.",
+          "Members of the Steering, Scientific, and Organizing Committees visited the National University of Uzbekistan to review laboratory facilities and ensure compliance with international standards.",
         contentHtml: `
-          <div class="hashtags">
-            <span class="hashtag">#IChO_2026</span>
-            <span class="hashtag">#Preparation</span>
+          <p>Members of the Steering, Scientific, and Organizing Committees made a visit to the National University of Uzbekistan, where the laboratory sessions of the Olympiad are planned to be held.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/Vd7Fq9Yn3Zo"
+                title="IChO 2026: On-site preparation for laboratory procedures"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
           </div>
 
-          <p>🇺🇿 Preparations for the International Chemistry Olympiad (IChO 2026), scheduled to be held in Uzbekistan in 2026, are actively underway.</p>
-
           <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-2">✅ The meeting is attended by:</p>
+            <p class="font-semibold text-slate-900 mb-3">💠 During the visit, the following aspects were thoroughly reviewed:</p>
             <ul class="space-y-2">
-              <li>Vice President of the Academy of Science, Academician Sh. Sagdullaev</li>
-              <li>Deputy Minister of Preschool and School Education A. Turdiyev</li>
-              <li>Director of the Science Olympiad Center and member of the IChO Steering Committee T. Shermatov</li>
-              <li>12 international experts from the United Kingdom, USA, Switzerland, Sweden, Uruguay, Czech Republic, Turkey, Russia, Saudi Arabia</li>
-              <li>30 local experts</li>
+              <li>➖ the condition of laboratory facilities</li>
+              <li>➖ technical equipment and safety requirements</li>
+              <li>➖ compliance with international standards</li>
             </ul>
           </div>
 
           <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-2">⚡️ For reference</p>
-            <p>Professors, leading specialists, and scientists have been engaged in both the international and national Scientific Committees to support the organization of the Olympiad.</p>
+            <p class="font-semibold text-slate-900 mb-2">❗️ Important Note</p>
+            <p>These processes represent an important stage in ensuring that the Olympiad is organized at a high level and that comfortable and safe conditions are provided for participants.</p>
           </div>
-
-          <h3>In particular:</h3>
-
-          <div class="bg-slate-50 p-6 rounded-xl my-6">
-            <p class="font-semibold text-slate-900 mb-3">➡️ International Scientific Committee includes:</p>
-            <ul class="space-y-2">
-              <li>➖ Scholars from Harvard University, Bilkent University, and the Swiss Federal Institute of Technology (ETH Zurich)</li>
-              <li>➖ Professors in the field from Lomonosov Moscow State University and the University of Chemistry and Technology in Prague</li>
-            </ul>
-          </div>
-
-          <div class="bg-slate-50 p-6 rounded-xl my-6">
-            <p class="font-semibold text-slate-900 mb-3">➡️ National Scientific Committee includes:</p>
-            <ul class="space-y-2">
-              <li>➖ Distinguished professors in the field of chemistry, young scientists conducting research at prestigious foreign universities, as well as former Olympiad winners</li>
-            </ul>
-          </div>
-
-          <p>ℹ️ As a reminder, the Science Olympiad Center is carrying out large-scale and systematic preparations to host this prestigious international Olympiad at the highest level.</p>
 
           <div class="highlight-box">
-            <p class="font-semibold text-slate-900">❗️ The meeting will continue until September 28.</p>
-          </div>
-
-          <div class="image-gallery">
-            <img src="/news/opening1.jpg" alt="Opening ceremony 1" />
-            <img src="/news/opening2.jpg" alt="Opening ceremony 2" />
-            <img src="/news/opening3.jpg" alt="Opening ceremony 3" />
+            <p class="font-semibold text-slate-900">⚡️ Preparatory activities within the framework of IChO 2026 are continuing consistently.</p>
           </div>
         `,
-        cover: "/news/frame.jpg",
-        // Hard-coded to 26 September 2025, 14:18 (UTC+5: Tashkent)
-        published_at: "2025-09-26T14:18:40+05:00",
+        cover: "https://i.ytimg.com/vi/Vd7Fq9Yn3Zo/hqdefault.jpg",
+        published_at: "2026-01-21T12:00:00+05:00",
       },
+      // 12. IChO 2026: Preparations are progressing
       {
-        id: 0,
+        id: 5,
+        slug: "icho-2026-hotel-inspection-opening-ceremony-venue",
+        title: "IChO 2026: Preparations are progressing",
+        excerpt:
+          "Members of the Steering, Scientific, and Organizing Committees, along with national team leaders, conducted detailed inspections of designated hotels and the International Forum Palace for the Opening Ceremony.",
+        contentHtml: `
+          <p>As part of the preparations for the International Chemistry Olympiad (IChO) 2026, members of the Steering, Scientific, and Organizing Committees, along with national team leaders conducted detailed inspections of the hotels designated for official accommodation.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/AcNbuVoiPk8"
+                title="IChO 2026: Preparations are progressing"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-3">🏛 Opening Ceremony Venue Review</p>
+            <p>In addition, the International Forum Palace planned to host the Opening Ceremony of IChO 2026 was thoroughly reviewed, with particular attention given to its facilities, capacity, and overall readiness.</p>
+          </div>
+
+          <div class="info-box">
+            <p class="font-semibold text-slate-900 mb-2">📹 Video Report</p>
+            <p>More details are presented in the video report above.</p>
+          </div>
+        `,
+        cover: "https://i.ytimg.com/vi/AcNbuVoiPk8/hqdefault.jpg",
+        published_at: "2026-01-23T12:00:00+05:00",
+      },
+      // 13. IChO 2026: Committee Members in SAMARKAND!
+      {
+        id: 4,
         slug: "icho-2026-committee-members-samarkand",
         title: "IChO 2026: Committee Members in SAMARKAND!",
         excerpt:
@@ -602,7 +585,103 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/news/sam.jpg",
         published_at: "2025-09-25T12:00:00+05:00",
       },
+      // 14. IChO 2026: Committee Members in SAMARKAND! (rasmli)
+      {
+        id: 3,
+        slug: "icho-2026-committee-members-samarkand-photos",
+        title: "IChO 2026: Committee Members in SAMARKAND! (rasmli)",
+        excerpt:
+          "Photo gallery from the Samarkand visit - Committee members explore the historic Pearl of Central Asia.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO_2026</span>
+            <span class="hashtag">#Samarkand</span>
+            <span class="hashtag">#PhotoGallery</span>
+          </div>
 
+          <p><strong>IChO 2026: Committee Members in SAMARKAND!</strong></p>
+
+          <p>📸 Photo gallery from the memorable visit to Samarkand - the Pearl of Central Asia.</p>
+
+          <p>🏛️ Committee members explored the historic sites and cultural landmarks of this ancient city, which has been a crossroads of cultures for millennia.</p>
+
+          <div class="image-gallery">
+            <img src="/news/order.jpg" alt="Samarkand photo gallery" />
+          </div>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900">🌟 Samarkand - a UNESCO World Heritage Site and one of the oldest continuously inhabited cities in Central Asia.</p>
+          </div>
+        `,
+        cover: "/news/order.jpg",
+        published_at: "2025-09-24T12:00:00+05:00",
+      },
+      // 15. IChO 2026: Podcast
+      {
+        id: 2,
+        slug: "icho-2026-podcast",
+        title: "IChO 2026: Podcast",
+        excerpt:
+          "Watch the IChO 2026 podcast discussing the preparations and insights into the upcoming 58th International Chemistry Olympiad.",
+        contentHtml: `
+          <p>Watch the IChO 2026 podcast discussing the preparations and insights into the upcoming 58th International Chemistry Olympiad.</p>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/TDpkzVpsz6s"
+                title="IChO 2026: Podcast"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
+          </div>
+        `,
+        cover: "https://i.ytimg.com/vi/TDpkzVpsz6s/hqdefault.jpg",
+        published_at: "2026-01-25T12:00:00+05:00",
+      },
+      // 16. The Work Behind the International Chemistry Olympiad (IChO)
+      {
+        id: 1,
+        slug: "the-work-behind-icho",
+        title: "The Work Behind the International Chemistry Olympiad (IChO)",
+        excerpt:
+          "Discover the extensive preparation, dedication, and collaboration that goes into organizing the International Chemistry Olympiad.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO</span>
+            <span class="hashtag">#BehindTheScenes</span>
+          </div>
+
+          <p><strong>The Work Behind the International Chemistry Olympiad (IChO)</strong></p>
+
+          <p>🔬 The International Chemistry Olympiad is one of the most prestigious science competitions in the world, bringing together the brightest young minds in chemistry from over 80 countries.</p>
+
+          <p>📋 Organizing such an event requires:</p>
+          <ul>
+            <li>➖ Years of meticulous planning and coordination</li>
+            <li>➖ Collaboration between international and national scientific committees</li>
+            <li>➖ Development of challenging theoretical and practical problems</li>
+            <li>➖ Ensuring safety standards and laboratory preparations</li>
+            <li>➖ Coordinating logistics for hundreds of participants</li>
+          </ul>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">🌍 Global Collaboration</p>
+            <p>The success of IChO depends on the dedication of scientists, educators, and volunteers from around the world who work together to inspire the next generation of chemists.</p>
+          </div>
+
+          <div class="info-box">
+            <p class="font-semibold text-slate-900 mb-2">🇺🇿 IChO 2026 in Uzbekistan</p>
+            <p>Uzbekistan is proud to host the 58th International Chemistry Olympiad, showcasing its commitment to science education and international cooperation.</p>
+          </div>
+        `,
+        cover: "/news/frame.jpg",
+        published_at: "2025-09-20T12:00:00+05:00",
+      },
     ];
   }
 

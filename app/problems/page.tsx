@@ -55,6 +55,25 @@ export default function Problems() {
           </ul>
         </div>
 
+        {/* Preparatory Problems */}
+        <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-3xl shadow-xl p-8 space-y-4">
+          <h2 className="text-2xl font-semibold text-slate-800">
+            Preparatory Problems
+          </h2>
+          <p className="text-slate-700 text-lg font-light">
+            Access the preparatory problems to help students prepare for IChO 2026.
+          </p>
+          <a
+            href="https://drive.google.com/drive/folders/13hL1jmTz-puehFlNMrUkBQRme0GLP_12?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-xl shadow hover:bg-emerald-700 transition"
+          >
+            <Download className="w-5 h-5" />
+            Preparatory Problems
+          </a>
+        </div>
+
         {/* Downloads for Past Problems */}
         <div className="space-y-6 pt-12">
           <h2 className="text-2xl font-semibold text-slate-800 text-center">
