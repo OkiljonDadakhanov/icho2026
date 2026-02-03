@@ -322,8 +322,8 @@ export default function Icho2026Page() {
     {
       name: "Aleksandr Koronatov",
       role: "Author & Reviewer",
-      institute: "Technion – Israel Institute of Technology",
-      country: "Israel",
+      institute: "University of Groningen, Stratingh Institute for Chemistry & Technion, Schulich Faculty of Chemistry",
+      country: "the Netherlands",
       title: "",
       image: "/international/aleksandr.jpg",
     },
