@@ -671,11 +671,11 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/news/sam.jpg",
         published_at: "2025-09-25T12:00:00+05:00",
       },
-      // 14. IChO 2026: Committee Members in SAMARKAND! (rasmli)
+      // 14. IChO 2026: Committee Members in SAMARKAND!
       {
         id: 3,
         slug: "icho-2026-committee-members-samarkand-photos",
-        title: "IChO 2026: Committee Members in SAMARKAND! (rasmli)",
+        title: "IChO 2026: Committee Members in SAMARKAND!",
         excerpt:
           "Photo gallery from the Samarkand visit - Committee members explore the historic Pearl of Central Asia.",
         contentHtml: `
@@ -692,14 +692,18 @@ export async function getNewsList(): Promise<NewsItem[]> {
           <p>🏛️ Committee members explored the historic sites and cultural landmarks of this ancient city, which has been a crossroads of cultures for millennia.</p>
 
           <div class="image-gallery">
-            <img src="/news/order.jpg" alt="Samarkand photo gallery" />
+            <img src="/news/sam.jpg" alt="Samarkand visit 1" />
+            <img src="/news/sam1.jpg" alt="Samarkand visit 2" />
+            <img src="/news/sam2.jpg" alt="Samarkand visit 3" />
+            <img src="/news/sam3.jpg" alt="Samarkand visit 4" />
+            <img src="/news/sam4.jpg" alt="Samarkand visit 5" />
           </div>
 
           <div class="highlight-box">
             <p class="font-semibold text-slate-900">🌟 Samarkand - a UNESCO World Heritage Site and one of the oldest continuously inhabited cities in Central Asia.</p>
           </div>
         `,
-        cover: "/news/order.jpg",
+        cover: "/news/sam.jpg",
         published_at: "2025-09-24T12:00:00+05:00",
       },
       // 15. IChO 2026: Podcast
