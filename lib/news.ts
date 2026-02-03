@@ -15,93 +15,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
   if (!BASE) {
     // Demo data when no API is configured
     return [
-      // 1. EduX Podcast Episode 4 - The Work Behind the International Chemistry Olympiad
-      {
-        id: 17,
-        slug: "edux-podcast-episode-4-icho",
-        title: "EduX Podcast | Episode 4 — Now Ready",
-        excerpt:
-          "Episode 4 of the EduX Podcast features distinguished representatives of the global chemistry and olympiad community discussing the work behind the International Chemistry Olympiad.",
-        contentHtml: `
-          <div class="hashtags">
-            <span class="hashtag">#Podcast1</span>
-          </div>
-
-          <p><strong>🎙 EduX Podcast | Episode 4 — Now Ready</strong></p>
-
-          <p><strong>The Work Behind the International Chemistry Olympiad (IChO)</strong></p>
-
-          <div class="highlight-box mb-6">
-            <a href="https://youtu.be/7FXH-JJ4DFs?si=FBhGSeoAf5O2SC4n" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-semibold text-lg">WATCH THE PODCAST 👈</a>
-          </div>
-
-          <div class="my-8">
-            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
-              <iframe
-                src="https://www.youtube.com/embed/7FXH-JJ4DFs"
-                title="EduX Podcast | Episode 4 — The Work Behind the International Chemistry Olympiad"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-                class="absolute top-0 left-0 w-full h-full"
-                style="border-radius: 1rem;"
-              ></iframe>
-            </div>
-          </div>
-
-          <p>We are pleased to announce the release of Episode 4 of the EduX Podcast, featuring distinguished representatives of the global chemistry and olympiad community:</p>
-
-          <div class="bg-slate-50 p-6 rounded-xl my-6">
-            <p class="font-semibold text-slate-900 mb-3">➡️ John Leon Kiappes</p>
-            <ul class="space-y-2">
-              <li>➖ Chairman of the Steering Committee of IChO</li>
-              <li>➖ Professor at University College London</li>
-            </ul>
-          </div>
-
-          <div class="bg-slate-50 p-6 rounded-xl my-6">
-            <p class="font-semibold text-slate-900 mb-3">➡️ Alexander Kirillovich Gladilin</p>
-            <ul class="space-y-2">
-              <li>➖ Co-Chairman of the Scientific Committee of IChO 2026</li>
-              <li>➖ Professor at Lomonosov Moscow State University</li>
-            </ul>
-          </div>
-
-          <div class="highlight-box">
-            <p class="font-semibold text-slate-900 mb-2">📌 In this episode</p>
-            <p>Our guests discuss the scientific, organizational, and international collaboration behind the International Chemistry Olympiad, offering valuable insights into its mission and global impact.</p>
-          </div>
-
-          <div class="info-box">
-            <p class="font-semibold text-slate-900 mb-2">📺 Watch Now</p>
-            <p>The episode is now available to watch and listen. We invite you to watch and learn more about the International Chemistry Olympiad.</p>
-          </div>
-
-          <div class="social-links">
-            <a href="https://www.icho2026.uz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
-              <span>✅</span> Website
-            </a>
-            <a href="https://t.me/icho_uzbekistan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
-              <span>🌐</span> Telegram
-            </a>
-            <a href="https://www.facebook.com/InternationalChemistryOlympiad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
-              <span>🌐</span> Facebook
-            </a>
-            <a href="https://www.instagram.com/icho.official/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors">
-              <span>🌐</span> Instagram
-            </a>
-            <a href="https://www.youtube.com/@icho2026uz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
-              <span>🌐</span> YouTube
-            </a>
-            <a href="https://www.linkedin.com/company/international-chemistry-olympiad-2026/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
-              <span>🌐</span> LinkedIn
-            </a>
-          </div>
-        `,
-        cover: "/news/16posy.jpg",
-        published_at: "2026-02-03T12:00:00+05:00",
-      },
-      // 2. The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!
+      // 1. The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!
       {
         id: 16,
         slug: "icho-2025-concluded-next-station-uzbekistan",
@@ -771,6 +685,96 @@ export async function getNewsList(): Promise<NewsItem[]> {
         `,
         cover: "/news/frame.jpg",
         published_at: "2025-09-20T12:00:00+05:00",
+      },
+      // 17. EduX Podcast Episode 4 - The Work Behind the International Chemistry Olympiad
+      {
+        id: 17,
+        slug: "edux-podcast-episode-4-icho",
+        title: "EduX Podcast | Episode 4 — Now Ready",
+        excerpt:
+          "Episode 4 of the EduX Podcast features distinguished representatives of the global chemistry and olympiad community discussing the work behind the International Chemistry Olympiad.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#Podcast1</span>
+          </div>
+
+          <p><strong>🎙 EduX Podcast | Episode 4 — Now Ready</strong></p>
+
+          <p><strong>The Work Behind the International Chemistry Olympiad (IChO)</strong></p>
+
+          <div class="highlight-box mb-6">
+            <a href="https://youtu.be/7FXH-JJ4DFs?si=FBhGSeoAf5O2SC4n" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-semibold text-lg">WATCH THE PODCAST 👈</a>
+          </div>
+
+          <div class="image-gallery">
+            <img src="/news/16posy.jpg" alt="EduX Podcast Episode 4" />
+          </div>
+
+          <div class="my-8">
+            <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
+              <iframe
+                src="https://www.youtube.com/embed/7FXH-JJ4DFs"
+                title="EduX Podcast | Episode 4 — The Work Behind the International Chemistry Olympiad"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="absolute top-0 left-0 w-full h-full"
+                style="border-radius: 1rem;"
+              ></iframe>
+            </div>
+          </div>
+
+          <p>We are pleased to announce the release of Episode 4 of the EduX Podcast, featuring distinguished representatives of the global chemistry and olympiad community:</p>
+
+          <div class="bg-slate-50 p-6 rounded-xl my-6">
+            <p class="font-semibold text-slate-900 mb-3">➡️ John Leon Kiappes</p>
+            <ul class="space-y-2">
+              <li>➖ Chairman of the Steering Committee of IChO</li>
+              <li>➖ Professor at University College London</li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-xl my-6">
+            <p class="font-semibold text-slate-900 mb-3">➡️ Alexander Kirillovich Gladilin</p>
+            <ul class="space-y-2">
+              <li>➖ Co-Chairman of the Scientific Committee of IChO 2026</li>
+              <li>➖ Professor at Lomonosov Moscow State University</li>
+            </ul>
+          </div>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">📌 In this episode</p>
+            <p>Our guests discuss the scientific, organizational, and international collaboration behind the International Chemistry Olympiad, offering valuable insights into its mission and global impact.</p>
+          </div>
+
+          <div class="info-box">
+            <p class="font-semibold text-slate-900 mb-2">📺 Watch Now</p>
+            <p>The episode is now available to watch and listen. We invite you to watch and learn more about the International Chemistry Olympiad.</p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.icho2026.uz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
+              <span>✅</span> Website
+            </a>
+            <a href="https://t.me/icho_uzbekistan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Telegram
+            </a>
+            <a href="https://www.facebook.com/InternationalChemistryOlympiad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Facebook
+            </a>
+            <a href="https://www.instagram.com/icho.official/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors">
+              <span>🌐</span> Instagram
+            </a>
+            <a href="https://www.youtube.com/@icho2026uz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
+              <span>🌐</span> YouTube
+            </a>
+            <a href="https://www.linkedin.com/company/international-chemistry-olympiad-2026/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> LinkedIn
+            </a>
+          </div>
+        `,
+        cover: "/news/16posy.jpg",
+        published_at: "2026-02-03T12:00:00+05:00",
       },
     ];
   }
