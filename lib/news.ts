@@ -31,6 +31,10 @@ export async function getNewsList(): Promise<NewsItem[]> {
 
           <p><strong>The Work Behind the International Chemistry Olympiad (IChO)</strong></p>
 
+          <div class="highlight-box mb-6">
+            <a href="https://youtu.be/7FXH-JJ4DFs?si=FBhGSeoAf5O2SC4n" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-semibold text-lg">WATCH THE PODCAST 👈</a>
+          </div>
+
           <div class="my-8">
             <div class="relative w-full" style="padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);">
               <iframe
