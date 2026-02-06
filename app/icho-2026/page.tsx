@@ -360,7 +360,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Filip Ilievski",
-      role: "Author & Reviewer",
+      role: "Reviewer",
       institute: "Uppsala University",
       country: "Sweden",
       title: "",
