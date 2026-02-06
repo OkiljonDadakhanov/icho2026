@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNewsBySlug } from "@/lib/news";
+import { getNewsBySlug, getNewsList } from "@/lib/news";
 
 type Params = { slug: string };
+
+export async function generateStaticParams() {
+  const news = await getNewsList();
+  return news.map((item) => ({ slug: item.slug }));
+}
 
 export async function generateMetadata({
   params,
