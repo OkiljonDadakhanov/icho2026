@@ -23,7 +23,14 @@ export function Navigation() {
     },
     { name: "Programme", href: "/program" },
     { name: "Partnership", href: "/partnership" },
-    { name: "Uzbekistan", href: "/uzbekistan" },
+    {
+      name: "Uzbekistan",
+      href: "/uzbekistan",
+      dropdown: [
+        { name: "About Uzbekistan", href: "/uzbekistan" },
+        { name: "Travel Details", href: "/travel-details" },
+      ],
+    },
     {
       name: "About IChO",
       href: "/about",
@@ -33,6 +40,7 @@ export function Navigation() {
         { name: "Past IChOs", href: "/previous-icho" },
         { name: "Future IChOs", href: "/future-icho" },
         { name: "IChO key dates", href: "/key-dates" },
+        { name: "Uzbekistan", href: "/uzbekistan" },
       ],
     },
     {
