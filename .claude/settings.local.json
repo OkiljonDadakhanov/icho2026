@@ -1,7 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ren \"C:\\\\Users\\\\akilhan\\\\Desktop\\\\work\\\\icho2026\\\\app\\\\competetions\" \"competitions\")"
+      "Bash(ren \"C:\\\\Users\\\\akilhan\\\\Desktop\\\\work\\\\icho2026\\\\app\\\\competetions\" \"competitions\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate participants, navigation, and add news articles\n\n- Remove Belarus and Russia from participants list\n- Reorder Organization dropdown: Supervisory, Steering, Organizing, Scientific\n- Add IChO 2025 conclusion news with ceremony images\n- Add Catalyzer publication announcement\n- Add Huawei logo and news images\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate Samarkand news with new content and images\n\n- Move Samarkand news to last position \\(oldest\\)\n- Update content with new text and hashtags\n- Add sam.jpg through sam4.jpg gallery images\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nReorder news items according to specified order\n\nAdjusted published_at dates to achieve correct sort order:\n- Position 3: Site Visit to Accommodation\n- Position 4: CaEX Center\n- Position 5: Podcast\n- Position 6: Another Key Preparation Stage\n- Position 7: Preparations are progressing\n- Position 8: Opening Ceremony\n- Position 9: Laboratory procedures\n- Position 10: Opening Ceremony Committees\n- Positions 11-14: unchanged \\(Full Swing, Venues, Scientific, Samarkand\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(npx skills add:*)",
+      "Bash(npm i:*)",
+      "Bash(vercel login:*)",
+      "Bash(head:*)",
+      "Bash(python:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }
