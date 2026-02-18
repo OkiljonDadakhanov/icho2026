@@ -187,12 +187,12 @@ export default function Icho2026Page() {
       image: "/team/akilhan.jpg",
     },
     {
-      name: "Ruxsora Toirova",
+      name: "Rukhsora Toirova",
       role: "Coordinator of IChO 2026",
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "Coordinator of IChO 2026",
-      image: "/team/ruxsora.jpg",
+      image: "/team/rukhsora.jpg",
     },
   ];
 
