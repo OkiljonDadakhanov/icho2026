@@ -171,23 +171,6 @@ export default function Icho2026Page() {
       image: "/team/azimjon.png",
     },
     {
-      name: "Musurmonov Rabbim",
-      role: "Committee member",
-      institute: "—",
-      country: "Uzbekistan",
-      title: "—",
-      image: "/team/rabbim.png",
-    },
-   
-    {
-      name: "Umarkhodjaev Akromkhuja",
-      role: "Committee member",
-      institute: "—",
-      country: "Uzbekistan",
-      title: "—",
-      image: "/team/akromxoja.png",
-    },
-    {
       name: "Fayyoz Tuychiev",
       role: "Committee member",
       institute: "Science Olympiad Center",
@@ -202,6 +185,14 @@ export default function Icho2026Page() {
       country: "Uzbekistan",
       title: "Software Engineer",
       image: "/team/akilhan.jpg",
+    },
+    {
+      name: "Ruxsora Toirova",
+      role: "Coordinator of IChO 2026",
+      institute: "Science Olympiad Center",
+      country: "Uzbekistan",
+      title: "Coordinator of IChO 2026",
+      image: "/team/ruxsora.jpg",
     },
   ];
 
