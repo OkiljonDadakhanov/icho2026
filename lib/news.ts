@@ -14,8 +14,56 @@ const BASE = process.env.NEWS_API_URL || ""; // e.g. https://api.yourdomain.com/
 export async function getNewsList(): Promise<NewsItem[]> {
   if (!BASE) {
     // Demo data when no API is configured
-    return [
-      // 1. The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!
+    const list = [
+      // IChO 2026: The Second Catalyzer has been published
+      {
+        id: 17,
+        slug: "icho-2026-second-catalyzer-published",
+        title: "IChO 2026: The Second Catalyzer has been published",
+        excerpt:
+          "The second issue of Catalyzer is now available, highlighting key outcomes of the September Scientific Committee Meeting and more about Uzbekistan.",
+        contentHtml: `
+          <div class="hashtags">
+            <span class="hashtag">#IChO2026</span>
+            <span class="hashtag">#Catalyzer</span>
+          </div>
+
+          <p>The second issue of Catalyzer is now available!</p>
+
+          <p>This edition highlights key outcomes of the September Scientific Committee Meeting, where important academic and organizational matters for the Olympiad were discussed.</p>
+
+          <p>Readers will also discover more about Uzbekistan, the host country of the 58th International Chemistry Olympiad 2026 — including its rich cultural heritage and the unique flavors of traditional Uzbek cuisine that await participants and guests.</p>
+
+          <div class="highlight-box">
+            <p class="font-semibold text-slate-900 mb-2">📖 More details</p>
+            <p><a href="https://www.icho2026.uz/catalyzer" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-700 font-medium">Read the Catalyzer ⬅️</a></p>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.icho2026.uz/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors">
+              <span>✅</span> Website
+            </a>
+            <a href="https://t.me/icho_uzbekistan" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Telegram
+            </a>
+            <a href="https://www.facebook.com/InternationalChemistryOlympiad" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> Facebook
+            </a>
+            <a href="https://www.instagram.com/icho.official/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-pink-50 text-pink-700 rounded-lg hover:bg-pink-100 transition-colors">
+              <span>🌐</span> Instagram
+            </a>
+            <a href="https://www.youtube.com/@icho2026uz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-700 rounded-lg hover:bg-red-100 transition-colors">
+              <span>🌐</span> YouTube
+            </a>
+            <a href="https://www.linkedin.com/company/international-chemistry-olympiad-2026/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3B0c5cL%2F8CQT6wetpDyd9KYA%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors">
+              <span>🌐</span> LinkedIn
+            </a>
+          </div>
+        `,
+        cover: "/images/catalyzer2.jpg",
+        published_at: "2026-02-15T12:00:00+05:00",
+      },
+      // The International Chemistry Olympiad has successfully concluded – next station is Uzbekistan!
       {
         id: 16,
         slug: "icho-2025-concluded-next-station-uzbekistan",
@@ -777,6 +825,7 @@ export async function getNewsList(): Promise<NewsItem[]> {
         published_at: "2026-02-03T12:00:00+05:00",
       },
     ];
+    return list.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
   }
 
   const res = await fetch(`${BASE}`, { next: { revalidate: 1800 } });

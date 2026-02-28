@@ -124,7 +124,7 @@ export default function PartnershipPage() {
     >
       <div className={`flex ${size === "large" ? "flex-col items-center text-center" : "items-start gap-4"}`}>
         <div
-          className={`bg-gradient-to-br from-slate-50 to-white border border-slate-100 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0 ${
+          className={`bg-white border border-slate-100 rounded-xl flex items-center justify-center overflow-hidden flex-shrink-0 ${
             size === "large" ? "w-32 h-32 mb-5" : "w-20 h-20"
           }`}
         >

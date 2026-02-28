@@ -1,33 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { Download } from "lucide-react";
 
 type Issue = {
   number: number;
-  cover: string;       // image path
-  pdf: string;         // pdf path
+  cover: string;
+  pdf: string;
 };
 
 const ISSUES: Issue[] = [
-  // {
-  //   number: 3,
-  //   title: "Beginning of Autumn",
-  //   date: "2022/07/11",
-  //   cover: "/images/catalyzer1.png", // replace with your real image if needed
-  //   pdf: "/catalyzer.pdf",
-  // },
-  // {
-  //   number: 2,
-  //   title: "Lesser Heat",
-  //   date: "2022/07/08",
-  //   cover: "/images/catalyzer1.png", // replace when you have cover #2
-  //   pdf: "/catalyzer.pdf",
-  // },
+  {
+    number: 2,
+    cover: "/images/catalyzer2.jpg",
+    pdf: "https://drive.google.com/file/d/1WdBppMXOr-rCIDjUVPHBmMrRHpucjHWD/view?usp=drive_link",
+  },
   {
     number: 1,
-    cover: "/images/catalyzer1.png", // replace when you have cover #1
+    cover: "/images/catalyzer1.png",
     pdf: "/catalyzer.pdf",
   },
 ];
@@ -59,28 +49,29 @@ export default function CatalyzerPage() {
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  priority={issue.number === 3}
+                  priority={issue.number === 2}
                 />
               </div>
 
               {/* Caption like in the picture */}
               <div className="mt-4">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <Link
+                  <a
                     href={issue.pdf}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-semibold tracking-wide text-[18px] sm:text-[20px] uppercase text-violet-700 hover:text-violet-800"
                   >
                     Catalyzer No.{issue.number}
-                  </Link>
+                  </a>
 
                   <a
                     href={issue.pdf}
-                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[13px] text-slate-500 hover:text-slate-700"
                   >
-                    (Download PDF)
+                    (View / Download)
                     <Download className="h-3.5 w-3.5" />
                   </a>
                 </div>

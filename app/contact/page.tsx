@@ -25,6 +25,7 @@ export default function ContactUsPage() {
                 <div>
                   <h3 className="font-semibold">Email:</h3>
                   <p>icho2026@olympcenter.uz</p>
+                  <p>info.icho2026@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start">

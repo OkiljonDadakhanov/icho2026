@@ -40,7 +40,6 @@ export function Navigation() {
         { name: "Past IChOs", href: "/previous-icho" },
         { name: "Future IChOs", href: "/future-icho" },
         { name: "IChO key dates", href: "/key-dates" },
-        { name: "Uzbekistan", href: "/uzbekistan" },
       ],
     },
     {

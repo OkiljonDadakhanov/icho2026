@@ -43,20 +43,20 @@ export function Footer() {
               </Link>
 
               <Link
-                href="https://www.linkedin.com/company/fan-olimpiadalari-markazi/"
+                href="https://www.linkedin.com/company/international-chemistry-olympiad-2026/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3B0c5cL%2F8CQT6wetpDyd9KYA%3D%3D"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
 
               <Link
-                href="https://www.instagram.com/icho_2026uz/"
+                href="https://www.instagram.com/icho.official/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </Link>
               <Link
-                href="http://bit.ly/olimpdep"
+                href="https://www.youtube.com/@icho2026uz"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Youtube className="h-5 w-5" />
@@ -143,6 +143,10 @@ export function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-500" />
                 <span className="text-gray-400">icho2026@olympcenter.uz</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="h-5 w-5 text-green-500" />
+                <span className="text-gray-400">info.icho2026@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-500" />

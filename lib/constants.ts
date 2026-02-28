@@ -16,16 +16,17 @@ export const EVENT = {
 
 // Social Media Links
 export const SOCIAL_LINKS = {
-  facebook: "https://www.facebook.com/share/1AZF86Kgxk/",
-  telegram: "https://t.me/icho2026",
-  linkedin: "https://www.linkedin.com/company/icho2026/",
-  instagram: "https://www.instagram.com/icho_2026/",
-  youtube: "https://www.youtube.com/@IChO2026",
+  facebook: "https://www.facebook.com/InternationalChemistryOlympiad",
+  telegram: "https://t.me/icho_uzbekistan",
+  linkedin: "https://www.linkedin.com/company/international-chemistry-olympiad-2026/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_companies%3B0c5cL%2F8CQT6wetpDyd9KYA%3D%3D",
+  instagram: "https://www.instagram.com/icho.official/",
+  youtube: "https://www.youtube.com/@icho2026uz",
 } as const;
 
 // Contact Information
 export const CONTACT = {
   email: "icho2026@olympcenter.uz",
+  emailInfo: "info.icho2026@gmail.com",
   website: "https://icho2026.uz",
 } as const;
 

@@ -338,9 +338,21 @@ export default function TravelDetailsPage() {
           <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">
             Visa Procedure
           </h2>
-          <p className="text-center text-slate-600 mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-slate-600 mb-8 max-w-3xl mx-auto">
             Information on obtaining a visa for entry into the Republic of Uzbekistan
           </p>
+
+          <div className="mb-12 flex justify-center">
+            <a
+              href="https://t.me/icho_uzbekistan/65"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-xl font-medium shadow-md hover:shadow-lg transition-all"
+            >
+              <span>Visa process info video</span>
+              <span aria-hidden>↗</span>
+            </a>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Individual Application */}
