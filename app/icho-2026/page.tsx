@@ -21,7 +21,7 @@ const Card = ({ member }: { member: CommitteeMember }) => (
   <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-5 flex gap-4 items-start hover:shadow-xl transition-all duration-300">
     <div className="w-16 h-16 rounded-full overflow-hidden border border-slate-300">
       <Image
-        src={member.image || "/images/default-avatar.jpg"}
+        src={member.image || "/images/icho.png"}
         alt={member.name}
         width={64}
         height={64}

@@ -16,12 +16,10 @@ export function Hero() {
         muted
         loop
         playsInline
-        poster="/images/hero-poster.jpg"
+        poster="/images/tashkent.jpeg"
         className="absolute inset-0 w-full h-full object-cover z-[1] opacity-70 max-w-full"
       >
-        <source src="/main.webm" type="video/webm" />
         <source src="/main.mp4" type="video/mp4" />
-        <source src="/main.MOV" type="video/mp4" />
       </video>
 
       {/* Overlay & Visuals */}

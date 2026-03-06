@@ -4,7 +4,7 @@ import { Calendar, FileText } from "lucide-react";
 
 export default function ResultsPage() {
   const mockYears = [
-    { year: 2026, host: "Uzbekistan", file: "/files/icho2025_results.pdf" },
+    { year: 2026, host: "Uzbekistan" },
    
   ];
 
