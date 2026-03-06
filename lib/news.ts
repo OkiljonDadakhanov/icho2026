@@ -1,4 +1,5 @@
-// lib/news.ts
+import { API } from "./constants";
+
 export type NewsItem = {
   id: number;
   slug: string;
@@ -9,12 +10,10 @@ export type NewsItem = {
   published_at: string; // ISO
 };
 
-const BASE = process.env.NEWS_API_URL || ""; // e.g. https://api.yourdomain.com/press/news
+const BASE = API.newsUrl;
 
-export async function getNewsList(): Promise<NewsItem[]> {
-  if (!BASE) {
-    // Demo data when no API is configured
-    const list = [
+function getFallbackNewsList(): NewsItem[] {
+  const list = [
       // IChO 2026: The Second Catalyzer has been published
       {
         id: 17,
@@ -824,23 +823,42 @@ export async function getNewsList(): Promise<NewsItem[]> {
         cover: "/news/16posy.jpg",
         published_at: "2026-02-03T12:00:00+05:00",
       },
-    ];
-    return list.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
+  ];
+
+  return list.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
+}
+
+export async function getNewsList(): Promise<NewsItem[]> {
+  const fallback = getFallbackNewsList();
+
+  if (!BASE) {
+    return fallback;
   }
 
-  const res = await fetch(`${BASE}`, { next: { revalidate: 1800 } });
-  if (!res.ok) throw new Error("Failed to fetch news");
-  return res.json();
+  try {
+    const res = await fetch(`${BASE}`, { next: { revalidate: 1800 } });
+    if (!res.ok) throw new Error("Failed to fetch news");
+    return res.json();
+  } catch (error) {
+    console.error("Falling back to bundled news list.", error);
+    return fallback;
+  }
 }
 
 export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
+  const fallback = getFallbackNewsList().find((n) => n.slug === slug) ?? null;
+
   if (!BASE) {
-    const list = await getNewsList();
-    return list.find((n) => n.slug === slug) ?? null;
+    return fallback;
   }
 
-  const res = await fetch(`${BASE}/${slug}`, { next: { revalidate: 1800 } });
-  if (res.status === 404) return null;
-  if (!res.ok) throw new Error("Failed to fetch news item");
-  return res.json();
+  try {
+    const res = await fetch(`${BASE}/${slug}`, { next: { revalidate: 1800 } });
+    if (res.status === 404) return fallback;
+    if (!res.ok) throw new Error("Failed to fetch news item");
+    return res.json();
+  } catch (error) {
+    console.error(`Falling back to bundled news item for ${slug}.`, error);
+    return fallback;
+  }
 }

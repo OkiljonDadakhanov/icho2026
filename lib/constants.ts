@@ -37,7 +37,7 @@ export const ANALYTICS = {
 
 // API Endpoints
 export const API = {
-  newsUrl: process.env.NEWS_API_URL || "",
+  newsUrl: process.env.NEWS_API_URL || "https://api.icho2026.uz/api/press/news",
 } as const;
 
 // Statistics displayed on the site
