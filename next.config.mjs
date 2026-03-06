@@ -15,6 +15,11 @@ const nextConfig = {
         hostname: 'i.ytimg.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'content-api.icho2026.uz',
+        pathname: '/**',
+      },
     ],
   },
 }
