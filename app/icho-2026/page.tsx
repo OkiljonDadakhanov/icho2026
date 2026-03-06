@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { ScrollText, Calendar, Download } from "lucide-react";
+import { ScrollText } from "lucide-react";
 
 type CommitteeMember = {
   name: string;
@@ -36,28 +35,6 @@ const Card = ({ member }: { member: CommitteeMember }) => (
       {member.institute && <p className="text-sm mt-1">{member.institute}</p>}
       <p className="text-sm text-slate-500">{member.country}</p>
     </div>
-  </div>
-);
-
-type IntSciMember = {
-  name: string;
-  role: string;
-  image: string;
-};
-
-const IntSciCard = ({ member }: { member: IntSciMember }) => (
-  <div className="flex flex-col items-center text-center">
-    <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-slate-200 shadow-md mb-3 flex-shrink-0">
-      <Image
-        src={member.image}
-        alt={member.name}
-        width={128}
-        height={128}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <h3 className="text-base sm:text-lg font-bold text-slate-900 leading-tight">{member.name}</h3>
-    <p className="text-sm text-slate-600 mt-1 leading-snug">{member.role}</p>
   </div>
 );
 

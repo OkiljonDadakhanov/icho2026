@@ -27,7 +27,7 @@ export default function Problems() {
             Types of Problems
           </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            IChO problems challenge students' analytical thinking, creativity,
+            IChO problems challenge students&apos; analytical thinking, creativity,
             and deep understanding of chemistry across various disciplines.
           </p>
         </div>

@@ -1,5 +1,3 @@
-import { Award, Globe, Users, Beaker } from "lucide-react";
-
 export function About() {
   return (
     <section className="py-20 bg-white">
@@ -14,7 +12,7 @@ export function About() {
         <div className="gap-12 items-center">
           <div>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              The International Chemistry Olympiad (IChO) is the world's most
+              The International Chemistry Olympiad (IChO) is the world&apos;s most
               prestigious annual competition for secondary school chemistry
               students. Since its inception in 1968 in Czechoslovakia, the IChO
               has grown to include over 90 countries, bringing together the

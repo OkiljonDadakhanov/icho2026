@@ -34,10 +34,10 @@ export const metadata: Metadata = {
       "The 58th International Chemistry Olympiad will be held in Tashkent, Uzbekistan from July 10-19, 2026. Transforming Elements, Connecting the World.",
     images: [
       {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "IChO 2026 - 58th International Chemistry Olympiad in Tashkent, Uzbekistan",
+        url: "/images/logo-without-bg.png",
+        width: 1920,
+        height: 1080,
+        alt: "IChO 2026 logo",
       },
     ],
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "IChO 2026 | 58th International Chemistry Olympiad",
     description:
       "Join us in Tashkent, Uzbekistan for the 58th International Chemistry Olympiad, July 10-19, 2026.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/logo-without-bg.png"],
   },
   robots: {
     index: true,
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/images/icho.png",
+    shortcut: "/images/icho.png",
+    apple: "/images/icho.png",
   },
 };
 
@@ -106,6 +106,7 @@ export default function RootLayout({
         {/* Noscript fallback */}
         <noscript>
           <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://mc.yandex.ru/watch/106225653"
               style={{ position: "absolute", left: "-9999px" }}

@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText, Calendar, Download } from "lucide-react";
+import { Calendar, FileText } from "lucide-react";
 
 export default function ResultsPage() {
   const mockYears = [
@@ -27,7 +27,7 @@ export default function ResultsPage() {
             <span>Results Archive</span>
           </div>
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            IChO 2026 Olympiad's results
+            IChO 2026 Olympiad&apos;s results
           </h1>
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
             Access the results, and statistics from IChO 2026 Olympiad, hosted in Uzbekistan.

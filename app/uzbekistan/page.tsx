@@ -4,14 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import {
   MapPin,
-  Clock,
-  Thermometer,
   Utensils,
   Camera,
   Landmark,
   Users,
-  Star,
-  ChevronRight,
   Globe,
   DollarSign,
   BookOpen,

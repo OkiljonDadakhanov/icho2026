@@ -1,41 +1,43 @@
 "use client"
 
-import { useState, useEffect, useCallback } from "react"
+import { useEffect, useState } from "react"
 import { EVENT } from "@/lib/constants"
 
 const TARGET_DATE = EVENT.targetDate.getTime()
 
-export default function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
+function getTimeLeft() {
+  const now = new Date().getTime()
+  const difference = TARGET_DATE - now
 
-  const calculateTimeLeft = useCallback(() => {
-    const now = new Date().getTime()
-    const difference = TARGET_DATE - now
-
-    if (difference > 0) {
-      setTimeLeft({
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((difference % (1000 * 60)) / 1000),
-      })
+  if (difference <= 0) {
+    return {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
     }
-  }, [])
+  }
+
+  return {
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
+    seconds: Math.floor((difference % (1000 * 60)) / 1000),
+  }
+}
+
+export default function CountdownTimer() {
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft)
 
   useEffect(() => {
-    // Calculate immediately on mount
-    calculateTimeLeft()
-
     let timer: NodeJS.Timeout | null = null
+    const updateTimeLeft = () => {
+      setTimeLeft(getTimeLeft())
+    }
 
     const startTimer = () => {
       if (!timer) {
-        timer = setInterval(calculateTimeLeft, 1000)
+        timer = setInterval(updateTimeLeft, 1000)
       }
     }
 
@@ -50,22 +52,19 @@ export default function CountdownTimer() {
       if (document.hidden) {
         stopTimer()
       } else {
-        calculateTimeLeft() // Update immediately when tab becomes visible
+        updateTimeLeft()
         startTimer()
       }
     }
 
-    // Start timer initially
     startTimer()
-
-    // Listen for visibility changes
     document.addEventListener("visibilitychange", handleVisibilityChange)
 
     return () => {
       stopTimer()
       document.removeEventListener("visibilitychange", handleVisibilityChange)
     }
-  }, [calculateTimeLeft])
+  }, [])
 
   const timeUnits = [
     { value: timeLeft.days, label: "Days", color: "from-blue-500 to-indigo-600", element: "H₂O" },
@@ -118,7 +117,7 @@ export default function CountdownTimer() {
 
         {/* Countdown Grid */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-          {timeUnits.map((unit, index) => (
+          {timeUnits.map((unit) => (
             <div key={unit.label} className="group">
               <div className="relative">
                 {/* Molecular Glow Effect */}
