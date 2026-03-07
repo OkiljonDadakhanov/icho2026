@@ -12,6 +12,10 @@ export type NewsItem = {
 
 const BASE = API.newsUrl;
 
+type NewsFetchOptions = {
+  live?: boolean;
+};
+
 function getFallbackNewsList(): NewsItem[] {
   const list = [
       // IChO 2026: The Second Catalyzer has been published
@@ -828,7 +832,9 @@ function getFallbackNewsList(): NewsItem[] {
   return list.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
 }
 
-export async function getNewsList(): Promise<NewsItem[]> {
+export async function getNewsList(
+  options: NewsFetchOptions = {},
+): Promise<NewsItem[]> {
   const fallback = getFallbackNewsList();
 
   if (!BASE) {
@@ -836,7 +842,10 @@ export async function getNewsList(): Promise<NewsItem[]> {
   }
 
   try {
-    const res = await fetch(`${BASE}`, { next: { revalidate: 1800 } });
+    const res = await fetch(
+      `${BASE}`,
+      options.live ? { cache: "no-store" } : { next: { revalidate: 1800 } },
+    );
     if (!res.ok) throw new Error("Failed to fetch news");
     return res.json();
   } catch (error) {
@@ -845,7 +854,10 @@ export async function getNewsList(): Promise<NewsItem[]> {
   }
 }
 
-export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
+export async function getNewsBySlug(
+  slug: string,
+  options: NewsFetchOptions = {},
+): Promise<NewsItem | null> {
   const fallback = getFallbackNewsList().find((n) => n.slug === slug) ?? null;
 
   if (!BASE) {
@@ -853,8 +865,13 @@ export async function getNewsBySlug(slug: string): Promise<NewsItem | null> {
   }
 
   try {
-    const res = await fetch(`${BASE}/${slug}`, { next: { revalidate: 1800 } });
-    if (res.status === 404) return fallback;
+    const res = await fetch(
+      `${BASE}/${slug}`,
+      options.live ? { cache: "no-store" } : { next: { revalidate: 1800 } },
+    );
+    if (res.status === 404) {
+      return options.live ? null : fallback;
+    }
     if (!res.ok) throw new Error("Failed to fetch news item");
     return res.json();
   } catch (error) {

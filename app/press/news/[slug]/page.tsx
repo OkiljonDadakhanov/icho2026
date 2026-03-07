@@ -1,14 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getNewsBySlug, getNewsList } from "@/lib/news";
+import { getNewsBySlug } from "@/lib/news";
 
 type Params = { slug: string };
 
-export async function generateStaticParams() {
-  const news = await getNewsList();
-  return news.map((item) => ({ slug: item.slug }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -16,7 +13,7 @@ export async function generateMetadata({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const item = await getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug, { live: true });
   if (!item) return { title: "News" };
   return {
     title: `${item.title} – News`,
@@ -35,7 +32,7 @@ export default async function NewsDetailPage({
   params: Promise<Params>;
 }) {
   const { slug } = await params;
-  const item = await getNewsBySlug(slug);
+  const item = await getNewsBySlug(slug, { live: true });
   if (!item) return notFound();
 
   return (

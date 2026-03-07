@@ -8,8 +8,10 @@ export const metadata = {
   description: "Latest announcements and press updates.",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function NewsPage() {
-  const items = await getNewsList();
+  const items = await getNewsList({ live: true });
 
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(1100px_600px_at_10%_0%,rgba(16,185,129,0.08),transparent_50%),radial-gradient(1000px_500px_at_90%_10%,rgba(56,189,248,0.08),transparent_55%)]">

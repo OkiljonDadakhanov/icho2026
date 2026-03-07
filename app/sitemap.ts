@@ -4,7 +4,7 @@ import { getNewsList } from "@/lib/news";
 
 const BASE_URL = "https://www.icho2026.uz";
 
-export const dynamic = "force-static";
+export const revalidate = 1800;
 
 const staticRoutes: Array<{
   path: string;
