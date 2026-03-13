@@ -19,12 +19,12 @@ type CommitteeSection = {
 
 const Card = ({ member }: { member: CommitteeMember }) => (
   <div className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-5 flex gap-4 items-start hover:shadow-xl transition-all duration-300">
-    <div className="w-16 h-16 rounded-full overflow-hidden border border-slate-300">
+    <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-slate-200 shadow-md flex-shrink-0">
       <Image
         src={member.image || "/images/icho.png"}
         alt={member.name}
-        width={64}
-        height={64}
+        width={80}
+        height={80}
         className="w-full h-full object-cover"
       />
     </div>
@@ -80,14 +80,7 @@ export default function Icho2026Page() {
       title: "Director",
       image: "/team/sevara.png",
     },
-    {
-      name: "Odil Temirov",
-      role: "Committee member",
-      institute: "JSC 'Uzkimyosanoat'",
-      country: "Uzbekistan",
-      title: "Chairman",
-      image: "/team/odil.png",
-    },
+    
     {
       name: "Asilbek Khudayarov",
       role: "Committee member",
@@ -124,52 +117,91 @@ export default function Icho2026Page() {
 
   const organizingCommittee: CommitteeMember[] = [
     {
-      name: "Turaboy Shermatov",
-      role: "Chairman of the Organising Committee",
+      name: "T.Y. Shermatov",
+      role: "Chair of the Organizing Committee",
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
-      title: "Director",
-      image: "/team/torabek.png",
+      title: "Director of the Science Olympiad Center",
+      image: "/team/shermatov.jpg",
     },
     {
-      name: "Davron Tukhtaev",
-      role: "Committee member",
+      name: "Kh.R. Shakirov",
+      role: "Co-Chair of the Organizing Committee",
+      institute: "Agency for Specialized Educational Institutions",
+      country: "Uzbekistan",
+      title: "Deputy Director",
+      image: "/team/Shakirov.png",
+    },
+    {
+      name: "S.A. Ashirov",
+      role: "Member of the Organizing Committee",
+      institute:
+        "Department for Creative and Sports Schools, Agency for Specialized Educational Institutions",
+      country: "Uzbekistan",
+      title: "Head of Department",
+      image: "/team/Ashirov.png",
+    },
+    {
+      name: "A.N. Abdulkhaev",
+      role: "Member of the Organizing Committee",
+      institute:
+        "Department of International Relations, Ministry of Preschool and School Education",
+      country: "Uzbekistan",
+      title: "Head of Department",
+      image: "/team/Abdulkhaev.png",
+    },
+    {
+      name: "M.N. Musurmonov",
+      role: "Member of the Organizing Committee",
+      institute:
+        "Department for ICT Implementation and Digitalization, Ministry of Preschool and School Education",
+      country: "Uzbekistan",
+      title: "Head of Department",
+      image: "/team/Musurmonov.png",
+    },
+    {
+      name: "D.A. Sobirova",
+      role: "Member of the Organizing Committee",
+      institute: "Information Service, Ministry of Preschool and School Education",
+      country: "Uzbekistan",
+      title: "Head of Information Service",
+      image: "/team/Sobirova.png",
+    },
+    {
+      name: "D.D. Tukhtaev",
+      role: "Member of the Organizing Committee",
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
-      title: "Vice Director",
-      image: "/team/davron.png",
+      title: "Deputy Director",
+      image: "/team/Tukhtaev.png",
     },
     {
-      name: "Azimjon Abdulkhaev",
-      role: "Committee member",
-      institute: "—",
+      name: "F.F. Tuychiev",
+      role: "Member of the Organizing Committee",
+      institute:
+        "Department for Selection and Training of Students for International Science Olympiads, Science Olympiad Center",
       country: "Uzbekistan",
-      title: "—",
-      image: "/team/azimjon.png",
+      title:
+        "Head of the Department for Selection and Training of Students for International Science Olympiads",
+      image: "/team/Tuychiev.JPG",
     },
     {
-      name: "Fayyoz Tuychiev",
-      role: "Committee member",
+      name: "T.O. Turaeva",
+      role: "Member of the Organizing Committee",
+      institute:
+        "Department for Digital Media Resources and Communications, Science Olympiad Center",
+      country: "Uzbekistan",
+      title:
+        "Head of the Department for Digital Media Resources and Communications",
+      image: "/team/Turaeva.JPG",
+    },
+    {
+      name: "R.X. Toirova",
+      role: "Member of the Organizing Committee",
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
-      title: "—",
-      image: "/team/fayyoz.jpg",
-    },
-    {
-      name: "Okiljon Dadakhonov",
-      role: "Committee member",
-      institute: "Science Olympiad Center",
-      country: "Uzbekistan",
-      title: "Software Engineer",
-      image: "/team/akilhan.jpg",
-    },
-    {
-      name: "Rukhsora Toirova",
-      role: "Coordinator of IChO 2026",
-      institute: "Science Olympiad Center",
-      country: "Uzbekistan",
-      title: "Coordinator of IChO 2026",
-      image: "/team/rukhsora.jpg",
+      title: "Coordinator of the Olympiad",
+      image: "/team/Toirova.jpg",
     },
   ];
 
@@ -505,6 +537,7 @@ export default function Icho2026Page() {
       institute: "",
       country: "UAE",
       title: "Member (2025)",
+      image: "/steering/Abdallah.png",
     },
     {
       name: "Turaboy Shermatov",

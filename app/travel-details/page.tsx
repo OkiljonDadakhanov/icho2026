@@ -342,16 +342,28 @@ export default function TravelDetailsPage() {
             Information on obtaining a visa for entry into the Republic of Uzbekistan
           </p>
 
-          <div className="mb-12 flex justify-center">
+          <div className="mb-8 flex justify-center">
             <a
               href="https://t.me/icho_uzbekistan/65"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-xl font-medium shadow-md hover:shadow-lg transition-all"
             >
-              <span>Visa process info video</span>
+              <span>Visa process info video (Telegram)</span>
               <span aria-hidden>↗</span>
             </a>
+          </div>
+
+          <div className="mb-12">
+            <div className="relative w-full max-w-3xl mx-auto aspect-video rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+              <iframe
+                src="https://www.youtube.com/embed/qcQD6ZxejIM?si=FN8k-PETHUG2NK78"
+                title="Visa process information for IChO 2026"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
