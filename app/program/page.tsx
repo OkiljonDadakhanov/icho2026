@@ -115,10 +115,10 @@ const SCHEDULE: DaySchedule[] = [
     title: "Trip to Samarkand",
     events: [
       { time: "05:00 – 06:00", students: "Breakfast (New Uzbekistan Hotels)", mentors: "Breakfast (Wyndham Hotel)", scientific: "Breakfast (Hyatt Regency)" },
-      { time: "06:00 – 18:00", students: "Trip to Samarkand", mentors: "Marking", scientific: "Marking" },
-      { time: "13:00 – 14:00", students: "Lunch (Samarkand)", mentors: "Lunch (Hyatt Regency)", scientific: "Lunch (Hyatt Regency)" },
-      { time: "18:00 – 19:00", students: "Dinner (Samarkand)", mentors: "Dinner (Hyatt Regency)", scientific: "Dinner (Hyatt Regency)" },
-      { time: "19:00 – 21:00", students: "Coming back to Tashkent", mentors: "Marking", scientific: "Marking" },
+      { time: "06:00 – 18:00", students: "Trip to Samarkand", mentors: "Trip to Samarkand", scientific: "Trip to Samarkand" },
+      { time: "13:00 – 14:00", students: "Lunch (Samarkand)", mentors: "Lunch (Samarkand)", scientific: "Lunch (Samarkand)" },
+      { time: "18:00 – 19:00", students: "Dinner (Samarkand)", mentors: "Dinner (Samarkand)", scientific: "Dinner (Samarkand)" },
+      { time: "19:00 – 21:00", students: "Coming back to Tashkent", mentors: "Coming back to Tashkent", scientific: "Coming back to Tashkent" },
     ],
   },
   {
