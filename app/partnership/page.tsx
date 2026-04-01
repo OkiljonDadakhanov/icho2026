@@ -49,10 +49,10 @@ export default function PartnershipPage() {
 
   const sponsors: Partner[] = [
     {
-      name: "Huawei",
+      name: "",
       logo: "/logos/huawei.png",
       tier: "Sponsor",
-      description: "Global technology partner supporting IChO 2026",
+      description: "Global partner supporting IChO 2026",
     },
   ];
 
