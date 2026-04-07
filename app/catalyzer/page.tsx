@@ -11,6 +11,11 @@ type Issue = {
 
 const ISSUES: Issue[] = [
   {
+    number: 3,
+    cover: "/catalyzer3.jpg",
+    pdf: "https://drive.google.com/file/u/0/d/1lT0ZZ5tE6c8cte9kUT-NM7CpRaDtXvvu/view?usp=drivesdk&pli=1",
+  },
+  {
     number: 2,
     cover: "/images/catalyzer2.jpg",
     pdf: "https://drive.google.com/file/d/1WdBppMXOr-rCIDjUVPHBmMrRHpucjHWD/view?usp=drive_link",
