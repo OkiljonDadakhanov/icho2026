@@ -226,6 +226,38 @@ export default function Icho2026Page() {
 
   const scientificCommitteeMembers: CommitteeMember[] = [
     {
+      name: "Hudoynazarov Ilyos Abdurasulovich",
+      role: "Scientific Committee Member",
+      institute: "National University of Uzbekistan named after Mirzo Ulugbek",
+      country: "Uzbekistan",
+      title: "Ph.D, Associate professor",
+      image: "/team/Hudoynazarov.jpg",
+    },
+    {
+      name: "Parmanov Askar",
+      role: "Scientific Committee Member",
+      institute: "National University of Uzbekistan named after Mirzo Ulugbek",
+      country: "Uzbekistan",
+      title: "Dr.",
+      image: "/team/Parmanov.jpg",
+    },
+    {
+      name: "Kholiqov Tursunali Suyunovich",
+      role: "Scientific Committee Member",
+      institute: "National University of Uzbekistan named after Mirzo Ulugbek",
+      country: "Uzbekistan",
+      title: "Professor",
+      image: "/team/Kholiqov.jpg",
+    },
+    {
+      name: "Tadjimuxamedov Xabibulla Sayfullayevich",
+      role: "Scientific Committee Member",
+      institute: "National University of Uzbekistan named after Mirzo Ulugbek",
+      country: "Uzbekistan",
+      title: "Ph.D, Associate professor",
+      image: "/team/Xabibulla.jpg",
+    },
+    {
       name: "Prof. Vadim Eremin",
       role: "Author & Reviewer",
       institute: "Moscow State University",
