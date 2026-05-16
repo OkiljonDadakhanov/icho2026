@@ -104,10 +104,10 @@ export default function ParticipantsPage() {
       <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-slate-900 tracking-tight">
-            Participating Countries
+            Participating Delegations
           </h1>
           <p className="text-slate-600 text-lg">
-           Over 90 countries represented in the International Chemistry Olympiad 2026. 
+          Participants from more than 90 countries will take part in the International Chemistry Olympiad 2026
           </p>
         </div>
 
