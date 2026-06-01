@@ -208,10 +208,10 @@ export default function Icho2026Page() {
   const scientificCommitteeCoChairs: CommitteeMember[] = [
     {
       name: "Prof. Shamansur Sagdullaev",
-      role: "Co-Chair",
+      role: "Chair",
       institute: "Yunusov Institute of the Chemistry of Plant Substances",
       country: "Uzbekistan",
-      title: "Co-Chair of Scientific Committee",
+      title: "Chair of Scientific Committee",
       image: "/international/Shomansur.jpg",
     },
     {
@@ -222,14 +222,7 @@ export default function Icho2026Page() {
       title: "Co-Chair of Scientific Committee",
       image: "/international/Alexander.jpg",
     },
-    {
-      name: "Fyodor Kuznetsov",
-      role: "Member of Scientific Committee",
-      institute: "",
-      country: "Russia",
-      title: "",
-      image: "/images/fyodor.png",
-    },
+    
   ];
 
   const scientificCommitteeMembers: CommitteeMember[] = [
@@ -281,6 +274,14 @@ export default function Icho2026Page() {
       country: "Saudi Arabia",
       title: "",
       image: "/team/xamid.png",
+    },
+    {
+      name: "Fyodor Kuznetsov",
+      role: "Member of Scientific Committee",
+      institute: "",
+      country: "Russia",
+      title: "",
+      image: "/images/Fyodor.png",
     },
     {
       name: "Bekhzodbek Boltaev",
