@@ -222,6 +222,14 @@ export default function Icho2026Page() {
       title: "Co-Chair of Scientific Committee",
       image: "/international/Alexander.jpg",
     },
+    {
+      name: "Fyodor Kuznetsov",
+      role: "Member of Scientific Committee",
+      institute: "",
+      country: "Russia",
+      title: "",
+      image: "/images/fyodor.png",
+    },
   ];
 
   const scientificCommitteeMembers: CommitteeMember[] = [
@@ -257,6 +265,7 @@ export default function Icho2026Page() {
       title: "Ph.D, Associate professor",
       image: "/team/Xabibulla.jpg",
     },
+   
     {
       name: "Prof. Vadim Eremin",
       role: "Author & Reviewer",
@@ -352,10 +361,10 @@ export default function Icho2026Page() {
       title: "",
     },
     {
-      name: "Aleksandr Koronatov",
+      name: "Dr. Aleksandr Koronatov",
       role: "Author & Reviewer",
       institute: "University of Groningen, Stratingh Institute for Chemistry & Technion, Schulich Faculty of Chemistry",
-      country: "the Netherlands",
+      country: "Netherlands",
       title: "",
       image: "/international/aleksandr.jpg",
     },
@@ -649,7 +658,7 @@ export default function Icho2026Page() {
           </h2>
 
           <h3 className="text-xl font-semibold text-slate-700">
-            Co-Chairs of Scientific Committee
+            Scientific Committee
           </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {scientificCommitteeCoChairs.map((member, idx) => (
