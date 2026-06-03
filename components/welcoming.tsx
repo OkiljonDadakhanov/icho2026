@@ -210,7 +210,7 @@ export function WelcomeMessages() {
             <MessageCard key={person.id} person={person} index={i} />
           ))}
 
-          {/* Placeholder cards for the 3 remaining people */}
+          {/* Placeholder cards for the 3 remaining people
           {[3, 4, 5].map((n, i) => (
             <div
               key={n}
@@ -229,7 +229,7 @@ export function WelcomeMessages() {
                 <p className="text-slate-300 italic text-sm">Welcome message #{n} will be added soon.</p>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
