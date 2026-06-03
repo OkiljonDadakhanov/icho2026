@@ -6,6 +6,7 @@ import {
   Users,
   Sparkles,
 } from "lucide-react";
+import { WelcomeMessages } from "@/components/welcoming";
 
 export function Hero() {
   return (
@@ -95,5 +96,6 @@ export function Hero() {
         </div>
       </div>
     </section>
+    
   );
 }
