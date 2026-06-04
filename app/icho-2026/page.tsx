@@ -82,7 +82,7 @@ export default function Icho2026Page() {
     },
     
     {
-      name: "Asilbek Khudayarov",
+      name: "Eldor Adilov",
       role: "Committee member",
       institute: "Ministry of Health",
       country: "Uzbekistan",
@@ -150,15 +150,7 @@ export default function Icho2026Page() {
       title: "Head of Department",
       image: "/team/Abdulkhaev.png",
     },
-    {
-      name: "M.N. Musurmonov",
-      role: "Member of the Organizing Committee",
-      institute:
-        "Department for ICT Implementation and Digitalization, Ministry of Preschool and School Education",
-      country: "Uzbekistan",
-      title: "Head of Department",
-      image: "/team/Musurmonov.png",
-    },
+   
     {
       name: "D.A. Sobirova",
       role: "Member of the Organizing Committee",
@@ -250,6 +242,7 @@ export default function Icho2026Page() {
       title: "Professor",
       image: "/team/Kholiqov.jpg",
     },
+
     {
       name: "Tadjimuxamedov Xabibulla Sayfullayevich",
       role: "Scientific Committee Member",
@@ -282,6 +275,14 @@ export default function Icho2026Page() {
       country: "Russia",
       title: "",
       image: "/images/Fyodor.png",
+    },
+    {
+      name: "Ibrohim Temurov",
+      role: "Scientific Committee Member",
+      institute: "",
+      country: "Uzbekistan",
+      title: "",
+      image: "/team/ibrohim.jpg",
     },
     {
       name: "Bekhzodbek Boltaev",

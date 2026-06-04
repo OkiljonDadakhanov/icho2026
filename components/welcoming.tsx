@@ -6,6 +6,30 @@ import { ChevronDown, ChevronUp, Quote } from "lucide-react";
 const welcomeMessages = [
   {
     id: 1,
+    name: "Ezozkhon Karimova",
+    title: "Minister of Preschool and School Education",
+    subtitle: "Republic of Uzbekistan",
+    image: "/welcoming/ezoza.jpg",
+    gradient: "from-sky-500 to-blue-600",
+    accentColor: "sky",
+    short:
+      "On the occasion of the 58th International Chemistry Olympiad (IChO 2026), held in Uzbekistan for the first time, I am delighted to extend a warm welcome to all delegations, scientists, mentors, and talented students.",
+    full: `On the occasion of the 58th International Chemistry Olympiad (IChO 2026), held in Uzbekistan for the first time, I am delighted to extend a warm welcome to all delegations, scientists, mentors, and talented students who have arrived from around the world.
+
+Hosting this prestigious international event is both a great honor and a significant responsibility for Uzbekistan. It reflects the international recognition of our country's ongoing efforts to advance education, science, and the development of young talent.
+
+This Olympiad once again demonstrates that science knows no borders. Chemistry transforms matter, while science transforms lives. It brings together people from different nations, cultures, and backgrounds in pursuit of a shared goal — knowledge, innovation, and progress.
+
+Uzbekistan is a country where ancient heritage and modern development come together. During your stay, you will not only participate in challenging Olympiad activities but also have the opportunity to experience the hospitality of our people, explore our rich cultural heritage, and discover the values that have shaped our nation for centuries.
+
+Dear students, we are eagerly looking forward to welcoming you to Uzbekistan. We believe that IChO 2026, where scientific discovery meets the spirit of international cooperation, will become an unforgettable and inspiring experience for every participant.
+
+Dear guests, it is our great pleasure to welcome you to Uzbekistan. We wish that IChO 2026 will be filled with outstanding achievements, meaningful exchanges, new friendships, inspiration, and unforgettable memories for all of you.
+
+We look forward to seeing you in Uzbekistan.`,
+  },
+  {
+    id: 2,
     name: "Turaboy Shermatov",
     title: "Director of the Science Olympiad Center",
     subtitle: "Republic of Uzbekistan",
@@ -30,30 +54,7 @@ We are delighted to welcome you to Uzbekistan and are confident that this Olympi
 
 I wish all of you success, confidence, and the very best of luck.`,
   },
-  {
-    id: 2,
-    name: "Ezozkhon Karimova",
-    title: "Minister of Preschool and School Education",
-    subtitle: "Republic of Uzbekistan",
-    image: "/welcoming/ezoza.jpg",
-    gradient: "from-sky-500 to-blue-600",
-    accentColor: "sky",
-    short:
-      "On the occasion of the 58th International Chemistry Olympiad (IChO 2026), held in Uzbekistan for the first time, I am delighted to extend a warm welcome to all delegations, scientists, mentors, and talented students.",
-    full: `On the occasion of the 58th International Chemistry Olympiad (IChO 2026), held in Uzbekistan for the first time, I am delighted to extend a warm welcome to all delegations, scientists, mentors, and talented students who have arrived from around the world.
-
-Hosting this prestigious international event is both a great honor and a significant responsibility for Uzbekistan. It reflects the international recognition of our country's ongoing efforts to advance education, science, and the development of young talent.
-
-This Olympiad once again demonstrates that science knows no borders. Chemistry transforms matter, while science transforms lives. It brings together people from different nations, cultures, and backgrounds in pursuit of a shared goal — knowledge, innovation, and progress.
-
-Uzbekistan is a country where ancient heritage and modern development come together. During your stay, you will not only participate in challenging Olympiad activities but also have the opportunity to experience the hospitality of our people, explore our rich cultural heritage, and discover the values that have shaped our nation for centuries.
-
-Dear students, we are eagerly looking forward to welcoming you to Uzbekistan. We believe that IChO 2026, where scientific discovery meets the spirit of international cooperation, will become an unforgettable and inspiring experience for every participant.
-
-Dear guests, it is our great pleasure to welcome you to Uzbekistan. We wish that IChO 2026 will be filled with outstanding achievements, meaningful exchanges, new friendships, inspiration, and unforgettable memories for all of you.
-
-We look forward to seeing you in Uzbekistan.`,
-  },
+  
 ];
 
 function MessageCard({ person, index }: { person: (typeof welcomeMessages)[0]; index: number }) {
