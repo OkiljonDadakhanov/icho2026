@@ -276,14 +276,7 @@ export default function Icho2026Page() {
       title: "",
       image: "/images/Fyodor.png",
     },
-    {
-      name: "Ibrohim Temurov",
-      role: "Scientific Committee Member",
-      institute: "",
-      country: "Uzbekistan",
-      title: "",
-      image: "/team/ibrohim.jpg",
-    },
+   
     {
       name: "Bekhzodbek Boltaev",
       role: "Author & Reviewer",
@@ -445,6 +438,7 @@ export default function Icho2026Page() {
       institute: "Central Asia University",
       country: "Uzbekistan",
       title: "",
+      image: "/team/Biloliddin.JPG",
     },
     {
       name: "Mirjahon Muhammadov",
@@ -452,6 +446,7 @@ export default function Icho2026Page() {
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "",
+      image: "/team/Mirjahon.JPG",
     },
     {
       name: "Ibrohim Temurov",
@@ -459,6 +454,7 @@ export default function Icho2026Page() {
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "",
+      image: "/team/ibrohim.JPG",
     },
     {
       name: "Saida Abdullaeva",
@@ -466,6 +462,7 @@ export default function Icho2026Page() {
       institute: "Tashkent State Medical University",
       country: "Uzbekistan",
       title: "",
+      image: "/team/Saida.JPG",
     },
     {
       name: "Sherzod Shaymatov",
@@ -480,6 +477,7 @@ export default function Icho2026Page() {
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "",
+      image: "/team/Daler.JPG",
     },
     {
       name: "Abdulloh Mahmudov",
@@ -508,6 +506,7 @@ export default function Icho2026Page() {
       institute: "Science Olympiad Center",
       country: "Uzbekistan",
       title: "",
+      image: "/team/firdavs.jpg",
     },
     {
       name: "Ikromiddin Boymahammadov",
