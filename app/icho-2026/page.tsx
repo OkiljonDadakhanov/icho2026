@@ -529,6 +529,7 @@ export default function Icho2026Page() {
       institute: "N. D. Zelinsky Institute of Organic Chemistry",
       country: "Russia",
       title: "",
+      image: "/team/kirill.jpg",
     },
   ];
 
