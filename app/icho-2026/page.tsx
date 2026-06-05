@@ -385,6 +385,7 @@ export default function Icho2026Page() {
       institute: "Cardiovascular Surgery Center \"American Hospital\"",
       country: "Uzbekistan",
       title: "",
+      image: "/team/bobur.jpg"
     },
     {
       name: "Islomjon Karimov",
@@ -424,6 +425,7 @@ export default function Icho2026Page() {
       institute: "Tashkent State Medical University",
       country: "Uzbekistan",
       title: "",
+      image: "/team/mahmudov.jpg"
     },
     {
       name: "Elyorbek Adkhamov",
@@ -431,7 +433,10 @@ export default function Icho2026Page() {
       institute: "Pirogov University",
       country: "Russia",
       title: "",
+      image: "/team/elyor.jpg"
     },
+   
+
     {
       name: "Biloliddin Zukhriddinov",
       role: "Author & Reviewer",
@@ -470,6 +475,7 @@ export default function Icho2026Page() {
       institute: "Tashkent State Medical University",
       country: "Uzbekistan",
       title: "",
+      image: "/team/shaymatov.jpg"
     },
     {
       name: "Daler Rahimov",
@@ -485,6 +491,7 @@ export default function Icho2026Page() {
       institute: "Massachusetts Institute of Technology",
       country: "USA",
       title: "",
+      image: "/team/mahmudovv.jpg"
     },
     {
       name: "Akhror Bahodirov",
@@ -514,6 +521,7 @@ export default function Icho2026Page() {
       institute: "New Uzbekistan University",
       country: "Uzbekistan",
       title: "",
+      image: "/team/Ikromiddin.png"
     },
     {
       name: "Kirill Kozlov",
