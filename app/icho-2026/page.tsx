@@ -499,6 +499,7 @@ export default function Icho2026Page() {
       institute: "Moscow Institute of Physics and Technology",
       country: "Russia",
       title: "",
+      image: "/team/axror.jpg"
     },
     {
       name: "Durdona Mukhtorkhodjaeva",
@@ -506,6 +507,7 @@ export default function Icho2026Page() {
       institute: "D. Mendeleev University of Chemical Technology of Russia in Tashkent",
       country: "Uzbekistan",
       title: "",
+      image: "/team/durdona.jpg"
     },
     {
       name: "Firdavs Sobirov",
