@@ -227,13 +227,22 @@ export default function Icho2026Page() {
       image: "/team/Hudoynazarov.jpg",
     },
     {
-      name: "Parmanov Askar",
+      name: "Dr. Parmanov Askar",
       role: "Scientific Committee Member",
       institute: "National University of Uzbekistan named after Mirzo Ulugbek",
       country: "Uzbekistan",
-      title: "Dr.",
+      title: "",
       image: "/team/Parmanov.jpg",
     },
+    {
+      name: "Abdurahim Nabiyev",
+      role: "Scientific Committee Member",
+      institute: "",
+      country: "Uzbekistan",
+      title: "",
+      image: "/team/nabiyev.jpg",
+    },
+
     {
       name: "Kholiqov Tursunali Suyunovich",
       role: "Scientific Committee Member",
@@ -339,6 +348,7 @@ export default function Icho2026Page() {
       institute: "Yunusov Institute of the Chemistry of Plant Substances",
       country: "Uzbekistan",
       title: "",
+      image: "/team/abdurazakov.jpg",
     },
     {
       name: "Dr. Bulat Garifullin",
