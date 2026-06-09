@@ -234,14 +234,7 @@ export default function Icho2026Page() {
       title: "",
       image: "/team/Parmanov.jpg",
     },
-    {
-      name: "Abdurahim Nabiyev",
-      role: "Scientific Committee Member",
-      institute: "",
-      country: "Uzbekistan",
-      title: "",
-      image: "/team/nabiyev.jpg",
-    },
+    
 
     {
       name: "Kholiqov Tursunali Suyunovich",
@@ -364,6 +357,7 @@ export default function Icho2026Page() {
       institute: "Tashkent Institute of Chemical Technology",
       country: "Uzbekistan",
       title: "",
+      image: "/team/nabiyev.jpg",
     },
     {
       name: "Dr. Aleksandr Koronatov",
