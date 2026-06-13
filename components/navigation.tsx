@@ -28,6 +28,7 @@ export function Navigation() {
       href: "/uzbekistan",
       dropdown: [
         { name: "About Uzbekistan", href: "/uzbekistan" },
+        { name: "Accommodation", href: "/accommodation" },
         { name: "Travel Details", href: "/travel-details" },
       ],
     },

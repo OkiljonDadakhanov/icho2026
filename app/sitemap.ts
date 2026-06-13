@@ -16,6 +16,7 @@ const staticRoutes: Array<{
   { path: "/program", changeFrequency: "monthly", priority: 0.9 },
   { path: "/partnership", changeFrequency: "monthly", priority: 0.8 },
   { path: "/uzbekistan", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/accommodation", changeFrequency: "monthly", priority: 0.8 },
   { path: "/travel-details", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about", changeFrequency: "monthly", priority: 0.8 },
   { path: "/about/regulations", changeFrequency: "yearly", priority: 0.7 },
