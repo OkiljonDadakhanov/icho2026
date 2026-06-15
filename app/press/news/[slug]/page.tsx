@@ -55,12 +55,24 @@ export default async function NewsDetailPage({
         </time>
 
         {item.cover && (
-          <div className="relative my-6 h-72 w-full overflow-hidden rounded-2xl border border-slate-200 bg-white/90 shadow-sm">
+          <div className="relative my-6 aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm">
             <Image
               src={item.cover}
               alt={item.title}
               fill
-              className="object-cover"
+              className="object-contain"
+            />
+          </div>
+        )}
+
+        {item.youtubeEmbedUrl && (
+          <div className="my-6 aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-sm">
+            <iframe
+              src={item.youtubeEmbedUrl}
+              title={`${item.title} video`}
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
           </div>
         )}

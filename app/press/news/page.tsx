@@ -59,12 +59,12 @@ export default async function NewsPage() {
               className="rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm backdrop-blur transition hover:shadow-md"
             >
               {n.cover && (
-                <div className="relative mb-3 h-40 w-full overflow-hidden rounded-xl">
+                <div className="relative mb-3 aspect-video w-full overflow-hidden rounded-xl bg-slate-50">
                   <Image
                     src={n.cover}
                     alt={n.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
               )}
