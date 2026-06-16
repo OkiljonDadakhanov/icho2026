@@ -69,6 +69,18 @@ export default async function NewsPage() {
                 </div>
               )}
 
+              {!n.cover && n.youtubeEmbedUrl && (
+                <div className="mb-3 h-40 w-full overflow-hidden rounded-xl bg-slate-950">
+                  <iframe
+                    src={n.youtubeEmbedUrl}
+                    title={`${n.title} video`}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              )}
+
               <time className="text-xs uppercase tracking-wide text-slate-500">
                 {new Date(n.published_at).toLocaleDateString()}
               </time>
