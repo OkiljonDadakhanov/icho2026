@@ -34,6 +34,8 @@ export default async function NewsDetailPage({
   const { slug } = await params;
   const item = await getNewsBySlug(slug, { live: true });
   if (!item) return notFound();
+  const shouldRenderYoutubeEmbed =
+    item.youtubeEmbedUrl && !item.contentHtml.includes(item.youtubeEmbedUrl);
 
   return (
     <section className="relative overflow-hidden bg-[radial-gradient(1100px_600px_at_10%_0%,rgba(16,185,129,0.08),transparent_50%),radial-gradient(1000px_500px_at_90%_10%,rgba(56,189,248,0.08),transparent_55%)]">
@@ -65,7 +67,7 @@ export default async function NewsDetailPage({
           </div>
         )}
 
-        {item.youtubeEmbedUrl && (
+        {shouldRenderYoutubeEmbed && (
           <div className="my-6 aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-950 shadow-sm">
             <iframe
               src={item.youtubeEmbedUrl}
