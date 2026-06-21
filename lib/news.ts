@@ -7,6 +7,8 @@ export type NewsItem = {
   excerpt: string;
   contentHtml: string; // pre-rendered HTML
   cover?: string;
+  youtubeUrl?: string;
+  youtubeEmbedUrl?: string;
   published_at: string; // ISO
 };
 
