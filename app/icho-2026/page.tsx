@@ -425,7 +425,7 @@ export default function Icho2026Page() {
     },
     {
       name: "Azizbek Nazarov",
-      role: "Reviewer",
+      role: "Author &Reviewer",
       institute: "Tashkent State Medical University",
       country: "Uzbekistan",
       title: "",
