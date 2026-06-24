@@ -5,6 +5,26 @@ import { ChevronDown, ChevronUp, Quote } from "lucide-react";
 
 const welcomeMessages = [
   {
+    id: 0,
+    name: "JL Kiappes",
+    title: "Chair, International Steering Committee",
+    subtitle: "IChO",
+    image: "/steering/JL.jpg",
+    gradient: "from-violet-500 to-purple-600",
+    accentColor: "amber",
+    short:
+      "In the coming days, we will have the opportunity to come together in Tashkent to celebrate the 58th International Chemistry Olympiad. Over nearly six decades, the IChO has grown a great deal.",
+    full: `Dear Participants, Mentors, and all Members of the Chemistry Olympiad Community,
+
+In the coming days, we will have the opportunity to come together in Tashkent to celebrate the 58th International Chemistry Olympiad. Over nearly six decades, the IChO has grown a great deal. What began with delegations from three countries now welcomes more than 350 students from more than 90 countries. Throughout this growth, the Olympiad has showcased chemical history, encouraged creativity in chemistry, and fostered friendships that go beyond borders. This year, that tradition continues in Uzbekistan, and you will become an integral part of the IChO's history.
+
+You have pursued your curiosity and dedicated time and effort to developing your practical and problem-solving skills. Your dedication deserves an excellent Olympiad, and the Organizers in Uzbekistan have gone to great lengths to provide one. The Olympiad community is very grateful to the Republic of Uzbekistan, particularly the Ministry of Preschool and School Education and the Science Olympiad Center, for ensuring that IChO 2026 is a success.
+
+Over the ten days of the IChO, you will unravel chemistry riddles, experience the culture of Uzbekistan, and meet people from around the world who share your passion for chemistry. I am certain that you will make memories and form friendships that you will treasure for the rest of your lives.
+
+Congratulations on your talent and commitment to chemistry! I am looking forward to meeting you during our time together in Tashkent. The International Jury joins me in wishing you the very best of luck for the exams and best of times in every moment of the Olympiad!`,
+  },
+  {
     id: 1,
     name: "Ezozkhon Karimova",
     title: "Minister of Preschool and School Education",
