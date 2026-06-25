@@ -60,7 +60,7 @@ export default function CatalyzerPage() {
         {/* Header (simple, like the ref) */}
         <div className="mb-8 sm:mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
-            CATALYZER
+            CATALYZERS
           </h1>
           <p className="mt-2 text-slate-600">IChO publications</p>
         </div>
