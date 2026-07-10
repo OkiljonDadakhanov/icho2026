@@ -20,6 +20,7 @@ const ISSUES: Issue[] = [
     cover: "/catalyzer8.PNG",
     pdf: "https://drive.google.com/file/d/11rJCCsG75-NfLlwz8uXtBBEqatt1o3a8/view?usp=sharing",
   },
+
   {
     number: 7,
     cover: "/catalyzer7.PNG",
