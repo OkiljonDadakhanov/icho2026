@@ -1,5 +1,12 @@
 import { API } from "./constants";
 
+export type NewsImage = {
+  id: number;
+  url: string;
+  caption: string;
+  sortOrder: number;
+};
+
 export type NewsItem = {
   id: number;
   slug: string;
@@ -9,6 +16,7 @@ export type NewsItem = {
   cover?: string;
   youtubeUrl?: string;
   youtubeEmbedUrl?: string;
+  images: NewsImage[];
   published_at: string; // ISO
 };
 
@@ -17,6 +25,17 @@ const BASE = API.newsUrl;
 type NewsFetchOptions = {
   live?: boolean;
 };
+
+type NewsApiItem = Omit<NewsItem, "images"> & {
+  images?: NewsImage[];
+};
+
+function normalizeNewsItem(item: NewsApiItem): NewsItem {
+  return {
+    ...item,
+    images: Array.isArray(item.images) ? item.images : [],
+  };
+}
 
 function getFallbackNewsList(): NewsItem[] {
   const list = [
@@ -831,7 +850,9 @@ function getFallbackNewsList(): NewsItem[] {
       },
   ];
 
-  return list.sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
+  return list
+    .map(normalizeNewsItem)
+    .sort((a, b) => new Date(b.published_at).getTime() - new Date(a.published_at).getTime());
 }
 
 export async function getNewsList(
@@ -849,7 +870,8 @@ export async function getNewsList(
       options.live ? { cache: "no-store" } : { next: { revalidate: 1800 } },
     );
     if (!res.ok) throw new Error("Failed to fetch news");
-    return res.json();
+    const items = (await res.json()) as NewsApiItem[];
+    return items.map(normalizeNewsItem);
   } catch (error) {
     console.error("Falling back to bundled news list.", error);
     return fallback;
@@ -875,7 +897,8 @@ export async function getNewsBySlug(
       return options.live ? null : fallback;
     }
     if (!res.ok) throw new Error("Failed to fetch news item");
-    return res.json();
+    const item = (await res.json()) as NewsApiItem;
+    return normalizeNewsItem(item);
   } catch (error) {
     console.error(`Falling back to bundled news item for ${slug}.`, error);
     return fallback;

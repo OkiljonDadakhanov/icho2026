@@ -101,6 +101,44 @@ export default async function NewsDetailPage({
             [&_.image-gallery>img]:w-full [&_.image-gallery>img]:h-auto [&_.image-gallery>img]:rounded-xl [&_.image-gallery>img]:shadow-lg"
           dangerouslySetInnerHTML={{ __html: item.contentHtml }}
         />
+
+        {item.images.length > 0 && (
+          <section className="mt-12" aria-labelledby="news-gallery-heading">
+            <h2
+              id="news-gallery-heading"
+              className="mb-6 text-3xl font-bold tracking-tight text-slate-900"
+            >
+              Gallery
+            </h2>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {item.images.map((image) => {
+                const alternativeText = image.caption || item.title;
+
+                return (
+                  <figure
+                    key={image.id}
+                    className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+                  >
+                    <div className="relative aspect-[4/3] bg-slate-50">
+                      <Image
+                        src={image.url}
+                        alt={alternativeText}
+                        fill
+                        sizes="(min-width: 768px) 352px, 100vw"
+                        className="object-contain"
+                      />
+                    </div>
+                    {image.caption && (
+                      <figcaption className="border-t border-slate-200 px-4 py-3 text-sm text-slate-600">
+                        {image.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              })}
+            </div>
+          </section>
+        )}
       </article>
     </section>
   );
