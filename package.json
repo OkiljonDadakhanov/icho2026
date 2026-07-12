@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
+    "test:news-gallery": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --experimental-strip-types --test lib/news-gallery.test.ts",
     "format": "prettier --write .",
     "clean": "rm -rf .next out node_modules/.cache"
   },
