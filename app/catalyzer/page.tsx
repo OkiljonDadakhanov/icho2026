@@ -10,6 +10,11 @@ type Issue = {
 };
 
 const ISSUES: Issue[] = [
+    {
+    number: 12,
+    cover: "/catalyzer12.PNG",
+    pdf: "https://drive.google.com/file/d/1poVWdei0kL5RUeYIsyr5q2SUvhZjG6wu/view?usp=sharing",
+  },
   {
     number: 11,
     cover: "/catalyzer11.PNG",
