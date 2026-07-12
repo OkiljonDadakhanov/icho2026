@@ -28,6 +28,11 @@ function extractArticleImages(contentHtml: string): ArticleImage[] {
     .filter((image) => image.url.length > 0);
 }
 
+function isCatalyzerPost(post: NewsItem): boolean {
+  const identity = `${post.slug} ${post.title}`.toLowerCase();
+  return identity.includes("catalyzer") || identity.includes("catalizer");
+}
+
 export function buildNewsGallery(posts: NewsItem[]): NewsGalleryItem[] {
   const seenUrls = new Set<string>();
   const gallery: NewsGalleryItem[] = [];
@@ -39,6 +44,8 @@ export function buildNewsGallery(posts: NewsItem[]): NewsGalleryItem[] {
   };
 
   for (const post of posts) {
+    if (isCatalyzerPost(post)) continue;
+
     const shared = {
       postTitle: post.title,
       postHref: `/press/news/${post.slug}`,

@@ -57,3 +57,28 @@ test("uses the post title when an additional picture has no caption", () => {
   assert.equal(gallery[0].caption, "Opening ceremony");
   assert.equal(gallery[0].postHref, "/press/news/opening-ceremony");
 });
+
+test("excludes every picture belonging to a Catalyzer post", () => {
+  const gallery = buildNewsGallery([
+    post,
+    {
+      ...post,
+      id: 2,
+      slug: "icho-2026-third-catalyzer-published",
+      title: "The Third Catalyzer Has Been Published",
+      cover: "/images/catalyzer3.jpg",
+      contentHtml: '<img src="/images/catalyzer-page.jpg" alt="Catalyzer page" />',
+      images: [
+        {
+          id: 12,
+          url: "/images/catalyzer-extra.jpg",
+          caption: "Catalyzer detail",
+          sortOrder: 0,
+        },
+      ],
+    },
+  ]);
+
+  assert.equal(gallery.some((picture) => picture.postTitle.includes("Catalyzer")), false);
+  assert.equal(gallery.some((picture) => picture.url.includes("catalyzer")), false);
+});
