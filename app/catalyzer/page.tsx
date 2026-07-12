@@ -11,6 +11,17 @@ type Issue = {
 
 const ISSUES: Issue[] = [
   {
+    number: 11,
+    cover: "/catalyzer11.PNG",
+    pdf: "https://drive.google.com/file/d/11cL08GmL8wM9qSc6ZcQLoUo_ikpADXfl/view?usp=sharing",
+  },
+  {
+    number: 10,
+    cover: "/catalyzer10.PNG",
+    pdf: "https://drive.google.com/file/d/1PvFiOwimevg2ZH7lf67-J_ieRxWTdllS/view?usp=sharing",
+  },
+
+  {
     number: 9,
     cover: "/catalyzer9.PNG",
     pdf: "https://drive.google.com/file/d/1V34UlY_AcvGWnlP4UZ23lPyiqE2Mzffu/view?usp=sharing",
@@ -24,7 +35,7 @@ const ISSUES: Issue[] = [
   {
     number: 7,
     cover: "/catalyzer7.PNG",
-    pdf: "https://drive.google.com/file/d/1I5NIEJ7AquoafPc5BSU52zRpTEAUMWTv/view?usp=sharing",
+    pdf: "https://drive.google.com/file/d/1pUJv0LfsfMrMWw8dIwywC5cp-VwMe7HW/view?usp=sharing",
   },
 {
     number: 6,
