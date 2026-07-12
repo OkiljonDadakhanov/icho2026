@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-
-import Link from "next/link";
 import { Images } from "lucide-react";
 
+import GalleryGrid from "@/components/gallery-grid";
 import { getNewsList } from "@/lib/news";
 import { buildNewsGallery } from "@/lib/news-gallery";
 
@@ -43,30 +41,7 @@ export default async function GalleryPage() {
             No pictures have been published yet.
           </div>
         ) : (
-          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
-            {pictures.map((picture) => (
-              <Link
-                key={picture.id}
-                href={picture.postHref}
-                className="group mb-6 block break-inside-avoid overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
-              >
-                <img
-                  src={picture.url}
-                  alt={picture.caption}
-                  loading="lazy"
-                  className="h-auto w-full bg-slate-50 object-contain transition duration-300 group-hover:scale-[1.02]"
-                />
-                <div className="space-y-1 border-t border-slate-100 p-4">
-                  <p className="text-sm font-medium text-slate-900">
-                    {picture.caption}
-                  </p>
-                  <p className="line-clamp-1 text-xs text-slate-500">
-                    {picture.postTitle}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <GalleryGrid pictures={pictures} />
         )}
       </div>
     </section>

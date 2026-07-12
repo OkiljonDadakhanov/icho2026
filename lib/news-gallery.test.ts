@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
+import { getNextGalleryCount } from "./gallery-batching.ts";
 import { buildNewsGallery } from "./news-gallery.ts";
 import type { NewsItem } from "./news.ts";
 
@@ -81,4 +82,10 @@ test("excludes every picture belonging to a Catalyzer post", () => {
 
   assert.equal(gallery.some((picture) => picture.postTitle.includes("Catalyzer")), false);
   assert.equal(gallery.some((picture) => picture.url.includes("catalyzer")), false);
+});
+
+test("loads gallery pictures in bounded batches without exceeding the total", () => {
+  assert.equal(getNextGalleryCount(24, 140), 48);
+  assert.equal(getNextGalleryCount(120, 140), 140);
+  assert.equal(getNextGalleryCount(140, 140), 140);
 });
