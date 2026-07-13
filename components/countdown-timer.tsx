@@ -116,47 +116,58 @@ export default function CountdownTimer() {
         </div>
 
         {/* Countdown Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
-          {timeUnits.map((unit) => (
-            <div key={unit.label} className="group">
-              <div className="relative">
-                {/* Molecular Glow Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${unit.color} rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                
-                {/* Main Card - Test Tube Style */}
-                <div className="relative bg-white/90 backdrop-blur-xl border-2 border-gray-200 hover:border-gray-300 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
-                  {/* Chemical Formula */}
-                  <div className="absolute top-3 right-3 text-xs text-gray-400 font-mono">
-                    {unit.element}
-                  </div>
-                  
-                  <div className={`text-5xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r ${unit.color} mb-4 tabular-nums drop-shadow-sm`}>
-                    {unit.value.toString().padStart(2, '0')}
-                  </div>
-                  <div className="text-gray-600 text-sm md:text-base uppercase tracking-widest font-bold">
-                    {unit.label}
-                  </div>
-                  
-                  {/* Reaction Progress Bar */}
-                  <div className="mt-4 h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div 
-                      className={`h-full bg-gradient-to-r ${unit.color} transition-all duration-1000 ease-out rounded-full`}
-                      style={{
-                        width: unit.label === 'Seconds' ? `${(unit.value / 60) * 100}%` :
-                               unit.label === 'Minutes' ? `${(unit.value / 60) * 100}%` :
-                               unit.label === 'Hours' ? `${(unit.value / 24) * 100}%` : '100%'
-                      }}
-                    ></div>
-                  </div>
-                  
-                  {/* Bubbling Effect */}
-                  <div className={`absolute bottom-2 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gradient-to-r ${unit.color} rounded-full animate-ping opacity-75`}></div>
-                </div>
-              </div>
-            </div>
-          ))}
+    {/* Olympiad Welcome Message */}
+<div className="max-w-5xl mx-auto">
+  <div className="relative">
+    {/* Glow */}
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-green-500/20 to-orange-500/20 blur-3xl rounded-[3rem]" />
+
+    <div className="relative bg-white/85 backdrop-blur-xl border border-white/60 rounded-[2rem] shadow-2xl p-8 md:p-14">
+      <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold mb-8 shadow-lg">
+        <span className="w-3 h-3 rounded-full bg-white animate-pulse" />
+        The Olympiad Has Officially Begun
+      </div>
+
+      <h2 className="text-4xl md:text-6xl font-black leading-tight bg-gradient-to-r from-blue-600 via-green-600 to-orange-500 bg-clip-text text-transparent mb-8">
+        Welcome to the 58th International Chemistry Olympiad
+      </h2>
+
+      <div className="space-y-6 text-lg md:text-xl leading-9 text-gray-700">
+        <p>
+          Today, Tashkent proudly welcomes the world's most talented young
+          chemists, distinguished mentors, observers, and guests for a week of
+          scientific excellence, cultural exchange, and international friendship.
+        </p>
+
+        <p>
+          Beyond the examinations, this Olympiad celebrates curiosity,
+          collaboration, and the shared belief that science has the power to
+          shape a better future for humanity.
+        </p>
+
+        <p>
+          May every experiment inspire discovery, every conversation spark new
+          ideas, and every friendship created here endure long after the medals
+          have been awarded.
+        </p>
+      </div>
+
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="px-6 py-3 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-semibold">
+          🇺🇿 Tashkent, Uzbekistan
         </div>
 
+        <div className="px-6 py-3 rounded-full bg-green-50 border border-green-200 text-green-700 font-semibold">
+          🔬 Inspiring Excellence in Chemistry
+        </div>
+
+        <div className="px-6 py-3 rounded-full bg-orange-50 border border-orange-200 text-orange-700 font-semibold">
+          🌍 One World • One Science • One Future
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
         {/* Bottom Message with Chemical Equation Style */}
         <div className="relative">
          
