@@ -130,7 +130,7 @@ const STUDENTS_SCHEDULE: DaySchedule[] = [
       { time: "10:10 – 12:00", activity: "Excursion: Tashkent City Mall / Shopping", highlight: true },
       { time: "12:30 – 13:10", activity: "Transfer: Tashkent City Mall → New Uzbekistan hotels" },
       { time: "13:10 – 14:30", activity: "Lunch (New Uzbekistan hotels)" },
-      { time: "14:30 – 18:00", activity: "Free time" },
+      { time: "14:30 – 18:00", activity: "Information on PTU - New State University established by the initiative of the President of Uzbekistan" },
       { time: "18:00 – 19:00", activity: "Dinner (New Uzbekistan hotels)" },
       { time: "19:20 – 20:00", activity: "Transfer: New Uzbekistan hotels → Anhor Lokomativ Park" },
       { time: "20:00 – 22:00", activity: "Excursion: Anhor Lokomativ Park", highlight: true },
