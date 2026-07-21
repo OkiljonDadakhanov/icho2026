@@ -7,67 +7,82 @@ export default function ResultsPage() {
     {
       year: 2026,
       host: "Uzbekistan",
-      file: "/results/rankings.xlsx", // Put your Excel file inside public/results/
+      file: "/results/rankings.pdf", // Place rankings.pdf inside public/results/
     },
   ];
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 overflow-hidden py-12">
       {/* Background Decorations */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-sky-500/5 to-amber-500/5"></div>
-        <div className="absolute top-24 left-10 w-32 h-32 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float"></div>
-        <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed"></div>
-        <div className="absolute bottom-32 left-20 w-40 h-40 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl -rotate-6 animate-float-slow"></div>
+        <div className="absolute top-12 left-10 w-48 h-48 bg-gradient-to-br from-emerald-400/20 to-emerald-600/20 rounded-2xl rotate-12 animate-float"></div>
+        <div className="absolute top-20 right-20 w-36 h-36 bg-gradient-to-br from-sky-400/20 to-sky-600/20 rounded-full animate-float-delayed"></div>
+        <div className="absolute bottom-20 left-20 w-56 h-56 bg-gradient-to-br from-amber-400/20 to-amber-600/20 rounded-3xl -rotate-6 animate-float-slow"></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-16">
-        <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium text-slate-600">
-            <FileText className="w-4 h-4 text-emerald-500" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-10 space-y-5">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/80 backdrop-blur-md rounded-full border border-slate-200/60 shadow-sm text-base font-medium text-slate-700">
+            <FileText className="w-5 h-5 text-emerald-500" />
             <span>Results Archive</span>
           </div>
 
-          <h1 className="text-5xl font-bold tracking-tight text-slate-900">
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900">
             IChO 2026 Olympiad&apos;s Results
           </h1>
 
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Access the official rankings and results from the IChO 2026
-            Olympiad hosted in Uzbekistan.
+          <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto">
+            Official rankings and results from the International Chemistry
+            Olympiad 2026 hosted in Uzbekistan.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {results.map((item) => (
-            <div
-              key={item.year}
-              className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-6 space-y-5 hover:shadow-xl transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 text-slate-800">
-                <Calendar className="text-emerald-500 w-5 h-5" />
-                <h3 className="text-xl font-semibold">
-                  IChO {item.year}
-                </h3>
-              </div>
+        {results.map((item) => (
+          <div
+            key={item.year}
+            className="bg-white/80 backdrop-blur-md border border-slate-200/60 rounded-3xl shadow-xl overflow-hidden"
+          >
+            {/* Card Header */}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 p-8 border-b border-slate-200">
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <Calendar className="w-8 h-8 text-emerald-600" />
+                  <h2 className="text-3xl font-bold text-slate-900">
+                    IChO {item.year}
+                  </h2>
+                </div>
 
-              <p className="text-slate-700">
-                Host Country: <strong>{item.host}</strong>
-              </p>
+                <p className="text-lg text-slate-600">
+                  Host Country:{" "}
+                  <span className="font-semibold text-slate-900">
+                    {item.host}
+                  </span>
+                </p>
+              </div>
 
               <a
                 href={item.file}
                 download
-                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700 transition"
+                className="inline-flex items-center justify-center gap-3 rounded-2xl bg-emerald-600 px-6 py-4 text-lg font-semibold text-white shadow-md hover:bg-emerald-700 transition-all"
               >
-                <FileText className="w-5 h-5" />
-                Download Ranking
+                <FileText className="w-6 h-6" />
+                Download PDF
               </a>
             </div>
-          ))}
-        </div>
+
+            {/* PDF Viewer */}
+            <div className="p-4 md:p-6">
+              <iframe
+                src={item.file}
+                title={`IChO ${item.year} Rankings`}
+                className="w-full h-[900px] rounded-2xl border border-slate-200"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

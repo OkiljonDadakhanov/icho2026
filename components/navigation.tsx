@@ -62,7 +62,7 @@ export function Navigation() {
         { name: "News", href: "/press/news" },
         { name: "Catalyzers", href: "/catalyzer" },
         { name: "Gallery - photos & videos", href: "/gallery" },
-        { name: "Report book", href: "/report" },
+        { name: "Report book and Year book", href: "/report" },
       ],
     },
     { name: "Contact Us", href: "/contact" },
