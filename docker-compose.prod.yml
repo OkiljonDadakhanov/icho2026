@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+    container_name: icho2026_site_web
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      HOSTNAME: 0.0.0.0
+      PORT: 3000
+    restart: unless-stopped
+    networks:
+      - icho_proxy
+
+networks:
+  icho_proxy:
+    external: true
+    name: icho-core-backend_icho_network
