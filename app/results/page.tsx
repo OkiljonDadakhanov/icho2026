@@ -3,9 +3,12 @@
 import { Calendar, FileText } from "lucide-react";
 
 export default function ResultsPage() {
-  const mockYears = [
-    { year: 2026, host: "Uzbekistan" },
-   
+  const results = [
+    {
+      year: 2026,
+      host: "Uzbekistan",
+      file: "/results/rankings.xlsx", // Put your Excel file inside public/results/
+    },
   ];
 
   return (
@@ -26,29 +29,42 @@ export default function ResultsPage() {
             <FileText className="w-4 h-4 text-emerald-500" />
             <span>Results Archive</span>
           </div>
+
           <h1 className="text-5xl font-bold tracking-tight text-slate-900">
-            IChO 2026 Olympiad&apos;s results
+            IChO 2026 Olympiad&apos;s Results
           </h1>
+
           <p className="text-lg text-slate-700 max-w-2xl mx-auto font-light">
-            Access the results, and statistics from IChO 2026 Olympiad, hosted in Uzbekistan.
+            Access the official rankings and results from the IChO 2026
+            Olympiad hosted in Uzbekistan.
           </p>
         </div>
 
-        {/* Archive Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {mockYears.map((item) => (
+          {results.map((item) => (
             <div
               key={item.year}
-              className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-6 space-y-3 hover:shadow-xl transition-all duration-300"
+              className="bg-white/60 backdrop-blur-sm border border-white/20 rounded-2xl shadow-lg p-6 space-y-5 hover:shadow-xl transition-all duration-300"
             >
               <div className="flex items-center gap-3 text-slate-800">
                 <Calendar className="text-emerald-500 w-5 h-5" />
-                <h3 className="text-xl font-semibold">IChO {item.year}</h3>
+                <h3 className="text-xl font-semibold">
+                  IChO {item.year}
+                </h3>
               </div>
-              <p className="text-slate-700 text-sm">
+
+              <p className="text-slate-700">
                 Host Country: <strong>{item.host}</strong>
               </p>
-              <p className="text-sm text-slate-500 italic mt-2">Coming soon</p>
+
+              <a
+                href={item.file}
+                download
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-3 text-white font-medium shadow hover:bg-emerald-700 transition"
+              >
+                <FileText className="w-5 h-5" />
+                Download Ranking
+              </a>
             </div>
           ))}
         </div>
