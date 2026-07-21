@@ -1,0 +1,74 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      DEPLOY_HOST: api.olympcenter.uz
+      DEPLOY_USER: sfom
+      DEPLOY_PATH: /home/sfom/icho2026-site
+      COMPOSE_FILE: docker-compose.prod.yml
+      NGINX_CONTAINER: olympcenter_django-nginx-1
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install deployment tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rsync openssh-client
+
+      - name: Configure SSH
+        env:
+          DEPLOY_SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+        run: |
+          test -n "$DEPLOY_SSH_PRIVATE_KEY"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$DEPLOY_SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+
+      - name: Sync source to server
+        run: |
+          rsync -az --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.next/' \
+            --exclude='node_modules/' \
+            --exclude='out/' \
+            --exclude='.DS_Store' \
+            --exclude='**/.DS_Store' \
+            --exclude='tsconfig.tsbuildinfo' \
+            --exclude='.env*' \
+            -e "ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
+            ./ "$DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH/"
+
+      - name: Rebuild and restart application
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes "$DEPLOY_USER@$DEPLOY_HOST" \
+            "cd '$DEPLOY_PATH' && docker compose -f '$COMPOSE_FILE' up -d --build"
+
+      - name: Reload Nginx
+        run: |
+          ssh -i ~/.ssh/deploy_key -o IdentitiesOnly=yes "$DEPLOY_USER@$DEPLOY_HOST" \
+            "docker exec '$NGINX_CONTAINER' nginx -t && docker exec '$NGINX_CONTAINER' nginx -s reload"
+
+      - name: Verify deployment
+        run: |
+          curl --fail --silent --show-error --location --max-time 20 https://icho2026.uz/ >/dev/null
+          curl --fail --silent --show-error --location --max-time 20 https://www.icho2026.uz/ >/dev/null
